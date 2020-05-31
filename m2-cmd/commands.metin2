@@ -1,0 +1,173 @@
+
+	################################################################################
+	##	 																		  ##
+	##	 8b    d8 oP"Yb.     88""Yb 88""Yb  dP"Yb   88888 888888  dP""b8 888888	  ##
+	##	 88b  d88 "' dP'     88__dP 88__dP dP   Yb     88 88__   dP   `"   88	  ##
+	##	 88YbdP88   dP'      88"""  88"Yb  Yb   dP o.  88 88""   Yb        88	  ##
+	##	 88 YY 88 .d8888     88     88  Yb  YbodP  "bodP' 888888  YboodP   88	  ##
+	##	 																		  ##
+	################################################################################
+
+		###########
+		## ALERT ##
+		###########
+
+			/reload q
+			/miaw
+
+		##########
+		## MAIN ##
+		##########
+
+			/a Pseudo Level		Changer le level d'un joueur
+			/ag					Pull les mobs autour du personnage (cape de bravoure)
+			/at					Attire tous les archers sur votre position
+			/b					Affiche un message dans un encadré
+			/block_chat X Y		Bannir du chat un joueur X pour Y secondes
+			/block_chat_list		Affiche la liste des bans chat
+			/book X				Créé un livre de compétence de type X (ID du skill)
+			/can_dead			Rend le joueur mortel (File 2014+)
+			/cannot_dead			Rend le joueur invinsible (File 2014+)
+			/dc X				Déconnecte le joueur X
+			/deleteguild X		Supprime la guilde X	
+			/eclipse	X			X = 0: Active le jour  X = 1: Active la nuit
+			/full_set			Lance les 3 commandes en même temps: all_skill_master, item_full_set, attr_full_set (File 2013+)
+			/go X				Téléporte le joueur à la map d'ID X
+			/go X Y				Téléporte le joueur aux coordonées X - Y de la map
+			/ip					Vide complètement l'inventaire du joueur
+			/inv					Permet de se rendre invisible
+			/i X Y				Give l'item d'ID X  Y fois
+			/item_full_set		Créé un équipement full bonus pour le personnage (File 2013+)
+			/kill X				Kill le joueur X
+			/level X				Met le joueur level X
+			/logout				Déconnecte votre personnage 
+			/m X Y				Invoque Y fois le mob X
+			/n X					Affiche le message X à tous les joueurs connectés
+			/notice_map X		Affiche le message X à tous les joueurs de la map
+			/pull_monster		Attire les mobs sur votre position
+			/purge				Enlève tous les mobs autour de vous
+			/purge all			Enlève tous les mobs autour de vous sur une plus longue distance
+			/reload				/reload p + /reload s + /reload u
+			/reload				Rechargement de la table admin
+			/reload c			Rechargement du fichier cube.txt
+			/reload f			Rechargement du fichier fishing.txt
+			/reload p			Rechargement de la table skill_proto et banword
+			/reload q			Rechargement des quêtes
+			/reload s			Rechargement du fichier locale_string.txt
+			/reload d			Rechargement des drops SQL
+			/reset				Recharge la vie et la mana à fond
+			/respawn				Fait ré-apparaitre les mobs autout de vous
+			/respawn all			Fait ré-apparaitre les mobs autour de vous sur une plus longue distance
+			/set X Y Z 			Offre Z fois Y pour le joueur X. Y peut prendre ces chaines de caractères:
+									align: donne ou enlève Z points d'alignement au joueur
+									exp: donne ou enlève Z points d'expérience au joueur
+									gold: donne ou enlève Z yangs au joueur
+									max_hp: donne ou enlève Z points de vie actuels au joueur
+									max_sp: donne ou enlève Z points d'énergie actuels au joueur
+									skill: donne ou enlève Z points de compétence au joueur
+			/setjob X			Lé spécialité du joueur devient X (assassin, etc..)	
+			/shutdown			Ferme le serveur
+			/transfer X			Transfère un joueur X sur votre position
+			/u					Affiche la liste des joueurs connectés
+			/warp X				Vous téléporte sur le joueur X
+			/warp X Y			Vous téléportes aux coordonées globales X Y d'une map
+			/weak				Baisse le nombre de point de vie des mobs autour de vous
+			/weak all			Baisse le nombre de point de vie des mobs autour de vous sur une plus longue distance
+			/who					Affiche le nombre de joueurs connectés dans chaque royaume
+			/xmas_snow X			X = 1: Désactive la neige sinon ça l'active
+			/add_attr			Ajoute un bonus aléatoire sur l'arme en main
+			/add_socket			Ajoute un emplacement pour une pierre sur l'arme en main
+			/cha 				Change aléatoirement les bonus de l'arme porté
+			/socketitem X		Créé l'objet de vnum X avec 3 emplacements de pierre
+			/af 					Affiche les effets actif sur un personnage
+			/af x				Affiche les effets de type X
+			/af x y				Supprime le bonus de type X et d'effet Y
+			/do_clear_affect		Supprime tous les effets présents sur le personnage (File 2013+)
+			/all_skill_master	Met toutes les compétences du joueur en Pseudo (File 2013+)
+			/attr_full_set		Ajoute des bonus définis sur l'équipement du personnage (File 2013+)
+			/con+ X				Le personnage dépense X points de caractéristique dans sa vitalité
+			/dex+ X				Ajoute X points de caractéristique dans la défense du personnage
+			/int+ X				Dépense X points de caractéristique dans l'intelligence du personnage
+			/str+				Dépense 1 point de caractéristique dans la force du joueur
+			/cooltime			Enlève le temps d'attente des skills au moment venu
+			/skillup X			Améliorer d'un point la compétence 
+			/inventory X			Affiche les X premiers items de l'inventaire du joueur
+			/stat-				Enlève un point de caractéristique à un joueur
+			/stat_reset			Redistribue 12 points de caractéristiques au joueur
+			/setskill X Y		Permet de monter la compétence du niveau X au niveau Y
+			/setskillother Z X Y	Permet de monter la compétence n°X au niveau Y pour le joueur nommé Z
+			/pkmode	X			Le joueur change de mode (0: paix, 1: ennemi, 2: libre, 3 : gm, 4: guilde)
+			/br	X	Y			Supprime le mariage entre le joueur X et le joueur Y
+			/clear_land			Nettoie le terrain de guilde où se trouve le GM
+			/console				Permet d'ouvrir la console
+			/delqf X Y Z			Supprime le getqf nommé Y dans la quête X du joueur Z
+			/dragon_soul a X		Active le dragonsoul à l'emplacement X (File 2014+)
+			/dragon_soul d		Désactive tous les dragon_soul du joueur (File 2014+)
+			/end_all_duel		Met fin à tous les duels dans l'arène
+			/end_duel X			Met fin au duel du joueur X dans l'arène
+			/eventhelper X		X = 1: Fait apparaitre l'animatrice sur les maps 1 & 2
+			/fish_simul X Y Z	Simulation de pêche. X = Niveau de la canne - Y = Colone de probabilité utilisé - Z = Nombre de tentative à simuler
+			/getqf				Affiche les getqf du personnage
+			/get_mob_count		Donne l'ID de la map et le nombre de mob qui s'y trouve
+			/group X				Invoque le groupe de mob d'id X, group.txt (sur votre position
+			/group X Y			Invoque le groupe de mob d'ID X group.txt sur la position Y
+			/grrandom X			Invoque un groupe de mob X définit dans le group_group.txt
+			/horse_level X		Passe le cheval au niveau X
+			/horse_ride			Monte sur le cheval s'il n'est pas dessus et en descent s'il est dessus
+			/horse_set_stat		Fixe la santé du cheval du joueur à X et son endurance à Y
+			/horse_state			Affiche les caractéristiques du cheval
+			/horse_summon		Appelle le chevel du joueur
+			/horse_unsummon		Renvoie le cheval
+			/ma X Y				Invoque Y fois le mob X agressif 
+			/mount_test X		Chevauche le mob d'ID X
+			/priv_empire A B C D	Donne le bonus privé n°B d'une puissance de C% pendant D secondes à l'empire n°A
+			/priv_guild A B C D	Donne le bonus privé n°B d'une puissance de C% pendant D secondes à la guilde n°A
+			/private X			Envoit le joueur dans le donjon de la map X
+			/safebox_change_password X Y	Remplace l'ancien mot de passe de la safebox X par le mot de passe Y
+			/safebox_close		Ferme la safebox
+			/safebox_password X	Ouvre la safebox avec le mot de passe X si le joueur est à proximité du magasinier
+			/setblockmode X		Bloque les options du joueur X
+			/setskillpoint X		Donne X points au joueur
+			/show_arena_list		Affiche les infos de l'arène
+			/state X				Affiche les informations du joueur X
+			/close_shop			Permet de fermer son magasin
+			/makeguild X			Créé une guilde de nom X
+			/gskillup X			Améliore la compétence X de la guilde
+			/gstate X			Affiche les informations de la guilde X
+			/gwlist				Affiche la liste des guerres en cours
+			/gwstop X Y 			Arrête la guerre entre la guilde X & Y
+			/nowar X				Refuse la guerre contre la guilde X
+			/observer			Met le joueur en mode spectateur
+			/observer_exit		Quitte le mode spectateur
+			/war X Y				Déclare une guerre de type Y à la guilde n°X (Type 0 : champ, Type 1 : arène, Type 2 : drapeau)
+			/mto X				Commande de l'empereur, se téléporte sur le joueur X pour 100K yang
+			/mtr X				Commande de l'empereur, transfère le joueur X sur votre position pour 100k yang
+			/mtax X				Commande de l'empereur, fixe la taxe de vente de l'empire.
+			/mmob X				Commande de l'empereur, invoque un mob d'ID x. Coût: 5M Yang
+			/mnotice X			Commande de l'empereur, envoit un message à tous les joueurs de l'empire
+			/setmonarch X		Le joueur X devient empereur de son empire
+			/dice X				Jette un dé à X face
+			/dice X Y			Jette un dé chiffré de X à Y
+			/duel X Y			Lance un duel entre le joueur X et Y dans l'arène
+			/ef X			 	Active l'effet visuel X
+			/fo					Permet de rendre le joueur invisible (=Drapeau blanc)
+			/frog X				Active le brouillard dans le chateau de l'empire X
+			/phase_select		Retourner dans le menu du choix du personnage
+			/poly X				Vous transforme en mob d'ID X
+			/polyitem X			Créé une orbe de polymorphie du mob d'ID X
+			/restart_here		Permet de ressusciter sur place si mort
+			/set_run_mode		Active le mode course
+			/set_walk_mode		Active le mode marche
+			/slow X				Le joueur X est ralenti
+			/stun X				Le joueur X est stun
+			/ungroup				Quitte le groupe
+			/unmount				Descend de la monture
+
+	################################################################################
+	##	 																		  ##
+	##	 8b    d8 oP"Yb.     88""Yb 88""Yb  dP"Yb   88888 888888  dP""b8 888888	  ##
+	##	 88b  d88 "' dP'     88__dP 88__dP dP   Yb     88 88__   dP   `"   88	  ##
+	##	 88YbdP88   dP'      88"""  88"Yb  Yb   dP o.  88 88""   Yb        88	  ##
+	##	 88 YY 88 .d8888     88     88  Yb  YbodP  "bodP' 888888  YboodP   88	  ##
+	##	 																		  ##
+	################################################################################
