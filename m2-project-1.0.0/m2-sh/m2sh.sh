@@ -35,6 +35,8 @@
 
 		CONFIG_PATH="${M2_PATH}/settings"
 
+		QUEST_PATH="${M2_PATH}/resources/locale/${LOCALE}/quest"
+
 		SRC_PATH="${M2_PATH}/srcs"
 		SRC_OUTPUT_PATH="${SRC_PATH}/output"
 		SRC_SERVER_PATH="${SRC_PATH}/server"
@@ -118,12 +120,12 @@
 				else
 
 					echo -e "       \033[37m[ \033[37mAUTH \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-					cd ${M2_PATH}/server/auth/ && ./auth >> syserr_start 2>> syslog_start & sleep 1
+					cd ${M2_PATH}/server/auth/ && ./auth >> syserr_start 2>> syslog_start & sleep 0.1
 				fi
 			else
 
 				echo -e "       \033[37m[ \033[37mAUTH \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-				cd ${M2_PATH}/server/auth/ && ./auth >> syserr_start 2>> syslog_start & sleep 1
+				cd ${M2_PATH}/server/auth/ && ./auth >> syserr_start 2>> syslog_start & sleep 0.1
 			fi
 		}
 
@@ -151,12 +153,12 @@
 				else
 
 					echo -e "           \033[37m[ \033[37mCORE ${CORE} \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-					cd ${M2_PATH}/server/channels/${CHANNEL}/cores/${CORE}/ && ./game_${CHANNEL}_${CORE} >> syserr_start 2>> syslog_start & sleep 0.3
+					cd ${M2_PATH}/server/channels/${CHANNEL}/cores/${CORE}/ && ./game_${CHANNEL}_${CORE} >> syserr_start 2>> syslog_start & sleep 0.1
 				fi
 			else
 
 				echo -e "           \033[37m[ \033[37mCORE ${CORE} \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-				cd ${M2_PATH}/server/channels/${CHANNEL}/cores/${CORE}/ && ./game_${CHANNEL}_${CORE} >> syserr_start 2>> syslog_start & sleep 0.3
+				cd ${M2_PATH}/server/channels/${CHANNEL}/cores/${CORE}/ && ./game_${CHANNEL}_${CORE} >> syserr_start 2>> syslog_start & sleep 0.1
 			fi
 		}
 
@@ -173,7 +175,7 @@
 				then
 
 					echo -e "       \033[37m[ \033[37mDB \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-					kill -9 ${PID_READ} > /dev/null 2> /dev/null & sleep 0.3
+					kill -9 ${PID_READ} > /dev/null 2> /dev/null & sleep 0.1
 				else
 
 					echo -e "       \033[37m[ \033[37mDB \033[37m] \033[37m[ \033[31mNOT STARTED \033[37m]\033[0m"
@@ -197,7 +199,7 @@
 				then
 
 					echo -e "       \033[37m[ \033[37mAUTH \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-					kill -9 ${PID_READ} > /dev/null 2> /dev/null & sleep 0.3
+					kill -9 ${PID_READ} > /dev/null 2> /dev/null & sleep 0.1
 				else
 
 					echo -e "       \033[37m[ \033[37mAUTH \033[37m] \033[37m[ \033[31mNOT STARTED \033[37m]\033[0m"
@@ -223,7 +225,7 @@
 				then
 
 					echo -e "           \033[37m[ \033[37mCORE ${CORE} \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
-					kill -9 ${PID_READ} > /dev/null 2> /dev/null & sleep 0.3
+					kill -9 ${PID_READ} > /dev/null 2> /dev/null & sleep 0.1
 				else
 
 					echo -e "           \033[37m[ \033[37mCORE ${CORE} \033[37m] \033[31mNOT STARTED \033[37m]\033[0m"
@@ -239,7 +241,7 @@
 			if [ -e $2/$1 ]
 			then
 				CLR=true
-				rm -rf $2/$1 & sleep 0.3
+				rm -rf $2/$1
 			fi
 		}
 
@@ -510,7 +512,7 @@
 					STATE_PID="\033[37m[ \033[32mONLINE \033[37m]\033[0m "
 				else
 
-					if [ ${CHECK_STATE} -eq 2 ]
+					if [ ${CHECK_STATE} -gt 2 ]
 					then
 
 						STATE_DB="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m]\033[0m "
@@ -533,7 +535,7 @@
 				fi
 			else
 
-				if [ ${CHECK_STATE} -eq 2 ]
+				if [ ${CHECK_STATE} -gt 2 ]
 				then
 
 					STATE_DB="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m]\033[0m "
@@ -588,7 +590,7 @@
 					STATE_PID="\033[37m[ \033[32mONLINE \033[37m]\033[0m "
 				else
 
-					if [ ${CHECK_STATE} -eq 2 ]
+					if [ ${CHECK_STATE} -gt 2 ]
 					then
 
 						STATE_GAME="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m]\033[0m "
@@ -611,7 +613,7 @@
 				fi
 			else
 
-				if [ ${CHECK_STATE} -eq 2 ]
+				if [ ${CHECK_STATE} -gt 2 ]
 				then
 
 					STATE_GAME="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m]\033[0m "
@@ -666,10 +668,10 @@
 					STATE_PID="\033[37m[ \033[32mONLINE \033[37m]\033[0m "
 				else
 
-					if [ ${CHECK_STATE} -eq 2 ]
+					if [ ${CHECK_STATE} -gt 2 ]
 					then
 
-						STATE_GAME="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m]\033[0m "
+						STATE_GAME="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m] \033[37m[ \033[31mPID NOT FOUND \033[37m]\033[0m "
 					else
 
 						CLR=false
@@ -689,10 +691,10 @@
 				fi
 			else
 
-				if [ ${CHECK_STATE} -eq 2 ]
+				if [ ${CHECK_STATE} -gt 2 ]
 				then
 
-					STATE_GAME="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m]\033[0m "
+						STATE_GAME="\033[37m[ \033[35mWARNING RUNNING PROCESS \033[37m] \033[37m[ \033[31mPID NOT FOUND \033[37m]\033[0m "
 				else
 
 					CLR=false
@@ -725,9 +727,9 @@
 
 		make_quest()
 		{
-			DIR_PATH="${M2_PATH}/resources/locale/${LOCALE}/quest"
-			LOCALE_LIST_PATH="${DIR_PATH}/locale_list"
-			OBJECT_PATH="${DIR_PATH}/object"
+			LOCALE_LIST_PATH="${QUEST_PATH}/new_locale_list"
+			# LOCALE_LIST_PATH="${QUEST_PATH}/locale_list"
+			OBJECT_PATH="${QUEST_PATH}/object"
 
 			if [ -e ${LOCALE_LIST_PATH} ]
 			then
@@ -748,7 +750,8 @@
 						for LINE in `cat ${LOCALE_LIST_PATH}`
 						do
 
-							cd ${DIR_PATH} && ./qc ${LINE} >> ./log/syslog 2>> ./log/syserr & sleep 1
+							# cd ${QUEST_PATH} && ./qc ${LINE} > ./log/syslog.${LINE} 2> ./log/syserr.${LINE} & sleep 1
+							cd ${QUEST_PATH} && ./qc ${LINE} > ./log/${LINE}.syslog 2> ./log/${LINE}.syserr & sleep 1
 							echo -e "           \033[37m[ \033[37mQUEST \033[37m] \033[37m[ \033[33m${LINE} \033[37m]\033[0m"
 						done
 
@@ -769,21 +772,24 @@
 		{
 			check log/syslog $1
 			check log/syserr $1
+			check log/*.syserr $1
+			check log/*.syslog $1
+			# check log/syserr.* $1
+			# check log/syslog.* $1
 			check qc.core $1
 		}
 
 		clean_quest()
 		{
-			DIR_PATH="${M2_PATH}/resources/locale/${LOCALE}/quest"
 			CLR=false
 
-			if [ -e ${DIR_PATH} ]
+			if [ -e ${QUEST_PATH} ]
 			then
 
-				rm -rdf ${DIR_PATH}/object
-				mkdir ${DIR_PATH}/object
+				rm -rdf ${QUEST_PATH}/object
+				mkdir ${QUEST_PATH}/object
 
-				quests_logs ${DIR_PATH}
+				quests_logs ${QUEST_PATH}
 
 				if [ $CLR = true ]
 				then
@@ -801,13 +807,12 @@
 
 		make_one_quest()
 		{
-			DIR_PATH="${M2_PATH}/resources/locale/${LOCALE}/quest"
-			OBJECT_PATH="${DIR_PATH}/object"
+			OBJECT_PATH="${QUEST_PATH}/object"
 
 			if [ -e ${PID_PATH} ]
 			then
 
-				if [ -f ${DIR_PATH}/${1} ]
+				if [ -f ${QUEST_PATH}/${1} ]
 				then
 
 					if [ ! -e ${OBJECT_PATH} ]
@@ -821,7 +826,8 @@
 
 					sleep 1
 
-					cd ${DIR_PATH} && ./qc ${1} > ./log/syslog 2> ./log/syserr
+					# cd ${QUEST_PATH} && ./qc ${1} > ./log/syslog.${1} 2> ./log/syserr.${1}
+					cd ${QUEST_PATH} && ./qc ${1} > ./log/${1}.syslog 2> ./log/${1}.syserr
 					echo -e "           \033[37m[ \033[37mQUEST \033[37m] \033[37m[ \033[33m${1} \033[37m]\033[0m"
 
 					sleep 1
@@ -870,8 +876,8 @@
 		echo -e ""
 		echo -e "       [ QUESTS ]\033[0m"
 		echo -e ""
-		echo -e "           [ \033[33m201\033[37m ] \033[36mUPDATE\033[37m   \033[37m[ \033[33m202\033[37m ] \033[36mMANUAL \033[0m"
-		echo -e "           [ \033[33m203\033[37m ] \033[36mCLEAN \033[0m"
+		echo -e "           [ \033[33m201\033[37m ] \033[36mUPDATE\033[37m   \033[37m[ \033[33m202\033[37m ] \033[36mMANUAL   \033[37m[ \033[33m203\033[37m ] \033[36mPRE QC \033[0m"
+		echo -e "           [ \033[33m204\033[37m ] \033[36mCLEAN \033[0m"
 		echo -e ""
 		echo -e "       [ SRCS ]\033[0m"
 		echo -e ""
@@ -1251,7 +1257,7 @@
 				if [ ${CHECK_STATE_DB} -gt 0 ] || [ ${CHECK_STATE_GAME} -gt 0 ]
 				then
 
-					m2_start_request "CLEAN"
+					m2_start_request "SHUTDOWN"
 
 						for CHANNEL in `seq ${DEFAULT_CORE_MIN} ${DEFAULT_CORE_MAX}`
 						do
@@ -1269,6 +1275,8 @@
 
 						kill_auth
 						kill_db
+
+					m2_end_request
 				fi
 
 			m2_start_request "CLEAN"
@@ -1290,6 +1298,7 @@
 				init_channel 99
 				clean_core 99 1
 
+			m2_end_request
 			m2_start_request "START"
 
 				init_db
@@ -1464,6 +1473,24 @@
 	################################################################################
 
 		203*)
+			m2_start_request "QUESTS"
+
+				cd ${QUEST_PATH}
+				python2.7 pre_qc.py -ac
+
+			m2_end_request
+		;;
+
+	################################################################################
+	##	 																		  ##
+	##	 8b    d8 oP"Yb.     88""Yb 88""Yb  dP"Yb   88888 888888  dP""b8 888888	  ##
+	##	 88b  d88 "' dP'     88__dP 88__dP dP   Yb     88 88__   dP   `"   88	  ##
+	##	 88YbdP88   dP'      88"""  88"Yb  Yb   dP o.  88 88""   Yb        88	  ##
+	##	 88 YY 88 .d8888     88     88  Yb  YbodP  "bodP' 888888  YboodP   88	  ##
+	##	 																		  ##
+	################################################################################
+
+		204*)
 			m2_start_request "CLEAN"
 
 				clean_quest
@@ -1906,6 +1933,25 @@
 	##	 																		  ##
 	################################################################################
 
+		401*)
+
+			m2_start_request "SYMBOLIC LINKS"
+			
+				echo -e "       \033[31mComing Soon\033[0m"
+			
+			m2_end_request
+
+		;;
+
+	################################################################################
+	##	 																		  ##
+	##	 8b    d8 oP"Yb.     88""Yb 88""Yb  dP"Yb   88888 888888  dP""b8 888888	  ##
+	##	 88b  d88 "' dP'     88__dP 88__dP dP   Yb     88 88__   dP   `"   88	  ##
+	##	 88YbdP88   dP'      88"""  88"Yb  Yb   dP o.  88 88""   Yb        88	  ##
+	##	 88 YY 88 .d8888     88     88  Yb  YbodP  "bodP' 888888  YboodP   88	  ##
+	##	 																		  ##
+	################################################################################
+
 		402*)
 			m2_start_request "STATE"
 
@@ -1938,11 +1984,30 @@
 	##	 																		  ##
 	################################################################################
 
+		403*)
+
+			m2_start_request "CHECK INTEGRITY"
+			
+				echo -e "       \033[31mComing Soon\033[0m"
+			
+			m2_end_request
+
+		;;
+
+	################################################################################
+	##	 																		  ##
+	##	 8b    d8 oP"Yb.     88""Yb 88""Yb  dP"Yb   88888 888888  dP""b8 888888	  ##
+	##	 88b  d88 "' dP'     88__dP 88__dP dP   Yb     88 88__   dP   `"   88	  ##
+	##	 88YbdP88   dP'      88"""  88"Yb  Yb   dP o.  88 88""   Yb        88	  ##
+	##	 88 YY 88 .d8888     88     88  Yb  YbodP  "bodP' 888888  YboodP   88	  ##
+	##	 																		  ##
+	################################################################################
+
 		404*)
 
 			m2_start_request "KIJARU"
 			
-				echo -e "       \033[31m<3\033[0m"
+				echo -e "       \033[31mI Miss You... <3\033[0m"
 			
 			m2_end_request
 
@@ -1986,14 +2051,21 @@
 					mysqldump --defaults-extra-file="${CONFIG_PATH}/mysqldump" --default-character-set="UTF8" --set-gtid-purged="OFF" metin2 > "${BACKUP_PATH}/${FILENAME}/M2SQL.sql"
 					echo -e "           \033[37m[ \033[37mM2 SQL \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
 
-					tar czfp ${BACKUP_PATH}/${FILENAME}/M2SF.tgz -P --exclude="${BACKUP_PATH}" --exclude="${SRC_PATH}" ${ROOT_PATH}
+					# tar czf ${BACKUP_PATH}/${FILENAME}/M2SF.tgz -P --exclude="${BACKUP_PATH}" --exclude="${SRC_PATH}" ${ROOT_PATH}
+					tar cf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "m2sh.sh"
+					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/logs"
+					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/server"
+					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/resources"
+					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/settings"
+					
 					echo -e "           [ \033[37mM2 SF \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
 
 
 					if [ -e ${SRC_PATH} ]
 					then
 
-						tar czfp ${BACKUP_PATH}/${FILENAME}/M2SRCSF.tgz -P ${SRC_PATH}
+						# tar czf ${BACKUP_PATH}/${FILENAME}/M2SRCSF.tgz -P ${SRC_PATH}
+						tar cf "${BACKUP_PATH}/${FILENAME}/M2SRCSF.tar" "${VERSION}/srcs"
 						echo -e "           \033[37m[ \033[37mM2 SRC SF \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
 					fi
 				fi
