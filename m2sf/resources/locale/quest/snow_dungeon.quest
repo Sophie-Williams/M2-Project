@@ -328,7 +328,7 @@ quest snow_dungeon begin
 							-- d.spawn_group(6063,setting.LEVEL4_TARGET_pos[1],setting.LEVEL4_TARGET_pos[2], 1, true, 1)
 							--d.regen_file ('data/dungeon/snow_dungeon/'..'id_4f.txt')
 							server_timer('snow_dungeon_level4_1_start',1,d.get_map_index())
-							server_timer ('snow_dungeon_killed_A_2', 6, get_server_timer_arg())
+							--server_timer ('snow_dungeon_killed_A_2', 6, get_server_timer_arg())
 						elseif d.getf('level4_boss_gen') == 1 then
 							d.notice(locale.snow_dungeon.say_9)
 							server_timer('snow_dungeon_level5_start',10,d.get_map_index())
@@ -362,7 +362,7 @@ quest snow_dungeon begin
 							-- d.spawn_group(6063,setting.LEVEL4_TARGET_pos[1],setting.LEVEL4_TARGET_pos[2], 1, true, 1)
 							--d.regen_file ('data/dungeon/snow_dungeon/'..'id_4f.txt')
 							server_timer('snow_dungeon_level4_1_start',1,d.get_map_index())
-							server_timer ('snow_dungeon_killed_A_2', 6, get_server_timer_arg())
+							--server_timer('snow_dungeon_killed_A_2', 6, get_server_timer_arg())
 						elseif d.getf('level4_boss_gen') == 1 then
 							d.notice(locale.snow_dungeon.say_9)
 							server_timer('snow_dungeon_level5_start',10,d.get_map_index())
@@ -488,7 +488,7 @@ quest snow_dungeon begin
 				
 				d.regen_file ('data/dungeon/snow_dungeon/'..'id_4f.txt')
 				server_timer ('snow_dungeon_killed_A_1', 6, d.get_map_index())
-				d.notice(locale.snow_dungeon.say_39)
+				d.notice(locale.snow_dungeon.say_39_1)
 			end 
 		end
 

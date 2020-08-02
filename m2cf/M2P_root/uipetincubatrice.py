@@ -1,12 +1,3 @@
-#########################################
-# title_name		: System Pack		#
-# filename			: root				#
-# author			: Bvural41			#
-# version			: Version 0.0.2		#
-# date				: 2015 04 11		#
-# update			: 2019 02 05		#
-#########################################
-
 import os
 import ui
 import player
@@ -68,9 +59,9 @@ class PetSystemIncubator(ui.ScriptWindow):
 			exception.Abort("PetHatchingWindow.LoadWindow.BindObject")
 			
 	def LoadPetIncubatorImg(self, new_pet):
-		petarryname = [localeInfo.PET_SYSTEM_MONKEY_EGG, localeInfo.PET_SYSTEM_BARONES_EGG, localeInfo.PET_SYSTEM_RAZADOR_EGG, localeInfo.PET_SYSTEM_NEMERE_EGG, localeInfo.PET_SYSTEM_EJDER_EGG, localeInfo.PET_SYSTEM_MELEY_EGG, localeInfo.PET_SYSTEM_HYDRA_EGG, localeInfo.PET_SYSTEM_AZRAIL_EGG, localeInfo.PET_SYSTEM_CELLAT_EGG, localeInfo.PET_SYSTEM_BASSHIDO_EGG]
-		petarryimg = [55701, 55702, 55703, 55704, 55705, 55706, 55707, 55708, 55709, 55710]
-		chat.AppendChat(chat.CHAT_TYPE_INFO, ""+petarryname[int(new_pet)]+".")
+		# petarryname = [localeInfo.PET_SYSTEM_MONKEY_EGG, localeInfo.PET_SYSTEM_BARONES_EGG, localeInfo.PET_SYSTEM_RAZADOR_EGG, localeInfo.PET_SYSTEM_NEMERE_EGG, localeInfo.PET_SYSTEM_EJDER_EGG, localeInfo.PET_SYSTEM_MELEY_EGG, localeInfo.PET_SYSTEM_HYDRA_EGG, localeInfo.PET_SYSTEM_AZRAIL_EGG, localeInfo.PET_SYSTEM_CELLAT_EGG, localeInfo.PET_SYSTEM_BASSHIDO_EGG]
+		petarryimg = [55701, 55702, 55703, 55704, 55705, 55706, 55707, 55708, 55709, 55710, 55711]
+		# chat.AppendChat(chat.CHAT_TYPE_INFO, ""+petarryname[int(new_pet)]+".")
 		self.petname.SetFocus()
 		self.petimg.SetItemSlot(0,petarryimg[int(new_pet)], 0)
 		self.petimg.SetAlwaysRenderCoverButton(0, TRUE)
@@ -78,17 +69,18 @@ class PetSystemIncubator(ui.ScriptWindow):
 		
 	def RequestHatching(self):
 		if self.petname.GetText() == "" or len(self.petname.GetText()) < 4:
-			chat.AppendChat(chat.CHAT_TYPE_INFO, "[Pet-Kulucka] Eksik Harf. 4 Haneli Sayi Giriniz.")
+			chat.AppendChat(chat.CHAT_TYPE_INFO, uiScriptLocale.PET_SYSTEM_CREATE_NAME)
 			return			
 		if player.GetElk() < 100000:
-			chat.AppendChat(chat.CHAT_TYPE_INFO, ""+str(localeInfo.NumberToMoneyString(100000)) +"'a ihtiyaciniz var.")
+			chat.AppendChat(chat.CHAT_TYPE_INFO, ""+str(localeInfo.NumberToMoneyString(100000)) + uiScriptLocale.PET_CREATE_YANG)
 			return
 		questionDialog = uiCommon.QuestionDialog()
-		questionDialog.SetText('Petine "'+self.petname.GetText()+'" ' + localeInfo.PET_TEXTT_8)
+		questionDialog.SetText(self.petname.GetText() + localeInfo.PET_TEXTT_8)
 		questionDialog.SetAcceptEvent(ui.__mem_func__(self.evett))
 		questionDialog.SetCancelEvent(ui.__mem_func__(self.hayirr))
 		questionDialog.Open()
 		self.questionDialog = questionDialog
+
 	def evett(self):
 		import chr
 		chr.RequestPetName(self.petname.GetText())

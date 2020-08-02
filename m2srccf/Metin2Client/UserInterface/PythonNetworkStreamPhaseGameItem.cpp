@@ -778,7 +778,7 @@ bool CPythonNetworkStream::SendItemPickUpPacket(DWORD vid)
 }
 
 
-bool CPythonNetworkStream::SendQuickSlotAddPacket(BYTE wpos, BYTE type, BYTE pos)
+bool CPythonNetworkStream::SendQuickSlotAddPacket(uint16_t wpos, BYTE type, uint16_t pos)
 {
 	if (!__CanActMainInstance())
 		return true;
@@ -799,7 +799,7 @@ bool CPythonNetworkStream::SendQuickSlotAddPacket(BYTE wpos, BYTE type, BYTE pos
 	return SendSequence();
 }
 
-bool CPythonNetworkStream::SendQuickSlotDelPacket(BYTE pos)
+bool CPythonNetworkStream::SendQuickSlotDelPacket(uint16_t pos)
 {
 	if (!__CanActMainInstance())
 		return true;
@@ -818,7 +818,7 @@ bool CPythonNetworkStream::SendQuickSlotDelPacket(BYTE pos)
 	return SendSequence();
 }
 
-bool CPythonNetworkStream::SendQuickSlotMovePacket(BYTE pos, BYTE change_pos)
+bool CPythonNetworkStream::SendQuickSlotMovePacket(uint16_t pos, uint16_t change_pos)
 {
 	if (!__CanActMainInstance())
 		return true;

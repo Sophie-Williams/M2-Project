@@ -14,7 +14,7 @@ Group Particle
         MaxEmissionCount        5
     
         CycleLength             0.500000
-        CycleLoopEnable         0
+        CycleLoopEnable         1
         LoopCount               0
     
         EmitterShape            0

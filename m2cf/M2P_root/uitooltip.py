@@ -20,7 +20,8 @@ import constInfo
 if app.ENABLE_ACCE_SYSTEM:
 	import acce
 
-WARP_SCROLLS = [22011, 22000, 22010]
+# WARP_SCROLLS = [22011, 22000, 22010, 39043]
+WARP_SCROLLS = [22000, 22010, 39043]
 
 DESC_DEFAULT_MAX_COLS = 26 
 DESC_WESTERN_MAX_COLS = 35
@@ -433,6 +434,7 @@ class ItemToolTip(ToolTip):
 		item.APPLY_IMMUNE_SLOW : localeInfo.TOOLTIP_APPLY_IMMUNE_SLOW,
 		item.APPLY_IMMUNE_FALL : localeInfo.TOOLTIP_APPLY_IMMUNE_FALL,
 		item.APPLY_BOW_DISTANCE : localeInfo.TOOLTIP_BOW_DISTANCE,
+		item.APPLY_DEF_GRADE : localeInfo.TOOLTIP_DEF_GRADE,
 		item.APPLY_DEF_GRADE_BONUS : localeInfo.TOOLTIP_DEF_GRADE,
 		item.APPLY_ATT_GRADE_BONUS : localeInfo.TOOLTIP_ATT_GRADE,
 		item.APPLY_MAGIC_ATT_GRADE : localeInfo.TOOLTIP_MAGIC_ATT_GRADE,
@@ -1109,6 +1111,14 @@ class ItemToolTip(ToolTip):
 		itemType = item.GetItemType()
 		itemSubType = item.GetItemSubType()
 
+
+		# if 55002 == itemVnum:
+			# if 0 == metinSlot:
+				# name = item.GetItemName()
+				# self.SetTitle(name)
+				# self.ShowToolTip()
+				# return
+
 		if 50026 == itemVnum:
 			if 0 != metinSlot:
 				name = item.GetItemName()
@@ -1183,19 +1193,20 @@ class ItemToolTip(ToolTip):
 		self.AppendDescription(itemSummary, 26, self.CONDITION_COLOR)
 		
 		if self.check_sigillo(itemVnum) or itemVnum == 55002:
-			if attrSlot[0][1] != 0:
-				self.AppendSpace(5)
-				self.AppendTextLine("Niveau : "+str(metinSlot[1]), self.NORMAL_COLOR)
-				self.AppendTextLine("PV : +"+pointop(str(attrSlot[0][1]))+"%", self.SPECIAL_POSITIVE_COLOR)
-				self.AppendTextLine("DEF : +"+pointop(str(attrSlot[1][1]))+"%", self.SPECIAL_POSITIVE_COLOR)
-				self.AppendTextLine("PM : +"+pointop(str(attrSlot[2][1]))+"%", self.SPECIAL_POSITIVE_COLOR)
-				self.AppendSpace(5)
-				if itemVnum != 55002:
-					days = (int(attrSlot[3][1])/60)/24
-					hours = (int(attrSlot[3][1]) - (days*60*24)) / 60
-					mins = int(attrSlot[3][1]) - (days*60*24) - (hours*60)
-					self.AppendTextLine("Temps restant : %d Jours %d Heures %d Minutes" % (days, hours, mins), self.SPECIAL_POSITIVE_COLOR)
-				
+			if 0 != metinSlot:
+				if attrSlot[0][1] != 0:
+					self.AppendSpace(5)
+					self.AppendTextLine("Niveau : "+str(metinSlot[1]), self.NORMAL_COLOR)
+					self.AppendTextLine("PV : +"+pointop(str(attrSlot[0][1]))+"%", self.SPECIAL_POSITIVE_COLOR)
+					self.AppendTextLine("DEF : +"+pointop(str(attrSlot[1][1]))+"%", self.SPECIAL_POSITIVE_COLOR)
+					self.AppendTextLine("PM : +"+pointop(str(attrSlot[2][1]))+"%", self.SPECIAL_POSITIVE_COLOR)
+					self.AppendSpace(5)
+					if itemVnum != 55002:
+						days = (int(attrSlot[3][1])/60)/24
+						hours = (int(attrSlot[3][1]) - (days*60*24)) / 60
+						mins = int(attrSlot[3][1]) - (days*60*24) - (hours*60)
+						self.AppendTextLine("Temps restant : %d Jours %d Heures %d Minutes" % (days, hours, mins), self.SPECIAL_POSITIVE_COLOR)
+			
 
 
 
@@ -1640,8 +1651,11 @@ class ItemToolTip(ToolTip):
 			for i in xrange(item.LIMIT_MAX_NUM):
 				(limitType, limitValue) = item.GetLimit(i)
 
-				if item.LIMIT_REAL_TIME == limitType:
-					self.AppendMallItemLastTime(metinSlot[0])
+				if 0 != metinSlot:
+					if item.LIMIT_REAL_TIME == limitType:
+						self.AppendMallItemLastTime(metinSlot[0])
+
+
 		elif item.ITEM_TYPE_DS == itemType:
 			self.AppendTextLine(self.__DragonSoulInfoString(itemVnum))
 			self.__AppendAttributeInformation(attrSlot)

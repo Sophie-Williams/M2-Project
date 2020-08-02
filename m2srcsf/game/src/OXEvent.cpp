@@ -246,7 +246,7 @@ bool COXEventManager::Quiz(uint8_t level, int32_t timelimit)
 
 	int32_t idx = number(0, m_vec_quiz[level].size()-1);
 
-	SendNoticeMap(LC_TEXT("문제 입니다."), OXEVENT_MAP_INDEX, true);
+	//SendNoticeMap(LC_TEXT("문제 입니다."), OXEVENT_MAP_INDEX, true);
 	SendNoticeMap(m_vec_quiz[level][idx].Quiz, OXEVENT_MAP_INDEX, true);
 	SendNoticeMap(LC_TEXT("맞으면 O, 틀리면 X로 이동해주세요"), OXEVENT_MAP_INDEX, true);
 

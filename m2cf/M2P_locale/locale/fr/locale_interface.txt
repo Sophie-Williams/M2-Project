@@ -4,9 +4,9 @@ LOGIN_PASSWORD	Mot de Passe
 M2CF_BUTTON	M2SF
 SASH_RESULT	Résultat
 PET_ATTR_CHANGE_ITEM_TEXT	Enchantement de familier
-PET_ATTR_CHANGE_TITLE	Changer type de pet
+PET_ATTR_CHANGE_TITLE	Changer le Type du Familier
 PET_ATTR_CONFIRMATION	Changer
-PET_ATTR_DETERMINE_TITLE	Nouveau type de familier
+PET_ATTR_DETERMINE_TITLE	Nouveau Type de Familier
 PET_ATTR_OK	Fermer
 PET_BESLE	Nourrir
 PET_CELIK_TOPLA	Il vous permet uniquement de récupérer des aciers.
@@ -22,6 +22,10 @@ PET_ISMI	Nom du familier
 PET_KITAP_TOPLA	Il vous permet uniquement de collecter des livres de compétences.
 PET_KOSTUM_TOPLA	Il vous permet simplement de récupérer les costumes.
 PET_KULUCKA	Couveuse
+PET_GUN	 Jour(s)
+PET_UI_LEVEL	Niveau
+PET_ITEM_NO_FEED	Vous ne pouvez pas faire manger ça à votre familier voyons...
+PET_FEED_STACK_ITEM	Vous ne pouvez pas fournir des objets empilés.
 PET_LV3_SPECIAL_EVO	Level 3 (Special Evolution)
 PET_NESNE_EXP	Objet d'EXP
 PET_RUH_TASI_TOPLA	Il vous permet uniquement de collecter les pierres.
@@ -29,10 +33,19 @@ PET_SANDIK_TOPLA	Il vous permet uniquement de collecter les coffres.
 PET_SILAH_TOPLA	Seul lvl75 vous donnera des armes.
 PET_SUPER_BABY_WHITE_DRAGON	Super White Baby Dragon
 PET_SURE	Durée
+PET_SYSTEM_FEED_DIALOG	Voulez-vous nourir votre Familier avec ceci ?
+PET_CREATE_YANG	sont nécessaires pour faire éclore l'oeuf !
 PET_SYSTEM_AGE	Âge
+PET_SYSTEM_SKILLS	Compétences
+PET_UI_TITLE	Familier
+PET_SYSTEM_INFO	Voulez-vous connaître le statut de votre animal de compagnie ?
 PET_SYSTEM_PM	PM
 PET_SYSTEM_BONUSES	Bonus
+PET_SYSTEM_CREATE_NAME	Le nom pour votre animal de compagnie est trop court !
+PET_NOT_ACCESS	Vous ne pouvez pas faire ça...
 PET_SYSTEM_DEF	Défense
+PET_RENAME_TITLE	Renommer votre Familier
+PET_RENAME_TEXT	Choisissez un nouveau nom
 PET_SYSTEM_DURATION	Temps restant
 PET_SYSTEM_EVOLVE	Développement
 PET_SYSTEM_EXP	Expérience

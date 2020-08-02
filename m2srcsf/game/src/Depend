@@ -5806,10 +5806,11 @@ OBJDIR/char_item.o: ../../liblua/include/lauxlib.h
 OBJDIR/char_item.o: ../../liblua/include/lualib.h fishing.h item.h party.h
 OBJDIR/char_item.o: dungeon.h sectree_manager.h sectree.h refine.h
 OBJDIR/char_item.o: unique_item.h war_map.h guild.h xmas_event.h marriage.h
-OBJDIR/char_item.o: monarch.h New_PetSystem.h polymorph.h blend_item.h
-OBJDIR/char_item.o: castle.h BattleArena.h arena.h dev_log.h pcbang.h
-OBJDIR/char_item.o: threeway_war.h safebox.h shop.h ../../common/VnumHelper.h
-OBJDIR/char_item.o: DragonSoul.h buff_on_attributes.h belt_inventory_helper.h
+OBJDIR/char_item.o: monarch.h battle.h New_PetSystem.h polymorph.h
+OBJDIR/char_item.o: blend_item.h castle.h BattleArena.h arena.h dev_log.h
+OBJDIR/char_item.o: pcbang.h threeway_war.h safebox.h shop.h
+OBJDIR/char_item.o: ../../common/VnumHelper.h DragonSoul.h
+OBJDIR/char_item.o: buff_on_attributes.h belt_inventory_helper.h
 OBJDIR/char_manager.o: stdafx.h debug_allocator.h
 OBJDIR/char_manager.o: ../../libthecore/include/stdafx.h /usr/include/stdio.h
 OBJDIR/char_manager.o: /usr/include/sys/cdefs.h /usr/include/sys/_null.h

@@ -1,7 +1,7 @@
 HOSTNAME: auth
 CHANNEL: 1
 PORT: 11002
-P2P_PORT: 70000
+P2P_PORT: 12002
 DB_PORT: 15000
 DB_ADDR: localhost
 TABLE_POSTFIX:
@@ -13,4 +13,3 @@ AUTH_SERVER: master
 PLAYER_SQL: localhost metin2 @METIN2! metin2
 COMMON_SQL: localhost metin2 @METIN2! metin2
 LOG_SQL: localhost metin2 @METIN2! metin2
-LOCALE_SERVICE: france

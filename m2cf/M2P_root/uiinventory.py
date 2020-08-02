@@ -1345,6 +1345,9 @@ class InventoryWindow(ui.ScriptWindow):
 				if item.IsRefineScroll(srcItemVID):
 					self.RefineItem(srcItemSlotPos, dstItemSlotPos)
 					self.wndItem.SetUseMode(FALSE)
+				# if srcItemVNum == player.GetItemIndex(dstSlotPos):
+					# if player.GetItemCount(dstSlotPos) < 200:
+						# return True
 				elif item.IsMetin(srcItemVID):
 					self.AttachMetinToItem(srcItemSlotPos, dstItemSlotPos)
 				elif item.IsDetachScroll(srcItemVID):
@@ -1871,7 +1874,7 @@ class InventoryWindow(ui.ScriptWindow):
 			item.SelectItem(itemVnum)
 			itemType = item.GetItemType()
 			if item.ITEM_TYPE_COSTUME == itemType or (itemVnum >= 55401 and itemVnum <= 55411) or (itemVnum >= 55701 and itemVnum <= 55711):
-				chat.AppendChat(chat.CHAT_TYPE_INFO, "Bu e©­yayy pete yediremezsin!")
+				chat.AppendChat(chat.CHAT_TYPE_INFO, uiScriptLocale.PET_ITEM_NO_FEED)
 			else:
 				constInfo.USE_FEED = slotIndex
 			return

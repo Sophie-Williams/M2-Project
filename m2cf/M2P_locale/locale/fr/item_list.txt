@@ -6000,6 +6000,7 @@
 27995	ETC	icon/item/27995.tga
 27996	ETC	icon/item/27996.tga
 27997	ETC	icon/item/27997.tga
+27998	ETC	icon/item/31050.tga
 27999	ETC	icon/item/27999.tga
 28000	ETC	icon/item/28004.tga
 28001	ETC	icon/item/28001.tga
@@ -6412,6 +6413,15 @@
 30097	ETC	icon/item/30096.tga
 30101	ETC	icon/item/30101.tga
 30102	ETC	icon/item/30102.tga
+30103	ETC	icon/item/30103.tga
+30104	ETC	icon/item/30056.tga
+30105	ETC	icon/item/30046.tga
+30106	ETC	icon/item/30152.tga
+30107	ETC	icon/item/30107.tga
+30110	ETC	icon/item/30001.tga
+30113	ETC	icon/item/30001.tga
+30117	ETC	icon/item/30001.tga
+30118	ETC	icon/item/boss_box.tga	d:/ymir work/item/etc/boss_box.gr2
 30114	ETC	icon/item/30152.tga
 30116	ETC	icon/item/30116.tga
 30129	ETC	icon/item/30129.tga
@@ -6774,6 +6784,7 @@
 40004	ETC	icon/item/40004.tga
 40008	ETC	icon/item/70058.tga
 40009	ETC	icon/item/70005.tga
+40010	ETC	icon/item/40010.tga
 40101	WEAPON	icon/item/40101.tga	d:/ymir work/item/weapon/costume/40101.gr2
 40102	WEAPON	icon/item/40102.tga	d:/ymir work/item/weapon/costume/40102.gr2
 40103	WEAPON	icon/item/40103.tga	d:/ymir work/item/weapon/costume/40103.gr2
@@ -8013,6 +8024,14 @@
 50802	ETC	icon/item/50802.tga
 50803	ETC	icon/item/50803.tga
 50804	ETC	icon/item/50804.tga
+50805	ETC	icon/item/50805.tga
+50806	ETC	icon/item/50806.tga
+50807	ETC	icon/item/50807.tga
+50808	ETC	icon/item/50808.tga
+50809	ETC	icon/item/50809.tga
+50810	ETC	icon/item/50810.tga
+50811	ETC	icon/item/50811.tga
+50812	ETC	icon/item/50812.tga
 50813	ETC	icon/item/50813.tga
 50814	ETC	icon/item/50814.tga
 50815	ETC	icon/item/50815.tga

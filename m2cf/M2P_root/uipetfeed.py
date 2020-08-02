@@ -1,12 +1,3 @@
-#########################################
-# title_name		: System Pack		#
-# filename			: root				#
-# author			: Bvural41			#
-# version			: Version 0.0.2		#
-# date				: 2015 04 11		#
-# update			: 2019 02 05		#
-#########################################
-
 import os
 import ui
 import player
@@ -95,7 +86,7 @@ class PetFeedWindow(ui.ScriptWindow):
 			attachedItemCount = mouseModule.mouseController.GetAttachedItemCount()
 			attachedItemIndex = mouseModule.mouseController.GetAttachedItemIndex()
 			if attachedItemCount > 1:
-				chat.AppendChat(chat.CHAT_TYPE_INFO, "[Pet] Esyalarý tekli koyabilirsin!")
+				chat.AppendChat(chat.CHAT_TYPE_INFO, uiScriptLocale.PET_FEED_STACK_ITEM)
 				return
 			if attachedItemCount == 1:
 				attachedItemCount = 0
@@ -108,16 +99,17 @@ class PetFeedWindow(ui.ScriptWindow):
 				self.arrysize[selectedSlotPos] = height
 				self.petslot.SetItemSlot(selectedSlotPos, attachedItemIndex, attachedItemCount)
 			else:
-				chat.AppendChat(chat.CHAT_TYPE_INFO, "[Pet] Bunu yapamassýn.")
+				chat.AppendChat(chat.CHAT_TYPE_INFO, uiScriptLocale.PET_NOT_ACCESS)
 
 			mouseModule.mouseController.DeattachObject()
 	
 	def PetUseFeed(self, SlotPos):
 		itemIndex = player.GetItemIndex(SlotPos)
 		ItemCount = player.GetItemCount(SlotPos)
+		(width, height) = item.GetItemSize()
 
 		if ItemCount > 1:
-			chat.AppendChat(chat.CHAT_TYPE_INFO, "Eþyalarý tekli koyabilirsin.")
+			chat.AppendChat(chat.CHAT_TYPE_INFO, uiScriptLocale.PET_FEED_STACK_ITEM)
 			constInfo.USE_FEED = -1
 			return
 
@@ -126,12 +118,42 @@ class PetFeedWindow(ui.ScriptWindow):
 
 		if not SlotPos in self.arryfeed:
 			for x in range(len(self.arryfeed)):
-				if self.arryfeed[x] == -1:
-					self.arryfeed[x] = SlotPos
-					self.petslot.SetItemSlot(x, itemIndex, ItemCount)
-					return
+				if self.CanMoveItem(height, x):
+					if self.arryfeed[x] == -1:
+						if height == 1 and self.arrysize[x] == 0:
+							self.arryfeed[x] = SlotPos
+							self.arrysize[x] = height
+
+							self.petslot.SetItemSlot(x, itemIndex, ItemCount)
+							return
+						elif height == 2 and self.arrysize[x+3] == 0:
+							self.arryfeed[x] = SlotPos
+							self.arrysize[x] = height
+
+							self.petslot.SetItemSlot(x, itemIndex, ItemCount)
+							return
+						elif height == 3 and self.arrysize[x+3] == 0 and self.arrysize[x+6] == 0:
+							self.arryfeed[x] = SlotPos
+							self.arrysize[x] = height
+
+							self.petslot.SetItemSlot(x, itemIndex, ItemCount)
+							return
+						else:
+							constInfo.USE_FEED = -1
+							break
+							return
+
+						constInfo.USE_FEED = -1
+						break
+						return
+
+							# self.arryfeed[x] = SlotPos
+
+							# self.petslot.SetItemSlot(x, itemIndex, ItemCount)
+							# return
 
 		constInfo.USE_FEED = -1
+		return False
 	
 	def SelectItemSlot(self, itemSlotIndex):
 		self.arryfeed[itemSlotIndex] = -1
@@ -149,7 +171,7 @@ class PetFeedWindow(ui.ScriptWindow):
 		
 	def SendPetItem(self):
 		self.questionDialog = uiCommon.QuestionDialog()
-		self.questionDialog.SetText("Esyalarý yedirmek istediðine emin misin?")
+		self.questionDialog.SetText(uiScriptLocale.PET_SYSTEM_FEED_DIALOG)
 		self.questionDialog.SetAcceptEvent(ui.__mem_func__(self.ConfirmPetItem))
 		self.questionDialog.SetCancelEvent(ui.__mem_func__(self.OnCloseQuestionDialog))
 		self.questionDialog.Open()

@@ -637,7 +637,7 @@ bool CExchange::Done()
 
 
 
-		m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 255);
+		m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 999);
 		item->RemoveFromCharacter();
 		
 		if (item->IsDragonSoul())

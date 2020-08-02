@@ -304,7 +304,7 @@ bool ITEM_MANAGER::ConvSpecialDropItemFile()
 	snprintf(szSpecialItemGroupFileName, sizeof(szSpecialItemGroupFileName),
 		"%s/special_item_group.txt", LocaleService_GetBasePath().c_str());
 
-	FILE *fp = fopen("locale/france/special_item_group_vnum.txt", "w");
+	FILE *fp = fopen("locale/special_item_group_vnum.txt", "w");
 	if (!fp)
 	{
 		sys_err("could not open file (%s)", "special_item_group_vnum.txt");

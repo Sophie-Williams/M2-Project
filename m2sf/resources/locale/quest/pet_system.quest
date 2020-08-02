@@ -14,6 +14,8 @@ quest pet_system begin
 				[53011] = { 34007, gameforge.pet_system.petname_34007, 0},
 				[53012] = { 34005, gameforge.pet_system.petname_34005, 0},
 				[53013] = { 34006, gameforge.pet_system.petname_34006, 0},
+				[38200] = { 34006, gameforge.pet_system.petname_34006, 0},
+				[38201] = { 34006, gameforge.pet_system.petname_34006, 0},
 				[53009] = { 34012, gameforge.pet_system.petname_34012, 0},
 				[53008] = { 34011, gameforge.pet_system.petname_34011, 0},
 				[53014] = { 34013, gameforge.pet_system.petname_34013, 0},
@@ -26,8 +28,11 @@ quest pet_system begin
 				[53231] = { 34035, gameforge.pet_system.petname_34035, 0},
 				[53232] = { 34039, gameforge.pet_system.petname_34039, 0},
 				[53233] = { 34056, gameforge.pet_system.petname_34056, 0},
-				[53234] = { 34057, gameforge.pet_system.petname_34057, 0},
+				[53234] = { 34056, gameforge.pet_system.petname_34056, 0},
+				[53235] = { 34057, gameforge.pet_system.petname_34057, 0},
 				[53236] = { 34058, gameforge.pet_system.petname_34058, 0},
+				[53239] = { 34059, gameforge.pet_system.petname_34059, 0},
+				[53238] = { 34058, gameforge.pet_system.petname_34058, 0},
 				[53237] = { 34059, gameforge.pet_system.petname_34059, 0},
 				[53022] = { 34021, gameforge.pet_system.petname_34021, 0},
 				[53023] = { 34022, gameforge.pet_system.petname_34022, 0},
@@ -47,6 +52,8 @@ quest pet_system begin
 				[53019] = { 34019, gameforge.pet_system.petname_34019, 0},
 				[53018] = { 34020, gameforge.pet_system.petname_34020, 0},
 				[53020] = { 34017, gameforge.pet_system.petname_34017, 0},
+				[53240] = { 34063, gameforge.pet_system.petname_34063, 0},
+				[53241] = { 34062, gameforge.pet_system.petname_34062, 0},
 			}
 
 			itemVnum = tonumber(itemVnum)
@@ -62,15 +69,7 @@ quest pet_system begin
 			return effect_table [idx]
 		end
 
-		    when 34057.use or 53229.use or
-			 53230.use or 53228.use or 53017.use or 53016.use or 53015.use or 53014.use or
-			 53013.use or 53008.use or 53009.use or 53001.use or 53002.use or 53003.use or
-			 53004.use or 53005.use or 53006.use or 53007.use or 53010.use or 53011.use or
-			 53236.use or 53237.use or 
-			 55709.use or 55710.use or 53022.use or 53023.use or 53024.use or 53025.use or
-			 53218.use or 53219.use or 53220.use or 53221.use or 53222.use or 53223.use or
-			 53224.use or 53225.use or 53226.use or 53227.use or 53021.use or 53019.use or 53018.use or 53020.use or 
-			 53012.use or 53013.use or 53231.use or 53232.use or 53233.use or 53234.use begin
+		    when 53235.use or 53240.use or 53241.use or 53229.use or 53230.use or 53228.use or 53017.use or 53016.use or 53015.use or 53014.use or 53013.use or 53008.use or 53009.use or 53001.use or 53002.use or 53003.use or 53004.use or 53005.use or 53006.use or 53007.use or 53010.use or 53011.use or 53236.use or 53237.use or 53238.use or 53239.use or 55709.use or 55710.use or 53022.use or 53023.use or 53024.use or 53025.use or 53218.use or 53219.use or 53220.use or 53221.use or 53222.use or 53223.use or 53224.use or 53225.use or 53226.use or 53227.use or 53021.use or 53019.use or 53018.use or 53020.use or 53012.use or 53231.use or 53232.use or 53233.use or 53234.use or 38200.use or 38201.use begin
 
             local pet_info = pet_system.get_pet_info(item.vnum)
 
@@ -84,12 +83,15 @@ quest pet_system begin
 					if spawn_effect_file_name != nil then
 						pet.spawn_effect (mobVnum, spawn_effect_file_name)
 					end
+
                     pet.unsummon(mobVnum)
+					syschat(M2SF.pets.unsummon..petName..M2SF.pets.dot)
                 else
                     if pet.count_summoned() < 1 then
                         pet.summon(mobVnum, petName, false)
+						syschat(M2SF.pets.summon..petName..M2SF.pets.dot)
                     else
-                        syschat(gameforge.pet_system._030_chat)
+						syschat(M2SF.pets.already_summon)
                     end
 					if spawn_effect_file_name != nil then
 						pet.spawn_effect (mobVnum, spawn_effect_file_name)

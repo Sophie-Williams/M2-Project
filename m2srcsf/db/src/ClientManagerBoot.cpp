@@ -10,6 +10,7 @@ using namespace std;
 
 extern int32_t g_test_server;
 extern std::string g_stLocaleNameColumn;
+extern std::string g_stCountry;
 
 bool CClientManager::InitializeTables()
 {
@@ -176,13 +177,125 @@ class FCompareVnum
 		}
 };
 
+
+
+
+bool LC_IsEnglish() { return g_stCountry == "english" ? true : false; }
+bool LC_IsFrance() { return g_stCountry == "france" ? true : false; }
+bool LC_IsYMIR() { return g_stCountry == "ymir" ? true : false; }
+bool LC_IsJapan() { return g_stCountry == "japan" ? true : false; }
+bool LC_IsHongKong() { return g_stCountry == "hongkong" ? true : false; }
+bool LC_IsNewCIBN() { return g_stCountry == "newcibn" ? true : false; }
+bool LC_IsGermany() { return g_stCountry == "germany" ? true : false; }
+bool LC_IsKorea() { return g_stCountry == "korea" ? true : false; }
+bool LC_IsItaly() { return g_stCountry == "italy" ? true : false; }
+bool LC_IsSpain() { return g_stCountry == "spain" ? true : false; }
+bool LC_IsGreek() { return g_stCountry == "greek" ? true : false; }
+bool LC_IsUK() { return g_stCountry == "uk" ? true : false; }
+bool LC_IsTurkey() { return g_stCountry == "turkey" ? true : false; }
+bool LC_IsPoland() { return g_stCountry == "poland" ? true : false; }
+bool LC_IsPortugal() { return g_stCountry == "portugal" ? true : false; }
+bool LC_IsCanada() { return g_stCountry == "canada" ? true : false; }
+bool LC_IsBrazil() { return g_stCountry == "brazil" ? true : false; }
+bool LC_IsRussia() { return g_stCountry == "russia" ? true : false; }
+bool LC_IsDenmark() { return g_stCountry == "denmark" ? true : false; }
+bool LC_IsBulgaria() { return g_stCountry == "bulgaria" ? true : false; }
+bool LC_IsCroatia() { return g_stCountry == "croatia" ? true : false; }
+bool LC_IsMexico() { return g_stCountry == "mexico" ? true : false; }
+bool LC_IsArabia() { return g_stCountry == "arabia" ? true : false; }
+bool LC_IsCzech() { return g_stCountry == "czech" ? true : false; }
+bool LC_IsRomania() { return g_stCountry == "romania" ? true : false; }
+bool LC_IsHungary() { return g_stCountry == "hungary" ? true : false; }
+bool LC_IsNetherlands() { return g_stCountry == "netherlands" ? true : false; }
+bool LC_IsSingapore() { return g_stCountry == "singapore" ? true : false; }
+bool LC_IsVietnam() { return g_stCountry == "vietnam" ? true : false; }
+bool LC_IsThailand() { return g_stCountry == "thailand" ? true : false; }
+bool LC_IsUSA() { return g_stCountry == "usa" ? true : false; }
+bool LC_IsWE_Korea() { return g_stCountry == "we_korea" ? true : false; }
+bool LC_IsTaiwan() { return g_stCountry == "taiwan" ? true : false; }
+
+
+
 bool CClientManager::InitializeMobTable()
 {
 	map<int32_t,const char*> localMap;
 	bool isNameFile = true;
 	
 	cCsvTable nameData;
-	if(!nameData.Load("locale/france/mob_names.txt",'\t'))
+
+	const char* ProtoFile;
+
+	if (LC_IsFrance())
+		ProtoFile = "locale/mob_names_fr.txt";
+	else if (LC_IsEnglish())
+		ProtoFile = "locale/mob_names_en.txt";
+	else if (LC_IsJapan())
+		ProtoFile = "locale/mob_names_jp.txt";
+	else if (LC_IsHongKong())
+		ProtoFile = "locale/mob_names_hk.txt";
+	else if (LC_IsNewCIBN())
+		ProtoFile = "locale/mob_names_cn.txt";
+	else if (LC_IsGermany())
+		ProtoFile = "locale/mob_names_de.txt";
+	else if (LC_IsKorea())
+		ProtoFile = "locale/mob_names_kr.txt";
+	else if (LC_IsItaly())
+		ProtoFile = "locale/mob_names_it.txt";
+	else if (LC_IsSpain())
+		ProtoFile = "locale/mob_names_es.txt";
+	else if (LC_IsGreek())
+		ProtoFile = "locale/mob_names_gr.txt";
+	else if (LC_IsUK())
+		ProtoFile = "locale/mob_names_en.txt";
+	else if (LC_IsTurkey())
+		ProtoFile = "locale/mob_names_tr.txt";
+	else if (LC_IsPoland())
+		ProtoFile = "locale/mob_names_pl.txt";
+	else if (LC_IsPortugal())
+		ProtoFile = "locale/mob_names_pt.txt";
+	else if (LC_IsCanada())
+		ProtoFile = "locale/mob_names_ca.txt";
+	else if (LC_IsBrazil())
+		ProtoFile = "locale/mob_names_br.txt";
+	else if (LC_IsYMIR())
+		ProtoFile = "locale/mob_names_en.txt";
+	else if (LC_IsRussia())
+		ProtoFile = "locale/mob_names_ru.txt";
+	else if (LC_IsDenmark())
+		ProtoFile = "locale/mob_names_dk.txt";
+	else if (LC_IsBulgaria())
+		ProtoFile = "locale/mob_names_bg.txt";
+	else if (LC_IsCroatia())
+		ProtoFile = "locale/mob_names_hr.txt";
+	else if (LC_IsMexico())
+		ProtoFile = "locale/mob_names_mx.txt";
+	else if (LC_IsArabia())
+		ProtoFile = "locale/mob_names_ae.txt";
+	else if (LC_IsCzech())
+		ProtoFile = "locale/mob_names_cz.txt";
+	else if (LC_IsHungary())
+		ProtoFile = "locale/mob_names_hu.txt";
+	else if (LC_IsRomania())
+		ProtoFile = "locale/mob_names_ro.txt";
+	else if (LC_IsNetherlands())
+		ProtoFile = "locale/mob_names_nl.txt";
+	else if (LC_IsSingapore())
+		ProtoFile = "locale/mob_names_sg.txt";
+	else if (LC_IsVietnam())
+		ProtoFile = "locale/mob_names_vn.txt";
+	else if (LC_IsThailand())
+		ProtoFile = "locale/mob_names_th.txt";
+	else if (LC_IsUSA())
+		ProtoFile = "locale/mob_names_en.txt";
+	else if (LC_IsWE_Korea())
+		ProtoFile = "locale/mob_names_kr.txt";
+	else if (LC_IsTaiwan())
+		ProtoFile = "locale/mob_names_tw.txt";
+	else
+		ProtoFile = "locale/mob_names_en.txt";
+
+
+	if(!nameData.Load(ProtoFile,'\t'))
 	{
 		fprintf(stderr, "mob_names.txt 파일을 읽어오지 못했습니다\n");
 		isNameFile = false;
@@ -203,7 +316,7 @@ bool CClientManager::InitializeMobTable()
 	
 	bool isTestFile = true;
 	cCsvTable test_data;
-	if(!test_data.Load("locale/france/mob_proto_test.txt",'\t'))
+	if(!test_data.Load("locale/mob_proto_test.txt",'\t'))
 	{
 		fprintf(stderr, "테스트 파일이 없습니다. 그대로 진행합니다.\n");
 		isTestFile = false;
@@ -244,7 +357,7 @@ bool CClientManager::InitializeMobTable()
 
 	
 	cCsvTable data;
-	if(!data.Load("locale/france/mob_proto.txt",'\t')) {
+	if(!data.Load("locale/mob_proto.txt",'\t')) {
 		fprintf(stderr, "mob_proto.txt 파일을 읽어오지 못했습니다\n");
 		return false;
 	}
@@ -262,7 +375,7 @@ bool CClientManager::InitializeMobTable()
 	}
 	
 	data.Destroy();
-	if(!data.Load("locale/france/mob_proto.txt",'\t'))
+	if(!data.Load("locale/mob_proto.txt",'\t'))
 	{
 		fprintf(stderr, "mob_proto.txt 파일을 읽어오지 못했습니다\n");
 		return false;
@@ -384,7 +497,7 @@ bool CClientManager::InitializeMobTable()
 	
 	
 	
-	if(!test_data.Load("locale/france/mob_proto_test.txt",'\t'))
+	if(!test_data.Load("locale/mob_proto_test.txt",'\t'))
 	{
 		fprintf(stderr, "테스트 파일이 없습니다. 그대로 진행합니다.\n");
 		isTestFile = false;
@@ -558,7 +671,79 @@ bool CClientManager::InitializeItemTable()
 	bool isNameFile = true;
 	map<int32_t,const char*> localMap;
 	cCsvTable nameData;
-	if(!nameData.Load("locale/france/item_names.txt",'\t'))
+
+	const char * ProtoFile;
+	
+	if (LC_IsFrance())
+		ProtoFile = "locale/item_names_fr.txt";
+	else if (LC_IsEnglish())
+		ProtoFile = "locale/item_names_en.txt";
+	else if (LC_IsJapan())
+		ProtoFile = "locale/item_names_jp.txt";
+	else if (LC_IsHongKong())
+		ProtoFile = "locale/item_names_hk.txt";
+	else if (LC_IsNewCIBN())
+		ProtoFile = "locale/item_names_cn.txt";
+	else if (LC_IsGermany())
+		ProtoFile = "locale/item_names_de.txt";
+	else if (LC_IsKorea())
+		ProtoFile = "locale/item_names_kr.txt";
+	else if (LC_IsItaly())
+		ProtoFile = "locale/item_names_it.txt";
+	else if (LC_IsSpain())
+		ProtoFile = "locale/item_names_es.txt";
+	else if (LC_IsGreek())
+		ProtoFile = "locale/item_names_gr.txt";
+	else if (LC_IsUK())
+		ProtoFile = "locale/item_names_en.txt";
+	else if (LC_IsTurkey())
+		ProtoFile = "locale/item_names_tr.txt";
+	else if (LC_IsPoland())
+		ProtoFile = "locale/item_names_pl.txt";
+	else if (LC_IsPortugal())
+		ProtoFile = "locale/item_names_pt.txt";
+	else if (LC_IsCanada())
+		ProtoFile = "locale/item_names_ca.txt";
+	else if (LC_IsBrazil())
+		ProtoFile = "locale/item_names_br.txt";
+	else if (LC_IsYMIR())
+		ProtoFile = "locale/item_names_en.txt";
+	else if (LC_IsRussia())
+		ProtoFile = "locale/item_names_ru.txt";
+	else if (LC_IsDenmark())
+		ProtoFile = "locale/item_names_dk.txt";
+	else if (LC_IsBulgaria())
+		ProtoFile = "locale/item_names_bg.txt";
+	else if (LC_IsCroatia())
+		ProtoFile = "locale/item_names_hr.txt";
+	else if (LC_IsMexico())
+		ProtoFile = "locale/item_names_mx.txt";
+	else if (LC_IsArabia())
+		ProtoFile = "locale/item_names_ae.txt";
+	else if (LC_IsCzech())
+		ProtoFile = "locale/item_names_cz.txt";
+	else if (LC_IsHungary())
+		ProtoFile = "locale/item_names_hu.txt";
+	else if (LC_IsRomania())
+		ProtoFile = "locale/item_names_ro.txt";
+	else if (LC_IsNetherlands())
+		ProtoFile = "locale/item_names_nl.txt";
+	else if (LC_IsSingapore())
+		ProtoFile = "locale/item_names_sg.txt";
+	else if (LC_IsVietnam())
+		ProtoFile = "locale/item_names_vn.txt";
+	else if (LC_IsThailand())
+		ProtoFile = "locale/item_names_th.txt";
+	else if (LC_IsUSA())
+		ProtoFile = "locale/item_names_en.txt";
+	else if (LC_IsWE_Korea())
+		ProtoFile = "locale/item_names_kr.txt";
+	else if (LC_IsTaiwan())
+		ProtoFile = "locale/item_names_tw.txt";
+	else
+		ProtoFile = "locale/item_names_en.txt";
+
+	if(!nameData.Load(ProtoFile,'\t'))
 	{
 		fprintf(stderr, "item_names.txt 파일을 읽어오지 못했습니다\n");
 		isNameFile = false;
@@ -577,7 +762,7 @@ bool CClientManager::InitializeItemTable()
 	map<uint32_t, TItemTable *> test_map_itemTableByVnum;
 	
 	cCsvTable test_data;
-	if(!test_data.Load("locale/france/item_proto_test.txt",'\t'))
+	if(!test_data.Load("locale/item_proto_test.txt",'\t'))
 	{
 		fprintf(stderr, "item_proto_test.txt 파일을 읽어오지 못했습니다\n");
 		
@@ -621,7 +806,7 @@ bool CClientManager::InitializeItemTable()
 
 	
 	cCsvTable data;
-	if(!data.Load("locale/france/item_proto.txt",'\t'))
+	if(!data.Load("locale/item_proto.txt",'\t'))
 	{
 		fprintf(stderr, "item_proto.txt 파일을 읽어오지 못했습니다\n");
 		return false;
@@ -648,7 +833,7 @@ bool CClientManager::InitializeItemTable()
 	}
 	
 	data.Destroy();
-	if(!data.Load("locale/france/item_proto.txt",'\t'))
+	if(!data.Load("locale/item_proto.txt",'\t'))
 	{
 		fprintf(stderr, "item_proto.txt 파일을 읽어오지 못했습니다\n");
 		return false;
@@ -737,7 +922,7 @@ bool CClientManager::InitializeItemTable()
 	
 	
 	test_data.Destroy();
-	if(!test_data.Load("locale/france/item_proto_test.txt",'\t'))
+	if(!test_data.Load("locale/item_proto_test.txt",'\t'))
 	{
 		fprintf(stderr, "item_proto_test.txt 파일을 읽어오지 못했습니다\n");
 		

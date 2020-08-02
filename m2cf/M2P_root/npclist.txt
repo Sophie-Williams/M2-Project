@@ -1149,6 +1149,12 @@
 10103	WARP	warp	
 10104	WARP	warp	
 10105	WARP	warp	
+10201	WARP	warp	
+10202	WARP	warp	
+10203	WARP	warp	
+10204	WARP	warp	
+10205	WARP	warp	
+10206	WARP	warp	
 10501	GOTO	warp	
 10502	GOTO	warp	
 10503	GOTO	warp	

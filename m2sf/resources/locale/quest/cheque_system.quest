@@ -6,17 +6,38 @@ quest cheque_system begin
 			if menu == 3 then
 				return
 			end
+
 			if menu == 1 then
-				say_title(M2SF.cheque.title_2)
+
+				say_title(mob_name(9005))
+				say()
 				say(M2SF.cheque.say_1)
+				say()
+				say_reward(M2SF.cheque.say_17)
 
-				local amount = tonumber(input())
+				local data = input()
 
-				if ((amount < 1) or (amount > 1000) or (amount == nil)) then
+				if tonumber(data) == nil then
+
+					syschat(M2SF.cheque.say_16)
+					return
+				else
+
+					amount = tonumber(data)
+					amount = math.ceil(amount)
+				end
+
+				if ((amount < 1) or (amount > 999) or (amount == nil)) then
+
+					say_title(mob_name(9005))
+					say()
 					say(M2SF.cheque.say_2)
 					return
 				else
-					say_title(M2SF.cheque.title_2)
+
+					say_title(mob_name(9005))
+					say()
+
 					local yang = 100000000
 					local total = amount * yang
 
@@ -29,32 +50,55 @@ quest cheque_system begin
 					end
 
 					if pc.get_cheque() >= amount then
-						if pc.get_gold() + total < 10000000000 then
+						if pc.get_gold() + total < 9999999999 then
+
 							pc.set_cheque(-amount)
 							pc.change_gold(total)
 							syschat(string.format(M2SF.cheque.say_10, amount))
 							syschat(string.format(M2SF.cheque.say_11, total))
 							return
 						else
+
 							syschat(M2SF.cheque.say_4)
 							return
 						end
 					else
+
 						syschat(M2SF.cheque.say_5)
 						return
 					end
 				end
 			elseif menu == 2 then
-				say_title(M2SF.cheque.title_3)
+
+				say_title(mob_name(9005))
+				say()
 				say(M2SF.cheque.say_6)
+				say()
+				say_reward(M2SF.cheque.say_17)
 
-				local amount = tonumber(input())
+				local data = input()
 
-				if ((amount < 1) or (amount >19) or (amount == nil)) then
+				if tonumber(data) == nil then
+
+					syschat(M2SF.cheque.say_16)
+					return
+				else
+
+					amount = tonumber(data)
+					amount = math.ceil(amount)
+				end
+
+				if ((amount < 1) or (amount > 1000) or (amount == nil)) then
+
+					say_title(mob_name(9005))
+					say()
 					say(M2SF.cheque.say_7)
 					return
 				else
-					say_title(M2SF.cheque.title_3)
+
+					say_title(mob_name(9005))
+					say()
+
 					local won = 100000000
 					local tax = amount * won * 0.03
 					local total = ((amount * won) + tax)
@@ -69,17 +113,20 @@ quest cheque_system begin
 					end
 
 					if pc.get_gold() >= total then
-						if pc.get_cheque() + amount < 1000 then
+						if pc.get_cheque() + amount < 999 then
+
 							pc.change_money(-total)
 							pc.set_cheque(amount)
 							syschat(string.format(M2SF.cheque.say_12, total))
 							syschat(string.format(M2SF.cheque.say_13, amount))
 							return
 						else
+
 							syschat(M2SF.cheque.say_14)
 							return
 						end
 					else
+
 						syschat(M2SF.cheque.say_15)
 						return
 					end

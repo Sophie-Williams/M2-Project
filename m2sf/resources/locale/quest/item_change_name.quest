@@ -1,0 +1,64 @@
+quest item_change_name begin
+	state start begin
+		function change_name(name)
+			local check = pc.change_name(name)
+			local result = false
+
+			if check == 0 then
+                syschat(M2SF.change_name.error_0)
+            elseif check == 1 then
+                syschat(M2SF.change_name.error_1)
+            elseif check == 2 then
+                syschat(M2SF.change_name.error_2)
+            elseif check == 3 then
+                syschat(M2SF.change_name.error_3)
+            elseif check == 4 then
+                syschat(M2SF.change_name.success_4)
+				result = true
+                item.remove()
+			else
+				syschat(M2SF.change_name.unknown_error)
+            end
+			
+			return result
+		end
+
+		when 71055.use begin
+			say_title(item_name(71055))
+			say()
+			say(M2SF.change_name.say_1)
+			say_reward(M2SF.change_name.say_2)
+			say()
+
+			local s = select(M2SF.change_name.select_yes, M2SF.change_name.select_no)
+			
+			if s == 2 then
+				return
+			end
+
+			if s == 1 then
+				say_title(item_name(71055))
+				say()
+
+				local new_name = input()
+
+				say()
+				say_title(item_name(71055))
+				say()
+				say_reward(new_name)
+				say(M2SF.change_name.say_3)
+				say()
+
+				local s = select(M2SF.change_name.select_yes, M2SF.change_name.select_no)
+
+				if s == 2 then
+					return
+				end
+
+				if s == 1 then
+					item_change_name.change_name(new_name)
+				end
+			end
+		end
+	end
+end

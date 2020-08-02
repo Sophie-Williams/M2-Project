@@ -202,6 +202,7 @@ class MiniMap(ui.ScriptWindow):
 		"109/map" : False,
 		"66/map" : False,
 		"76/map" : False,
+		"252/map" : False,
 	}
 
 	def __init__(self):

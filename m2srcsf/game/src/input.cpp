@@ -407,6 +407,14 @@ int32_t CInputHandshake::Analyze(LPDESC d, uint8_t bHeader, const char * c_pData
 					LogManager::instance().CharLog(0, 0, 0, 1, "NOTICE", msg.c_str(), d->GetHostName());
 					BroadcastNotice(msg.c_str());
 				}
+#ifdef __FULL_NOTICE_SYSTEM__
+				else if (!stBuf.compare(0, 11, "BIG_NOTICE "))
+				{
+					std::string msg = stBuf.substr(11, 50);
+					LogManager::instance().CharLog(0, 0, 0, 1, "BIG_NOTICE", msg.c_str(), d->GetHostName());
+					BroadcastNotice(msg.c_str(), true);
+				}
+#endif
 				else if (!stBuf.compare("CLOSE_PASSPOD"))
 				{
 					g_bNoPasspod = true;
@@ -624,7 +632,7 @@ dev_log(LOG_DEB0, "DC : '%s'", msg.c_str());
 		if (!d->IsCipherPrepared())
 		{
 			sys_err ("Cipher isn't prepared. %s maybe a Hacker.", inet_ntoa(d->GetAddr().sin_addr));
-			d->DelayedDisconnect(5);
+			d->DelayedDisconnect(3);
 			return 0;
 		}
 		if (d->FinishHandshake(p->wAgreedLength, p->data, p->wDataLength))

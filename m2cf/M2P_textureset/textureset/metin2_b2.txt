@@ -82,7 +82,7 @@ Start Texture008
     0
 End Texture008
 Start Texture009
-    "d:\ymir work\terrainmaps\b\field\field 03.dds"
+    "d:\ymir work\terrainmaps\b\field\field 04.dds"
     5.000000
     5.000000
     0.000000

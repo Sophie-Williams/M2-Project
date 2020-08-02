@@ -30,7 +30,7 @@ SRV_LOCALHOST = {
 
 SRV_LAN = {
 	'name':'LAN',
-	'host':'192.168.0.23',
+	'host':'192.168.0.21',
 	'auth':11002,
 	'c1':13001,
 	'ids':'20',

@@ -168,5 +168,54 @@ quest energy_system begin
 			pc.give_item2(setting.charging_stone, 1)
 
 		end
+
+		-- SYSTEM WITH GUI INTERFACE
+
+        when login begin
+            if getenergytime() < 50000 then
+                setenergytime(getenergytime() + get_time())
+                cmdchat("energysystem "..getenergytyp().."|"..getenergyvalue().."#"..getenergytime())
+            end
+        end
+
+        when logout begin
+            if getenergytime() > get_time() then
+                local energy = getenergytime() - get_time()
+                if energy > 0 then
+                    setenergytime(energy)
+                end
+            end
+        end
+
+        when 51002.use begin
+            if getenergytime() > get_time() then
+                syschat(gameforge.energy_system._280_say)
+                return
+            end
+
+            local luck = number(1, 10)
+
+            bonus = {}
+            bonus [1] = {apply.ATTBONUS_HUMAN, 15}
+            bonus [2] = {apply.ATTBONUS_MONSTER, 10}
+            bonus [3] = {apply.CRITICAL_PCT, 10}
+            bonus [4] = {apply.PENETRATE_PCT, 10}
+            bonus [5] = {apply.MAX_HP, 1000}
+            bonus [6] = {apply.MAX_SP, 2000}
+            bonus [7] = {apply.HP_REGEN, 30}
+            bonus [8] = {apply.STEAL_HP, 10}
+            bonus [9] = {apply.ATT_GRADE_BONUS, 75}
+            bonus [10] = {apply.ATT_GRADE_BONUS, 50}
+
+            affect.add_collect(bonus[luck][1], bonus[luck][2], 7200)
+            setenergy(luck, bonus[luck][2], get_time() + 7200)
+
+            cmdchat("energysystem "..luck.."|"..bonus[luck][2].."#"..(get_time() + 7200))
+
+            setenergytime(get_time() + 7200)
+
+            item.remove()
+            syschat(gameforge.energy_system._290_say)
+        end
 	end
 end

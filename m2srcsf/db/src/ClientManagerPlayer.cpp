@@ -877,11 +877,13 @@ void CClientManager::__QUERY_PLAYER_CREATE(CPeer *peer, uint32_t dwHandle, TPlay
 			"`skill_level`, `quickslot`) "
 			"VALUES(0, %u, '%s', %d, %d, %d, %d, %d, "
 			"%d, %d, %d, %d, %d, %d, %d, "
-			"%d, %d, %d, %d, %d, %d, %d, %d, %lld, %ld, 0, %d, 0, ",
+			//"%d, %d, %d, %d, %d, %d, %d, %d, %lld, %ld, 0, %d, 0, ",
+			"%d, %d, %d, %d, %d, %d, 0, 0, %lld, %ld, 0, %d, 0, ",
 			GetTablePostfix(),
 			packet->account_id, packet->player_table.name, packet->player_table.level, packet->player_table.st, packet->player_table.ht, packet->player_table.dx, packet->player_table.iq,
 			packet->player_table.job, packet->player_table.voice, packet->player_table.dir, packet->player_table.x, packet->player_table.y, packet->player_table.z,
-			packet->player_table.hp, packet->player_table.sp, packet->player_table.sRandomHP, packet->player_table.sRandomSP, packet->player_table.stat_point, packet->player_table.stamina, packet->player_table.part_base, packet->player_table.part_base, packet->player_table.part_base, packet->player_table.gold, packet->player_table.gaya, packet->player_table.envanter);
+			//packet->player_table.hp, packet->player_table.sp, packet->player_table.sRandomHP, packet->player_table.sRandomSP, packet->player_table.stat_point, packet->player_table.stamina, packet->player_table.part_base, packet->player_table.part_base, packet->player_table.part_base, packet->player_table.gold, packet->player_table.gaya, packet->player_table.envanter);
+			packet->player_table.hp, packet->player_table.sp, packet->player_table.sRandomHP, packet->player_table.sRandomSP, packet->player_table.stat_point, packet->player_table.stamina, packet->player_table.part_base, packet->player_table.gold, packet->player_table.gaya, packet->player_table.envanter);
 	
 	sys_log(0, "PlayerCreate accountid %d name %s level %d gold %lld, st %d ht %d job %d",
 			packet->account_id, 

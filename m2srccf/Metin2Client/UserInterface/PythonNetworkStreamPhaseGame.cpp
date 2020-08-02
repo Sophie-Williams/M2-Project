@@ -38,29 +38,15 @@ BOOL gs_bEmpireLanuageEnable = TRUE;
 #pragma comment(lib, "discord_rpc_r.lib")
 #endif
 static int64_t StartTime;
-static constexpr auto DiscordClientID = "713021816180047892"; //Change
+
 void CPythonNetworkStream::Discord_Start()
 {
 	StartTime = time(0);
 	DiscordEventHandlers handlers;
 	memset(&handlers, 0, sizeof(handlers));
-	Discord_Initialize(DiscordClientID, &handlers, 1, nullptr);
+	Discord_Initialize(Discord::DiscordClientID, &handlers, 1, nullptr);
 	Discord_Update(false);
 }
-/*void CPythonNetworkStream::Discord_Update(const bool ingame)
-{
-	DiscordRichPresence discordPresence;
-	memset(&discordPresence, 0, sizeof(discordPresence));
-	if (ingame) {
-		discordPresence.state = CPythonBackground::Instance().GetWarpMapName();
-		discordPresence.details = CPythonPlayer::Instance().GetName();
-	}
-	discordPresence.startTimestamp = StartTime;
-	discordPresence.largeImageKey = "m2_project";
-	discordPresence.largeImageText = "M2 Project";
-	Discord_UpdatePresence(&discordPresence);
-}*/
-
 
 void CPythonNetworkStream::Discord_Update(const bool ingame)
 {
@@ -274,7 +260,7 @@ void CPythonNetworkStream::GamePhase()
 	kMap_kPacketInfo.clear();
 #endif
 
-	const DWORD MAX_RECV_COUNT = 4;
+	const DWORD MAX_RECV_COUNT = 16; //32, 4(def)?
 	const DWORD SAFE_RECV_BUFSIZE = 8192;
 	DWORD dwRecvCount = 0;
 
@@ -1671,14 +1657,43 @@ bool CPythonNetworkStream::RecvPointChange()
 			case POINT_STAT_RESET_COUNT:
 				__RefreshStatus();
 				break;
-			case POINT_LEVEL:
+			/*case POINT_LEVEL:
 			case POINT_ST:
 			case POINT_DX:
 			case POINT_HT:
 			case POINT_IQ:
 				__RefreshStatus();
 				__RefreshSkillWindow();
+				break;*/
+			case POINT_PLAYTIME:
+				m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].dwPlayMinutes = PointChange.value;
 				break;
+			case POINT_LEVEL:
+				m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byLevel = PointChange.value;
+				__RefreshStatus();
+				__RefreshSkillWindow();
+				break;
+			case POINT_ST:
+				m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byST = PointChange.value;
+				__RefreshStatus();
+				__RefreshSkillWindow();
+				break;
+			case POINT_DX:
+				m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byDX = PointChange.value;
+				__RefreshStatus();
+				__RefreshSkillWindow();
+				break;
+			case POINT_HT:
+				m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byHT = PointChange.value;
+				__RefreshStatus();
+				__RefreshSkillWindow();
+				break;
+			case POINT_IQ:
+				m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byIQ = PointChange.value;
+				__RefreshStatus();
+				__RefreshSkillWindow();
+				break;
+
 			case POINT_SKILL:
 			case POINT_SUB_SKILL:
 			case POINT_HORSE_SKILL:

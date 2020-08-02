@@ -227,7 +227,7 @@ CGraphicImage* CGrannyMaterial::__GetImagePointer(const char* fileName)
 	assert(*fileName != '\0');
 
 #ifdef _DEBUG
-	TraceError("Grannymaterial: TEXTURE FILENAME %s", fileName);
+	TraceError("GrannyMaterial: %s", fileName);
 #endif
 
 	CResourceManager& rkResMgr = CResourceManager::Instance();
@@ -247,7 +247,7 @@ CGraphicImage* CGrannyMaterial::__GetImagePointer(const char* fileName)
 			CResource* pResource = rkResMgr.GetResourcePointer(localFileName);
 
 			#ifdef _DEBUG
-				TraceError("Grannymaterial: Loading local texture %s", localFileName);
+				TraceError("LoadingLocalGrannyMaterial: %s", localFileName);
 			#endif
 
 
@@ -265,7 +265,7 @@ CGraphicImage* CGrannyMaterial::__GetImagePointer(const char* fileName)
 	CResource* pResource = rkResMgr.GetResourcePointer(TexturePath.c_str());
 
 #ifdef _DEBUG
-	TraceError("Grannymaterial: Loading texture %s from path %s", TexturePath.c_str(), modelLocalPath.c_str());
+	TraceError("LoadingGrannyMaterial: (%s) from (%s)", TexturePath.c_str(), modelLocalPath.c_str());
 #endif
 	
 	

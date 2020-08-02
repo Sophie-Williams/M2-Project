@@ -50,11 +50,19 @@ enum SCMD_XMAS
 };
 
 extern void Shutdown(int32_t iSec);
-extern void SendNotice(const char * c_pszBuf);
+//extern void SendNotice(const char * c_pszBuf);
 extern void SendLog(const char * c_pszBuf);
-extern void BroadcastNotice(const char * c_pszBuf);
+//extern void BroadcastNotice(const char * c_pszBuf);
 extern void SendNoticeMap(const char* c_pszBuf, int32_t nMapIndex, bool bBigFont);
 extern void SendMonarchNotice(uint8_t bEmpire, const char * c_pszBuf);
+
+#ifdef __FULL_NOTICE_SYSTEM__
+extern void SendNotice(const char* c_pszBuf, bool bBigFont = false);
+extern void BroadcastNotice(const char* c_pszBuf, bool bBigFont = false);
+#else
+extern void SendNotice(const char* c_pszBuf);
+extern void BroadcastNotice(const char* c_pszBuf);
+#endif
 
 void CHARACTER_SetBGMVolumeEnable();
 void CHARACTER_AddBGMInfo(unsigned mapIndex, const char* name, float vol);

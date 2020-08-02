@@ -97,7 +97,8 @@ int32_t CInputP2P::Relay(LPDESC d, const char * c_pData, uint32_t uiBytes)
 	return (p->lSize);
 }
 
-int32_t CInputP2P::Notice(LPDESC d, const char * c_pData, uint32_t uiBytes)
+//int32_t CInputP2P::Notice(LPDESC d, const char * c_pData, uint32_t uiBytes)
+int32_t CInputP2P::Notice(LPDESC d, const char* c_pData, uint32_t uiBytes, bool bBigFont)
 {
 	TPacketGGNotice * p = (TPacketGGNotice *) c_pData;
 
@@ -113,7 +114,12 @@ int32_t CInputP2P::Notice(LPDESC d, const char * c_pData, uint32_t uiBytes)
 
 	char szBuf[256+1];
 	strlcpy(szBuf, c_pData + sizeof(TPacketGGNotice), MIN(p->lSize + 1, sizeof(szBuf)));
+	//SendNotice(szBuf);
+#ifdef __FULL_NOTICE_SYSTEM__
+	SendNotice(szBuf, bBigFont);
+#else
 	SendNotice(szBuf);
+#endif
 	return (p->lSize);
 }
 
@@ -434,6 +440,13 @@ int32_t CInputP2P::Analyze(LPDESC d, uint8_t bHeader, const char * c_pData)
 			if ((iExtraLen = Relay(d, c_pData, m_iBufferLeft)) < 0)
 				return -1;
 			break;
+
+#ifdef __FULL_NOTICE_SYSTEM__
+		case HEADER_GG_BIG_NOTICE:
+			if ((iExtraLen = Notice(d, c_pData, m_iBufferLeft, true)) < 0)
+				return -1;
+			break;
+#endif
 
 		case HEADER_GG_NOTICE:
 			if ((iExtraLen = Notice(d, c_pData, m_iBufferLeft)) < 0)

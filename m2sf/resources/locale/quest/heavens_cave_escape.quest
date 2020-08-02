@@ -11,13 +11,24 @@ quest heavens_cave_escape begin
 
 			say(gameforge.heavens_cave_escape._030_say)
 			local a= select(gameforge.locale.guild.yes, gameforge.locale.guild.no)
-			if 1==a then
+			if 1 == a then
 				say_title(gameforge.heavens_cave_escape._020_say_title)
 
 				say(gameforge.heavens_cave_escape._040_say)
 				wait()
 				
-				pc.warp(284460, 810495)
+				if pc.get_empire() == 1 then
+					pc.warp(284200, 809800)
+				end
+
+				if pc.get_empire() == 2 then
+					pc.warp(117600, 177600)
+				end
+
+				if pc.get_empire() == 3 then
+					pc.warp(809100, 402900)
+				end
+
 				return
 			end
 

@@ -118,7 +118,7 @@ def _process_result(code, fqname):
 
 module_do = lambda x:None
 
-def __pack_import(name,globals=None,locals=None,fromlist=None):
+def __pack_import(name,globals=None,locals=None,fromlist=None, arg5 = None):
 	if name in sys.modules:
 		return sys.modules[name]
 

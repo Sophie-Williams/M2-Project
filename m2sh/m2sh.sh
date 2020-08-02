@@ -9,13 +9,15 @@
 	##	 																		  ##
 	################################################################################
 
-		VERSION="1.0.0"
+		VERSION="1.0.1"
 
 		ROOT_PATH="/usr/m2_project"
-		LOCALE="france"
 
 		FLAG="-j3"
 		CONFIGURATION="0" # 0 = debug | 1 = release #
+
+		USE_AUTO_START="1" # 0 = false | 1 = true #
+		USE_PRE_QC="1" # 0 = false | 1 = true #
 
 		DEFAULT_CORE_COUNT="2" # for auto start option #
 		DEFAULT_CORE_MIN="1" # don't touch #
@@ -35,7 +37,7 @@
 
 		CONFIG_PATH="${M2_PATH}/settings"
 
-		QUEST_PATH="${M2_PATH}/resources/locale/${LOCALE}/quest"
+		QUEST_PATH="${M2_PATH}/resources/locale/quest"
 
 		SRC_PATH="${M2_PATH}/srcs"
 		SRC_OUTPUT_PATH="${SRC_PATH}/output"
@@ -238,10 +240,10 @@
 
 		check()
 		{
-			if [ -e $2/$1 ]
+			if [ -e ${2}/${1} ]
 			then
 				CLR=true
-				rm -rf $2/$1
+				rm -rf ${2}/${1}
 			fi
 		}
 
@@ -728,7 +730,6 @@
 		make_quest()
 		{
 			LOCALE_LIST_PATH="${QUEST_PATH}/new_locale_list"
-			# LOCALE_LIST_PATH="${QUEST_PATH}/locale_list"
 			OBJECT_PATH="${QUEST_PATH}/object"
 
 			if [ -e ${LOCALE_LIST_PATH} ]
@@ -770,10 +771,11 @@
 
 		quests_logs()
 		{
-			check log/syslog $1
-			check log/syserr $1
-			check log/*.syserr $1
-			check log/*.syslog $1
+			# check log/syslog $1
+			# check log/syserr $1
+			# check log/*.syserr $1
+			# check log/*.syslog $1
+			check log/* $1
 			# check log/syserr.* $1
 			# check log/syslog.* $1
 			check qc.core $1
@@ -870,23 +872,44 @@
 		echo -e ""
 		echo -e "       [ FILES ]\033[0m"
 		echo -e ""
-		echo -e "           [ \033[33m101\033[37m ] \033[36mSTART\033[37m   \033[37m[ \033[33m102\033[37m ] \033[36mMANUAL   \033[37m[ \033[33m103\033[37m ] \033[36mAUTO \033[0m"
-		echo -e "           [ \033[33m104\033[37m ] \033[36mSTOP\033[37m    \033[37m[ \033[33m105\033[37m ] \033[36mFORCE \033[0m"
-		echo -e "           [ \033[33m106\033[37m ] \033[36mCLEAN \033[0m"
+
+		if [ ${USE_AUTO_START} = "1" ]
+		then
+
+			echo -e "           [ \033[33m103\033[37m ] \033[36mSTART \033[0m"
+			echo -e "           [ \033[33m104\033[37m ] \033[36mSTOP \033[0m"
+			echo -e "           [ \033[33m106\033[37m ] \033[36mCLEAN \033[0m"
+		else
+
+			echo -e "           [ \033[33m101\033[37m ] \033[36mSTART\033[37m   \033[37m[ \033[33m102\033[37m ] \033[36mMANUAL   \033[37m[ \033[33m103\033[37m ] \033[36mAUTO \033[0m"
+			echo -e "           [ \033[33m104\033[37m ] \033[36mSTOP\033[37m    \033[37m[ \033[33m105\033[37m ] \033[36mFORCE \033[0m"
+			echo -e "           [ \033[33m106\033[37m ] \033[36mCLEAN \033[0m"
+		fi
+
 		echo -e ""
 		echo -e "       [ QUESTS ]\033[0m"
 		echo -e ""
-		echo -e "           [ \033[33m201\033[37m ] \033[36mUPDATE\033[37m   \033[37m[ \033[33m202\033[37m ] \033[36mMANUAL   \033[37m[ \033[33m203\033[37m ] \033[36mPRE QC \033[0m"
-		echo -e "           [ \033[33m204\033[37m ] \033[36mCLEAN \033[0m"
+
+		if [ ${USE_PRE_QC} = "1" ]
+		then
+
+			echo -e "           [ \033[33m203\033[37m ] \033[36mUPDATE \033[0m"
+			echo -e "           [ \033[33m204\033[37m ] \033[36mCLEAN \033[0m"
+		else
+
+			echo -e "           [ \033[33m201\033[37m ] \033[36mUPDATE\033[37m   \033[37m[ \033[33m202\033[37m ] \033[36mMANUAL   \033[37m[ \033[33m203\033[37m ] \033[36mPRE QC \033[0m"
+			echo -e "           [ \033[33m204\033[37m ] \033[36mCLEAN \033[0m"
+		fi
+
 		echo -e ""
 		echo -e "       [ SRCS ]\033[0m"
 		echo -e ""
-		echo -e "           [ \033[33m301\033[37m ] \033[36mGAME\033[37m   \033[37m[ \033[33m302\033[37m ] \033[36mDB   \033[37m[ \033[33m303\033[37m ] \033[36mQC \033[0m"
-		echo -e ""
-		echo -e "           [ \033[33m304\033[37m ] \033[36mLIBGAME\033[37m   \033[37m[ \033[33m305\033[37m ] \033[36mLIBTHECORE    \033[37m[ \033[33m306\033[37m ] \033[36mLIBLUA \033[0m"
-		echo -e "           [ \033[33m307\033[37m ] \033[36mLIBPOLY\033[37m   \033[37m[ \033[33m308\033[37m ] \033[36mLIBCRYPTOPP   \033[37m[ \033[33m309\033[37m ] \033[36mLIBSQL \033[0m"
-		echo -e ""
-		echo -e "           [ \033[33m310\033[37m ] \033[36mCLEAN ALL\033[37m   \033[37m[ \033[33m311\033[37m ] \033[36mCLEAN MAIN   \033[37m[ \033[33m312\033[37m ] \033[36mCLEAN SUB \033[0m"
+		echo -e "           [ \033[33m301\033[37m ] \033[36mGAME\033[37m        \033[37m[ \033[33m302\033[37m ] \033[36mDB            \033[37m[ \033[33m303\033[37m ] \033[36mQC \033[0m"
+		# echo -e ""
+		echo -e "           [ \033[33m304\033[37m ] \033[36mLIBGAME\033[37m     \033[37m[ \033[33m305\033[37m ] \033[36mLIBTHECORE    \033[37m[ \033[33m306\033[37m ] \033[36mLIBLUA \033[0m"
+		echo -e "           [ \033[33m307\033[37m ] \033[36mLIBPOLY\033[37m     \033[37m[ \033[33m308\033[37m ] \033[36mLIBCRYPTOPP   \033[37m[ \033[33m309\033[37m ] \033[36mLIBSQL \033[0m"
+		# echo -e ""
+		echo -e "           [ \033[33m310\033[37m ] \033[36mCLEAN ALL\033[37m   \033[37m[ \033[33m311\033[37m ] \033[36mCLEAN MAIN    \033[37m[ \033[33m312\033[37m ] \033[36mCLEAN SUB \033[0m"
 		echo -e ""
 		echo -e "       [ MISCELLANEOUS ]\033[0m"
 		echo -e ""
@@ -1628,7 +1651,7 @@
 					if [ -e ${QC_DEBUG_PATH} ]
 					then
 
-						cp ${QC_DEBUG_PATH} ${M2_PATH}/resources/locale/${LOCALE}/quest/qc
+						cp ${QC_DEBUG_PATH} ${M2_PATH}/resources/locale/quest/qc
 						echo -e "       \033[37m[ \033[37mQC \033[37m] \033[37m[ \033[32mQC REQUEST SUCCESS \033[37m]\033[0m"
 					else
 
@@ -2057,7 +2080,6 @@
 					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/server"
 					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/resources"
 					tar uf "${BACKUP_PATH}/${FILENAME}/M2SF.tar" "${VERSION}/settings"
-					
 					echo -e "           [ \033[37mM2 SF \033[37m] \033[37m[ \033[32mDONE \033[37m]\033[0m"
 
 

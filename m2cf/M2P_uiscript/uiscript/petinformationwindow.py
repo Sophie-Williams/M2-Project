@@ -91,7 +91,7 @@ window = {
 							"name" : "TitlePetInfoWindow", "type" : "window", "x" : 10, "y" : 10, "width" : PET_UI_BG_WIDTH-10-15, "height" : 15, "style" : ("attach",),
 							"children" :
 							(
-								{"name":"TitleName", "type":"text", "x":0, "y":0, "text":"Pet", "all_align" : "center"},
+								{"name":"TitleName", "type":"text", "x":0, "y":0, "text": uiScriptLocale.PET_UI_TITLE, "all_align" : "center"},
 							),	
 						},
 													
@@ -142,7 +142,7 @@ window = {
 							"name" : "LevelWindow", "type" : "window", "x" : 28, "y" : 124, "width" : SHORT_LABLE_WIDTH, "height" : SHORT_LABLE_HEIGHT, "style" : ("attach",),
 							"children" :
 							(
-								{"name":"LevelTitle", "type":"text", "x":0, "y":0, "text": "Level", "color":GOLD_COLOR, "all_align" : "center"},
+								{"name":"LevelTitle", "type":"text", "x":0, "y":0, "text": uiScriptLocale.PET_UI_LEVEL, "color":GOLD_COLOR, "all_align" : "center"},
 							),	
 						},
 						## Level Value
@@ -399,7 +399,7 @@ window = {
 							"name" : "PetSkillWindow", "type" : "window", "x" : 11, "y" : 371, "width" : 120, "height" : 20, "style" : ("attach",),
 							"children" :
 							(
-								{"name":"PetSkillTitle", "type":"text", "x":0, "y":0, "text": "Beceri", "r":1.0, "g":0.0, "b":0.0, "a":1.0, "all_align" : "center"},
+								{"name":"PetSkillTitle", "type":"text", "x":0, "y":0, "text": uiScriptLocale.PET_SYSTEM_SKILLS, "r":1.0, "g":0.0, "b":0.0, "a":1.0, "all_align" : "center"},
 							),
 						},
 				
@@ -536,7 +536,7 @@ if app.ENABLE_PET_ATTR_DETERMINE:
 					"name" : "TitleAttrChangeWindow", "type" : "window", "x" : 10, "y" : 10, "width" : PET_UI_BG_WIDTH-10-15, "height" : 15, "style" : ("attach",),
 					"children" :
 					(
-						{"name":"TitleName", "type":"text", "x":0, "y":0, "text":"Pet", "all_align" : "center"},
+						{"name":"TitleName", "type":"text", "x":0, "y":0, "text": uiScriptLocale.PET_UI_TITLE, "all_align" : "center"},
 					),	
 				},
 				

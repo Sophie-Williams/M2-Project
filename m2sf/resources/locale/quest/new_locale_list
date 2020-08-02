@@ -231,8 +231,6 @@ subquest_47.quest
 subquest_48.quest
 subquest_49.quest
 training_grandmaster_skill.quest
-training_mount.quest
-training_mount_v2.quest
 upgrade_refine_scroll.quest
 warehouse.quest
 xxx_huanso_deliverdrag.quest
@@ -243,7 +241,6 @@ acce_mission.lua
 PetSystemIncubator.lua
 PetSystems.lua
 newpetstaff.quest
-M2Exp.lua
 M2Start.lua
 M2Test.lua
 M2TeleportRing.lua
@@ -257,3 +254,11 @@ M2PurgatoryTicket.lua
 spider_dungeon_3floor_key.quest
 newskills.lua
 daily_95.quest
+back_to_orc.lua
+ServerTime.lua
+ServerExp.lua
+YangPacket.lua
+ChestCharacterBook.lua
+CostumeChest.lua
+item_change_name.quest
+training_mount_v3.lua

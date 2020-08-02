@@ -1,32 +1,32 @@
-﻿COMB_COST	%s
-TOOLTIP_ANTIFLAG_DROP	Jeter
-TOOLTIP_ANTIFLAG_GIVE	Echanger
-TOOLTIP_ANTIFLAG_MYSHOP	Magasin
-TOOLTIP_ANTIFLAG_SAFEBOX	Magasinier
-TOOLTIP_ANTIFLAG_SELL	Vendre
-TOOLTIP_ANTIFLAG_STACK	Empiler
-TOOLTIP_ITEM_BONUS_FIRSTADD	Vous pouvez ajouter des bonus
-TOOLTIP_ITEM_BONUS_NEXTADD	Vous pouvez ajouter un bonus supplémentaire
+COMB_COST	Price: %s
+TOOLTIP_ANTIFLAG_DROP	Drop
+TOOLTIP_ANTIFLAG_GIVE	Exchange
+TOOLTIP_ANTIFLAG_MYSHOP	Shop
+TOOLTIP_ANTIFLAG_SAFEBOX	Safebox
+TOOLTIP_ANTIFLAG_SELL	Sell
+TOOLTIP_ANTIFLAG_STACK	Stack
+TOOLTIP_ITEM_BONUS_FIRSTADD	You can add bonuses
+TOOLTIP_ITEM_BONUS_NEXTADD	You can add an additional bonus
 NOT_POSSIBLE	Impossible
-PET_AFFECT_ANTI_MAGIC	Réduit la défense magique
-PET_AFFECT_BERSERKER	Attaque au corps à corps/magique
-PET_AFFECT_BLOCK	Chance de bloquer un coup au Corps-à-corps
-PET_AFFECT_BOW_DISTANCE	Augmente la portée de l'arc
-PET_AFFECT_DROP_GOLD	Chute des Yangs
-PET_AFFECT_HEAL	Yenilenme
-PET_AFFECT_HEAL2	Chance de soigner le ralentissement, saignement et le poison.
-PET_AFFECT_IMMORTAL	Yenilmezlik
-PET_AFFECT_MAGIC_SPEED	Vitesse du sort
-PET_AFFECT_PENETRATE	Chances de coup perçant
-PET_AFFECT_REFLECT_MELEE	Chance de renvoyer une attaque au Corps-à-corps
-PET_AFFECT_RESIST_LYCAN	Résistance contre les Ninja
-PET_AFFECT_RESIST_NINJA	Résistance contre les Ninjas
-PET_AFFECT_RESIST_SHAMAN	Résistance contre les Chamanes
-PET_AFFECT_RESIST_SURA	Résistance contre les Suras
-PET_AFFECT_RESIST_WARRIOR	Résistance contre les Guerriers
+PET_AFFECT_ANTI_MAGIC	Reduces magic defense
+PET_AFFECT_BERSERKER	Melee / magic attack
+PET_AFFECT_BLOCK	Chance to block a melee hit
+PET_AFFECT_BOW_DISTANCE	Increase arc range
+PET_AFFECT_DROP_GOLD	Fall of the Yangs
+PET_AFFECT_HEAL	Regeneration
+PET_AFFECT_HEAL2	Chance to heal Slow, Bleed, and Poison.
+PET_AFFECT_IMMORTAL	Unbeaten
+PET_AFFECT_MAGIC_SPEED	Speed of the spell
+PET_AFFECT_PENETRATE	Piercing Chance
+PET_AFFECT_REFLECT_MELEE	Chance to deflect a melee attack
+PET_AFFECT_RESIST_LYCAN	Resistance Against Wolfman
+PET_AFFECT_RESIST_NINJA	Resistance Against Assassin
+PET_AFFECT_RESIST_SHAMAN	Resistance against Shamans
+PET_AFFECT_RESIST_SURA	Resistance against the Sura
+PET_AFFECT_RESIST_WARRIOR	Resistance against Warriors
 PET_AFFECT_SPRITISM	Absorption PM
-CALL_PET_FIRST	Vous devez d'abord appeler votre familier.
-MISSING_PET_ITEM	Vous devez posseder une Orbe d'identité familier
+CALL_PET_FIRST	You must first call your pet.
+MISSING_PET_ITEM	You must have a Pet Identity Orb
 PET_AFFECT_VAMPIRISM	Restauration PV
 PET_ATTR_CHANGE_DIALOG_TEXT	Would you like to change your pet's attributes now?\nThe 'Enchant Pet' item will be used in this process.\nThe process can fail.
 PET_ATTR_CHANGE_USE	This action cannot be carried out while pet attributes are being modified.
@@ -38,127 +38,126 @@ PET_ATTR_DETERMINE_TYPE5	Pet Type 5: bold. Strong.\nOver time you can improve it
 PET_ATTR_DETERMINE_TYPE6	Pet Type 6: legendary. Strong.\nA loyal companion whose abilities will even improve with time.
 PET_ATTR_DETERMINE_TYPE7	Pet Type 7: mythic. Very strong.\nIt will reach its full potential over time.
 PET_ATTR_DETERMINE_TYPE8	Pet Type 8: prismatic. Extremely strong.\nA loyal companion you can always rely on.
-PET_SYSTEM_ADD_BOX_PET	Voulez-vous ajouter votre familier à la boîte?
-PET_SYSTEM_AZRAIL_EGG	Oeuf du bébé Azraël
-PET_SYSTEM_BARONES_EGG	Oeuf d'Araignée
-PET_SYSTEM_BASSHIDO_EGG	Oeuf du bébé Baashido
-PET_SYSTEM_CELLAT_EGG	Oeuf du mini bourreau
-PET_SYSTEM_CORRECT_PET_NAME	Entrez un nom correct pour votre familier.
-PET_SYSTEM_EJDER_EGG	Oeuf de Nessie
-PET_SYSTEM_EVO1	Jeune
-PET_SYSTEM_EVO2	Sauvage
-PET_SYSTEM_EVO3	Vaillant
-PET_SYSTEM_EVO4	Héroïque
-PET_SYSTEM_EXPERIENCE	Points d'experience :
-PET_SYSTEM_EXPERIENCE_ITEM	Points d'experience (N) :
-PET_SYSTEM_FEED_PROTEIN	Voulez-vous nourrir votre familier ?
-PET_SYSTEM_HP_RESTORED	PV restaurés:
-PET_SYSTEM_HYDRA_EGG	Oeuf de Nessie
-PET_SYSTEM_IMMORTAL_TIME	Temps immortel:
-PET_SYSTEM_ITEM_COUNT	Vous ne pouvez pas superposer des objets.
-PET_SYSTEM_MELEY_EGG	Oeuf de Dragon rouge
-PET_SYSTEM_MONKEY_EGG	Oeuf de Singe
-PET_SYSTEM_NEMERE_EGG	Oeuf de Nemere
-PET_SYSTEM_ORE	Heure
-PET_SYSTEM_RAZADOR_EGG	Oeuf de Razador
-PET_SYSTEM_SKILL_COOLDOWN	Durée des compétences:
-PET_SYSTEM_TOOLTIP	Temps restant: %d Jour %d Heure %d Minute
+PET_SYSTEM_ADD_BOX_PET	Do you want to add your pet to the box?
+PET_SYSTEM_AZRAIL_EGG	Baby Azrael Egg
+PET_SYSTEM_BARONES_EGG	Spider Egg
+PET_SYSTEM_BASSHIDO_EGG	Baashido baby egg
+PET_SYSTEM_CELLAT_EGG	Mini executioner's egg
+PET_SYSTEM_CORRECT_PET_NAME	Enter a correct name for your pet.
+PET_SYSTEM_EJDER_EGG	Nessie's Egg
+PET_SYSTEM_EVO1	Young
+PET_SYSTEM_EVO2	Wild
+PET_SYSTEM_EVO3	Valiant
+PET_SYSTEM_EVO4	Heroic
+PET_SYSTEM_EXPERIENCE	Experience points:
+PET_SYSTEM_EXPERIENCE_ITEM	Experience points (N):
+PET_SYSTEM_FEED_PROTEIN	Do you want to feed your pet?
+PET_SYSTEM_HP_RESTORED	HP restored:
+PET_SYSTEM_HYDRA_EGG	Nessie's Egg
+PET_SYSTEM_IMMORTAL_TIME	Immortal time:
+PET_SYSTEM_ITEM_COUNT	You cannot overlap objects.
+PET_SYSTEM_MELEY_EGG	Red Dragon Egg
+PET_SYSTEM_MONKEY_EGG	Monkey Egg
+PET_SYSTEM_NEMERE_EGG	Nemere egg
+PET_SYSTEM_ORE	Hour
+PET_SYSTEM_RAZADOR_EGG	Razador Egg
+PET_SYSTEM_SKILL_COOLDOWN	Duration of skills:
+PET_SYSTEM_TOOLTIP	Remaining time: %d Day %d Hour %d Minute
 PET_SYSTEM_ZILE	Jour
-PET_TEXTT_1	Kalan süre: %d Jour %d Heure %d Minute
-PET_TEXTT_2	Expérience actuelle : %.2f%%
-PET_TEXTT_3	Expérience restante : %d sur %d
+PET_TEXTT_1	Kalan s�re: %d Jour %d Heure %d Minute
+PET_TEXTT_2	Exp�rience actuelle : %.2f%%
+PET_TEXTT_3	Exp�rience restante : %d sur %d
 PET_TEXTT_4	Objet actuel : %.2f%%
 PET_TEXTT_5	Objet restant : %d sur %d
 PET_TEXTT_7	Jeune
-PET_TEXTT_8	Voulez-vous le renommer?
-PET_YAS_TEXT	(%d Jour)
-PET_EXP1	Exp. Restante : %d / %d
-PET_EXP2	Exp. Actuelle : %.2f%%
-PET_EXP_ITEM1	Exp. Objet Restant : %d / %d
-PET_EXP_ITEM2	Exp. Objet Actuel : %.2f%%
+PET_TEXTT_8	will hatch! Do you want to continue ?
+PET_YAS_TEXT	(%d Day(s))
+PET_EXP1	Exp. Remaining : %d / %d
+PET_EXP2	Exp. Current : %.2f%%
+PET_EXP_ITEM1	Exp. Remaining object : %d / %d
+PET_EXP_ITEM2	Exp. Current Object : %.2f%%
 MAP_0	Inconnue
 MAP_1	Zone Yongan
-MAP_2	Vallée de Seungryong
+MAP_2	Vall�e de Seungryong
 MAP_3	Zone Jayan
 MAP_4	Jungrang
 MAP_5	Hasung Dong
 MAP_6	Miryang
 MAP_21	Zone Joan
-MAP_22	Vallée d'Imji
+MAP_22	Vall�e d'Imji
 MAP_23	Zone Bokjung
 MAP_24	Waryong
 MAP_25	Hasung Dong
 MAP_26	Songpa
 MAP_41	Zone Pyungmoo
-MAP_42	Vallée de Bangsan
+MAP_42	Vall�e de Bangsan
 MAP_43	Zone Bakra
 MAP_44	Imha
 MAP_45	Hasung Dong
 MAP_46	Daeyami
 MAP_61	Mont Sohan
-MAP_62	Terre de Feu
-MAP_63	Désert de Yongbi
+MAP_62	Land of Fire
+MAP_63	D�sert de Yongbi
 MAP_65	Temple de Hwang
-MAP_66	Tour des Démons
-MAP_67	Bois Enchanté
+MAP_66	Tour des D�mons
+MAP_67	Bois Enchant�
 MAP_68	Bois Rouge
-MAP_69	Grande Vallée
+MAP_69	Grande Vall�e
 MAP_70	Terre des Ogres
 MAP_71	Kuahlo Dong 1
 MAP_72	Kuahlo Dong 2
 MAP_73	Grotte de l'Exil
 MAP_74	Grotte de l'Exil 2
 MAP_75	Temple du Dragon
-MAP_76	Catacombes du Diable
+MAP_76	Catacombs of the Devil
 MAP_77	Kuahlo Dong 3
-MAP_81	Zone de Cérémonie
-MAP_91	Bataille des Empires : Château
+MAP_81	Ceremony area
+MAP_91	Battle of Empires : Castle
 MAP_92	Metin2 Project
-MAP_103	Terrain de Guerre de Guildes
-MAP_105	Terrain de Guerre de Guildes
+MAP_103	Guild War Ground
+MAP_105	Guild War Ground
 MAP_108	Jungsun Dong
 MAP_109	Sangsun Dong
-MAP_110	Terrain de Guerre de Guildes
-MAP_111	Terrain de Guerre de Guildes
-MAP_112	Arène d'Entraînement
-MAP_113	Evénement OX Contest
-MAP_114	Bataille des Empires
-MAP_118	Bataille des Empires : Terre de Feu
-MAP_119	Bataille des Empires : Terre de Feu
-MAP_120	Bataille des Empires : Terre de Feu
-MAP_121	Bataille des Empires : Terre Glaciaire
-MAP_122	Bataille des Empires : Terre Glaciaire
-MAP_123	Bataille des Empires : Terre Glaciaire
-MAP_124	Bataille des Empires : Terre Glaciaire
-MAP_125	Bataille des Empires : Terre du Désert
-MAP_126	Bataille des Empires : Terre du Désert
-MAP_127	Bataille des Empires : Terre du Désert
-MAP_128	Bataille des Empires : Terre du Désert
-MAP_140	Baie de Néphrite
+MAP_110	Guild War Ground
+MAP_111	Guild War Ground
+MAP_112	Training Arena
+MAP_113	Ev�nement OX Contest
+MAP_114	Battle of Empires
+MAP_118	Battle of Empires : Land of Fire
+MAP_119	Battle of Empires : Land of Fire
+MAP_120	Battle of Empires : Land of Fire
+MAP_121	Battle of Empires : Glacial land
+MAP_122	Battle of Empires : Glacial land
+MAP_123	Battle of Empires : Glacial land
+MAP_124	Battle of Empires : Glacial land
+MAP_125	Battle of Empires : Desert Land
+MAP_126	Battle of Empires : Desert Land
+MAP_127	Battle of Empires : Desert Land
+MAP_128	Battle of Empires : Desert Land
+MAP_140	Baie de N�phrite
 MAP_141	Cap du Feu Dragonesque
 MAP_142	Falaise de Gautama
 MAP_143	Montagnes Fulgurantes
-MAP_181	Bataille pour le Château
-MAP_182	Bataille pour le Château
-MAP_183	Bataille pour le Château
-MAP_251	Forteresse du Dragon Rouge
-MAP_252	Observatoire de Nemere
-GEMS1	Voulez-vous débloquer l'emplacement ?
-GEMS2	Voulez-vous acheter cet article en échange de Gaya ?
-GEMS3	Voulez-vous acheter cet article en échange de Gaya ?
-GEMS4	Voulez-vous rénitialiser la liste des objets en vente ?
-YENILE_BUTTON_TITLE	Trier l'Inventaire
-YENILE_BUTTON	Nom (Clic)
-YENILE_BUTTON2	Niveau (Ctrl + Clic)
-YENILE_BUTTON3	Personnalisé (Alt + Clic)
+MAP_181	Battle for the Castle
+MAP_182	Battle for the Castle
+MAP_183	Battle for the Castle
+MAP_251	Fortress of the Red Dragon
+MAP_252	Nemere Observatory
+GEMS1	Do you want to unblock the slot?
+GEMS2	Do you want to buy this item in exchange for Gaya?
+GEMS3	Do you want to buy this item in exchange for Gaya?
+GEMS4	Do you want to reset the list of items for sale?
+YENILE_BUTTON_TITLE	Sort Inventory
+YENILE_BUTTON	Name (Clic)
+YENILE_BUTTON2	Level (Ctrl + Clic)
+YENILE_BUTTON3	Custom (Alt + Clic)
 GAYA_SYSTEM_UNIT	Gaya
-GAME_PICK_CHEQUE	Vous avez obtenu %d Won(s).
-DROP_CHEQUE_FAILURE_1000_OVER	Vous pouvez lâcher 999 Wons maximum.
-DO_YOU_DROP_CHEQUE	Voulez-vous lâcher %d Won(s) ?
-DO_YOU_DROP_CHEQUE	Voulez-vous lâcher %d Won(s) ?
+GAME_PICK_CHEQUE	You obtained %d Won(s).
+DROP_CHEQUE_FAILURE_1000_OVER	You can drop a maximum of 999 Wons.
+DO_YOU_DROP_CHEQUE	Do you want drop %d Won(s) ?
 CHEQUE_SYSTEM_UNIT_WON	Won
 CHEQUE_ONLY_VALUE	You can only enter a value.
-CHEQUE_NO_ADD_SALE_PRICE	Vous devez saisir au moins un prix de vente. Si vous ne voulez pas mettre de prix, entrez"0".
+CHEQUE_NO_ADD_SALE_PRICE	You must enter at least one sales price. If you don't want to put a price, enter "0".
 CHEQUE_SYSTEM_SELL_PRICE	[Sales price]
 CHEQUE_SYSTEM_YANG	%s Yang
 CHEQUE_SYSTEM_WON	%s Won
@@ -176,7 +175,7 @@ DO_YOU_BUY_ITEM1_CHEQUE	Voulez-vous acheter %s pour %s Won(s) et %s Yang(s) ?
 DO_YOU_BUY_ITEM2_CHEQUE	Voulez-vous acheter %s (%s lots) pour %s Won(s) et %s Yang(s) ?
 DO_YOU_BUY_ITEM1_CHEQUE1	Voulez-vous acheter %s pour %s et 0 Yang ?
 DO_YOU_BUY_ITEM2_CHEQUE1	Voulez-vous acheter %s (%s lots) pour %s et 0 Yang ?
-MESSENGER_ADD_FRIEND_ANSWER_TIMEOVER	La demande d'ami a été annulée.
+MESSENGER_ADD_FRIEND_ANSWER_TIMEOVER	La demande d'ami a �t� annul�e.
 PARTY_ANSWER_TIMEOVER	The invitation was rejected.
 INTRO_SELECT_LEVEL	Niv. %d
 APPLY_ANTI_RESIST_MAGIC	Bonus anti magie: %d%% SA
@@ -190,7 +189,7 @@ ACCE_REFINE_COST	Prix d'absorption: %d
 ACCE_ABSORB_CHANCE	Taux d'absorption: %d%%
 ACCE_ABSORB_CHANCE2	Taux d'absorption: %d%% ~ %d%%
 ACCE_DO_YOU_CLEAN	Voulez-vous supprimer tous les bonus disponibles ?
-ACCE_FAILURE_CLEAN	Aucun bonus ne peut être retiré.
+ACCE_FAILURE_CLEAN	Aucun bonus ne peut �tre retir�.
 ACCE_DEL_SERVEITEM	Sash 2 will be destroyed should the combination fail.
 ACCE_DEL_ABSORDITEM	Absorb item, destroying it in the process?
 EXINVEN_USE_ITEM_FAIL_FALL_SHORT	You still require %d Inventory Expansion(s).
@@ -400,7 +399,7 @@ HORSE_HEALTH3	Full
 HORSE_LEVEL1	Normal Horse
 HORSE_LEVEL2	Battle Horse
 HORSE_LEVEL3	Military Horse
-EMPIRE_SELECT	Sélectionner
+EMPIRE_SELECT	To select
 EMPIRE_SELECT_MODE	Select kingdom
 HOUR	hr
 HOW_MANY_ITEM_DO_YOU_DROP1	Do you want to drop %s?
@@ -640,7 +639,7 @@ SHOP_SELL_INFO	Choose the item you want to sell in your inventory window.
 SHOP_SOLDOUT	Sold Out
 SHOT_ERROR_UNKNOWN	Unknown Error during Long Distance Attack: %s
 SKILL_BOHO	Reflect
-SKILL_BUDONG	n'est plus utilisé.
+SKILL_BUDONG	n'est plus utilis�.
 SKILL_CANNOT_LEVEL_UP_ANYMORE_BY_BOOK	You need EXP to learn this Skill.
 SKILL_CANNOT_LEVEL_UP_ANYMORE_BY_STAT	You need a Book to learn this Skill.
 SKILL_CHEONGEUN	Strong Body
@@ -653,7 +652,7 @@ SKILL_FIRE	Permanent Fire
 SKILL_FISHMIND	Fishing Marble is active
 SKILL_GAMJI	Capture
 SKILL_GEOMGYEONG	Aura of the Sword
-SKILL_GEONGON	Plus utilisé.
+SKILL_GEONGON	Plus utilis�.
 SKILL_GICHEON	Dragon's Aid
 SKILL_GIGONG	Chi Rotation
 SKILL_GONGPO	Fear
@@ -673,28 +672,28 @@ SKILL_GWIGEOM	Enchanted Blade
 SKILL_GYEONGGONG	Feather Walking
 SKILL_HEUKSIN	Dark Protection
 SKILL_HOSIN	Blessing
-SKILL_HWAYEOM	SKILL_HWAYEON Plus utilisé.
-SKILL_HYEOLMA	SKILL_HYEOLMA plus utilisé.
+SKILL_HWAYEOM	SKILL_HWAYEON Plus utilis�.
+SKILL_HYEOLMA	SKILL_HYEOLMA plus utilis�.
 SKILL_INC_ATKSPD	Attack speed raised
 SKILL_INC_MOVSPD	Movement speed raised
-SKILL_INMA	SKILL_INMA Plus utilisé.
+SKILL_INMA	SKILL_INMA Plus utilis�.
 SKILL_JEOJU	Curse
 SKILL_JEONGEOP	Healing
 SKILL_JEONGWI	Berserk
 SKILL_JEONSINBANGEO	Full Defence
 SKILL_JEONSINGONGGYEOK	Full Attack
-SKILL_JEUNGCHE	SKILL_JEUNGCHE Plus utilisé.
-SKILL_JEUNGHON	SKILL_JEUNGHON Plus utilisé.
+SKILL_JEUNGCHE	SKILL_JEUNGCHE Plus utilis�.
+SKILL_JEUNGHON	SKILL_JEUNGHON Plus utilis�.
 SKILL_JEUNGRYEOK	Attack +
 SKILL_JEUNGSOK	Speed +
-SKILL_JIGAM	SKILL_JIGAM Plus utilisé.
-SKILL_JIPJUNG	SKILL_JIPJUNG Plus utilisé.
+SKILL_JIGAM	SKILL_JIGAM Plus utilis�.
+SKILL_JIPJUNG	SKILL_JIPJUNG Plus utilis�.
 SKILL_JUMAGAP	Enchanted Armour
-SKILL_JUMAGEOM	SKILL_JUMAGEOM Plus utilisé.
-SKILL_KWAEGEOM	SKILL_KWAEGEOM Plus utilisé.
+SKILL_JUMAGEOM	SKILL_JUMAGEOM Plus utilis�.
+SKILL_KWAEGEOM	SKILL_KWAEGEOM Plus utilis�.
 SKILL_KWAESOK	Speed
-SKILL_LEGBOUND	SKILL_LEGBOUND Plus utilisé.
-SKILL_MUSA	SKILL_MUSA Plus utilisé.
+SKILL_LEGBOUND	SKILL_LEGBOUND Plus utilis�.
+SKILL_MUSA	SKILL_MUSA Plus utilis�.
 SKILL_MUYEONG	Ghost of the Flame
 SKILL_NEED_EMPTY_BOTTLE	I do not have an Empty Bottle.
 SKILL_NEED_POISON_BOTTLE	I do not have a Poison Bottle
@@ -702,7 +701,7 @@ SKILL_ONLY_FOR_GUILD_WAR	You can use this Skill during a Guild War only.
 SKILL_PABEOP	Neutralize Spell
 SKILL_POWERFUL_STRIKE	Dazing Attack
 SKILL_SEOMGWANG	Lightning Bomb
-SKILL_SINCHAK	SKILL_SINCHAK Plus utilisé.
+SKILL_SINCHAK	SKILL_SINCHAK Plus utilis�.
 SKILL_SLEEP	Sleep
 SKILL_SLOW	Slow
 SKILL_STUN	Daze
@@ -713,8 +712,8 @@ SKILL_TOOLTIP_LEVEL	Level
 SKILL_TOXICDIE	Poisoning
 SKILL_TOXICPOWER	Poison attack value increased
 SKILL_TUSOK	Ghost Hit
-SKILL_WONSIN	SKILL_WONSIN Plus utilisé.
-SKILL_YONGSIN	SKILL_YONGSIN Plus utilisé.
+SKILL_WONSIN	SKILL_WONSIN Plus utilis�.
+SKILL_YONGSIN	SKILL_YONGSIN Plus utilis�.
 STAT_MINUS_CON	Vitality Adjustment (Remaining chance: %d)
 STAT_MINUS_DEX	Dexterity Adjustment (Remaining Chance: %d)
 STAT_MINUS_INT	Intelligence Adjustment (Rest of Chance: %d)
@@ -724,13 +723,13 @@ STAT_TOOLTIP_DEX	Increases attack and evasion
 STAT_TOOLTIP_INT	Increases SP, magic attack and defence
 STAT_TOOLTIP_STR	Increases attack value and damage
 SYMBOLLIST_TITLE	Register Guild flag
-SYSTEM_OPTION_CPU_TILING_1	CPU Tiling Mode peut améliorer la vitesse sur une configuration modeste.
-SYSTEM_OPTION_CPU_TILING_2	Si vous rencontrez des problèmes avec les éléments graphiques choisissez ,Systemoption ou ,CONFIG.exe
+SYSTEM_OPTION_CPU_TILING_1	CPU Tiling Mode peut am�liorer la vitesse sur une configuration modeste.
+SYSTEM_OPTION_CPU_TILING_2	Si vous rencontrez des probl�mes avec les �l�ments graphiques choisissez ,Systemoption ou ,CONFIG.exe
 SYSTEM_OPTION_CPU_TILING_3	et changez le CPU Tiling Mode.
 SYSTEM_OPTION_GPU_TILING_1	GPU Tiling Mode peut ralentir une configuration modeste.
-SYSTEM_OPTION_GPU_TILING_2	Si vous rencontrez des problèmes avec les éléments graphiques allez dans les "Options système" ou lancez "CONFIG.exe"
+SYSTEM_OPTION_GPU_TILING_2	Si vous rencontrez des probl�mes avec les �l�ments graphiques allez dans les "Options syst�me" ou lancez "CONFIG.exe"
 SYSTEM_OPTION_GPU_TILING_3	et change le CPU Tiling Mode
-SYSTEM_OPTION_TILING_EXIT	Il faut redémarrer le programme pour pouvoir changer le Tiling Mode.
+SYSTEM_OPTION_TILING_EXIT	Il faut red�marrer le programme pour pouvoir changer le Tiling Mode.
 TARGET_BUTTON_ACCEPT_FIGHT	Agree
 TARGET_BUTTON_AVENGE	Revenge
 TARGET_BUTTON_BUILDING_DESTROY	Destroy
@@ -994,8 +993,8 @@ TOOLTIP_UNIQUE	Unique
 TOOLTIP_WARRIOR	Warrior
 TOOLTIP_WEAPON	Weapon
 TOOLTIP_WRISTLET	Wristlet
-CHSWITCH_ALREADY_USE	Vous êtes déjà sur le Channel selectionné !
-CHSWITCH_NOT_USE_MAP	Vous ne pouvez pas l'utiliser sur cette Map !
+CHSWITCH_ALREADY_USE	Vous �tes d�j� sur le Channel selectionn� !
+CHSWITCH_NOT_USE_MAP	You cannot use it on this Map!
 UI_ACCEPT	Accept
 UI_CANCEL	Cancel
 UI_CLOSE	Close
@@ -1017,22 +1016,22 @@ UPLOAD_MARK_CHECK_NEED_RECONNECT	The upload has to be started again.
 UPLOAD_MARK_UPLOAD_NEED_RECONNECT	The upload has to be started again.
 USE_ITEM_FAILURE_PRIVATE_SHOP	You cannot use items while you have a private shop open.
 USE_SKILL_ERROR_UNKNOWN	Unknown Skill Error: %s
-LOGIN_FAILURE_WRONG_SOCIALID	Mauvais code de sécurité.
-LOGIN_FAILURE_SHUTDOWN_TIME	Allez au lit...
-BLOCK_EXP_QUESTION	Vous souhaitez bloquer votre expérience?
-DEBLOCK_EXP_QUESTION	Vous souhaitez débloquer votre expérience?
+LOGIN_FAILURE_WRONG_SOCIALID	Wrong security code.
+LOGIN_FAILURE_SHUTDOWN_TIME	Go to bed...
+BLOCK_EXP_QUESTION	Do you want to block your experience?
+DEBLOCK_EXP_QUESTION	Do you want to unlock your experience?
 CHARACTER_CREATE_MODE	Create character
 CHARACTER_SELECT_MODE	Select character
-CHARACTER_CREATE_MALE	Homme
-CHARACTER_CREATE_FEMALE	Femme
-CHARACTER_CREATE_APPEARANCE1	Tenue 1
-CHARACTER_CREATE_APPEARANCE2	Tenue 2
+CHARACTER_CREATE_MALE	Male
+CHARACTER_CREATE_FEMALE	Female
+CHARACTER_CREATE_APPEARANCE1	Outfit 1
+CHARACTER_CREATE_APPEARANCE2	Outfit 2
 TOOLTIP_SEALED	Soulbound
 TOOLTIP_UNSEAL_LEFT_TIME	Removing soulbind in: %d hrs. %d mins.
-SOULBIND_ITEM	Voulez-vous lier cet item à l'âme ?
-SOULUNBIND_ITEM	Voulez-vous séparer cet item de l'âme ?
-SOULBIND_ALERT1	L'item n'est pas lié à l'âme.
-SOULBIND_ALERT2	L'item est déjà lié à l'âme.
-SOULBIND_ALERT3	La séparation d'âme est déjà en cours.
-LOGIN_ACCOUNT_SAVED	Le compte a été sauvegardé avec succès!
-SELECT_PG_SAVED	Le personnage a été sauvegardé avec succès!
+SOULBIND_ITEM	Do you want to tie this item to the soul?
+SOULUNBIND_ITEM	Do you want to separate this item from the soul?
+SOULBIND_ALERT1	The item is not related to the soul.
+SOULBIND_ALERT2	The item is already linked to the soul.
+SOULBIND_ALERT3	Soul separation is already underway.
+LOGIN_ACCOUNT_SAVED	Le compte a �t� sauvegard� avec succ�s!
+SELECT_PG_SAVED	Le personnage a �t� sauvegard� avec succ�s!

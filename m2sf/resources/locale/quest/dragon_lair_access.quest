@@ -109,6 +109,41 @@ quest dragon_lair_access begin
 			end
 		end
 
+		
+		-- when SpawnDragon.server_timer begin
+			-- DragonVid = mob.spawn_group(settings.dragon_vnum, settings.spawn.x, settings.spawn.y, 1, 1, 1)
+			-- DragonVid = mob.spawn(2493, 181, 173, 1, 1, 1)
+		-- end
+
+		when RespawnStone.server_timer begin
+			-- notice_all("RespawnStone")
+			-- mob.spawn(8031, 170, 160, 0, 0)
+			-- mob.spawn(8032, 190, 180, 0, 0)
+			-- mob.spawn(8033, 170, 160, 0, 0)
+			-- mob.spawn(8034, 190, 180, 0, 0)
+
+			regen_in_map(75, "locale/map/map_75/stone_dragon.txt")
+
+			game.set_event_flag("dragon_lair_stone_1", 1)
+			game.set_event_flag("dragon_lair_stone_2", 1)
+			game.set_event_flag("dragon_lair_stone_3", 1)
+			game.set_event_flag("dragon_lair_stone_4", 1)
+			game.set_event_flag("dragon_lair_respawn_stone", 0)
+			
+			setDFR_from_table(DragonLair_racelimit, DragonVid)
+		end
+
+		when CheckStone.server_timer begin
+			-- notice_all("CheckStone")
+			if game.get_event_flag("dragon_lair_stone_1") == 0 and game.get_event_flag("dragon_lair_stone_2") == 0 and game.get_event_flag("dragon_lair_stone_3") == 0 and game.get_event_flag("dragon_lair_stone_4") == 0 and game.get_event_flag("dragon_lair_respawn_stone") == 0 then
+				-- notice_all("CheckStone::RespawnStone")
+				game.set_event_flag("dragon_lair_respawn_stone", 1)
+				server_timer('RespawnStone', 150, get_server_timer_arg())
+				
+				d.reset_damage_from_race(DragonVid)
+			end
+		end
+
 		when blue_dragon_timer.server_timer begin
 			game.set_event_flag("dragon_lair_timer_used", 0)
 			if game.get_event_flag("dragon_lair_alive") == 1 then
@@ -251,10 +286,20 @@ quest dragon_lair_access begin
 			notice_multiline(string.format(gameforge.dragon_lair_access._090_notice, pc.name), notice_all)
 			
 			-- spawn all mobs needed
-			regen_in_map(75, "locale/france/map/metin2_map_skipia_dungeon_boss/regen.txt")
-			mob.spawn_group(settings.dragon_vnum, settings.spawn.x, settings.spawn.y, 1, 1, 1) -- spawn the dragon
+			regen_in_map(75, "locale/map/map_75/regen.txt")
+
+
+
 			
+			-- server_timer('SpawnDragon', 1, pc.get_map_index())
+			DragonVid = mob.spawn(2493, 181, 173, 1, 1, 1)
+			setDFR_from_table(DragonLair_racelimit, DragonVid)
 			
+			server_timer('RespawnStone', 2, get_server_timer_arg())
+			server_loop_timer('CheckStone', 3, get_server_timer_arg())
+
+
+
 			game.set_event_flag("dragon_lair_alive", 1) -- dragon is alive
 			char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' SPAWN DRAGON')
 			
@@ -317,7 +362,31 @@ quest dragon_lair_access begin
 				set_state(start)
 			end
 		end
+		
+		when 8031.kill with pc.get_map_index() == 75 begin
+			-- notice_all("8031")
+			game.set_event_flag("dragon_lair_stone_1", 0)
+		end
+		
+		when 8032.kill with pc.get_map_index() == 75 begin
+			-- notice_all("8032")
+			game.set_event_flag("dragon_lair_stone_2", 0)
+		end
+		
+		when 8033.kill with pc.get_map_index() == 75 begin
+			-- notice_all("8033")
+			game.set_event_flag("dragon_lair_stone_3", 0)
+		end
+		
+		when 8034.kill with pc.get_map_index() == 75 begin
+			-- notice_all("8034")
+			game.set_event_flag("dragon_lair_stone_4", 0)
+		end
+		
 		when 2493.kill with pc.get_map_index() == 75 begin
+			clear_server_timer('RespawnStone', get_server_timer_arg())
+			clear_server_timer('CheckStone', get_server_timer_arg())
+			
 			char_log(pc.get_player_id(), 'LAIR', pc.get_channel_id() ..' DRAGON KILLED')
 			game.set_event_flag("dragon_lair_alive", 0) -- dragon is dead
 			game.drop_item_with_ownership(71123, 1) -- dropping dragon scale

@@ -4586,7 +4586,8 @@ VNUM	LOCALE_NAME
 40006	Reçu de livr. du sauvage
 40007	Lettre du chef sauvage
 40008	Anneau de Téléportation
-40009	Gestion de l'Exp.
+40009	Gestion de l'Expérience
+40010	Orbe du Temps
 40101	Lame crantée
 40102	Dague crantée
 40103	Arc cranté

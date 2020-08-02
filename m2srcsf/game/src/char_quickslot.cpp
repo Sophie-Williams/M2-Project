@@ -6,7 +6,7 @@
 #include "packet.h"
 #include "item.h"
 
-void CHARACTER::SyncQuickslot(uint8_t bType, uint8_t bOldPos, uint8_t bNewPos) 
+void CHARACTER::SyncQuickslot(uint8_t bType, uint16_t bOldPos, uint16_t bNewPos)
 {
 	if (bOldPos == bNewPos)
 		return;
@@ -15,7 +15,7 @@ void CHARACTER::SyncQuickslot(uint8_t bType, uint8_t bOldPos, uint8_t bNewPos)
 	{
 		if (m_quickslot[i].type == bType && m_quickslot[i].pos == bOldPos)
 		{
-			if (bNewPos == 255)
+			if (bNewPos == 999)
 				DelQuickslot(i);
 			else
 			{
@@ -30,7 +30,7 @@ void CHARACTER::SyncQuickslot(uint8_t bType, uint8_t bOldPos, uint8_t bNewPos)
 	}
 }
 
-bool CHARACTER::GetQuickslot(uint8_t pos, TQuickslot ** ppSlot)
+bool CHARACTER::GetQuickslot(uint16_t pos, TQuickslot ** ppSlot)
 {
 	if (pos >= QUICKSLOT_MAX_NUM)
 		return false;
@@ -39,7 +39,7 @@ bool CHARACTER::GetQuickslot(uint8_t pos, TQuickslot ** ppSlot)
 	return true;
 }
 
-bool CHARACTER::SetQuickslot(uint8_t pos, TQuickslot & rSlot)
+bool CHARACTER::SetQuickslot(uint16_t pos, TQuickslot & rSlot)
 {
 	struct packet_quickslot_add pack_quickslot_add;
 
@@ -94,7 +94,7 @@ bool CHARACTER::SetQuickslot(uint8_t pos, TQuickslot & rSlot)
 	return true;
 }
 
-bool CHARACTER::DelQuickslot(uint8_t pos)
+bool CHARACTER::DelQuickslot(uint16_t pos)
 {
 	struct packet_quickslot_del pack_quickslot_del;
 
@@ -110,7 +110,7 @@ bool CHARACTER::DelQuickslot(uint8_t pos)
 	return true;
 }
 
-bool CHARACTER::SwapQuickslot(uint8_t a, uint8_t b)
+bool CHARACTER::SwapQuickslot(uint16_t a, uint16_t b)
 {
 	struct packet_quickslot_swap pack_quickslot_swap;
 	TQuickslot quickslot;
@@ -132,7 +132,7 @@ bool CHARACTER::SwapQuickslot(uint8_t a, uint8_t b)
 	return true;
 }
 
-void CHARACTER::ChainQuickslotItem(LPITEM pItem, uint8_t bType, uint8_t bOldPos)
+void CHARACTER::ChainQuickslotItem(LPITEM pItem, uint8_t bType, uint16_t bOldPos)
 {
 	if (pItem->IsDragonSoul())
 		return;

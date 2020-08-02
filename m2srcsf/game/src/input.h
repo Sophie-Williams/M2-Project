@@ -349,7 +349,8 @@ class CInputP2P : public CInputProcessor
 		void		Login(LPDESC d, const char * c_pData);
 		void		Logout(LPDESC d, const char * c_pData);
 		int32_t			Relay(LPDESC d, const char * c_pData, uint32_t uiBytes);
-		int32_t			Notice(LPDESC d, const char * c_pData, uint32_t uiBytes);
+		//int32_t			Notice(LPDESC d, const char * c_pData, uint32_t uiBytes);
+		int32_t			Notice(LPDESC d, const char* c_pData, uint32_t uiBytes, bool bBigFont = false);
 		int32_t			MonarchNotice(LPDESC d, const char * c_pData, uint32_t uiBytes);
 		int32_t			MonarchTransfer(LPDESC d, const char * c_pData);
 		int32_t			Guild(LPDESC d, const char* c_pData, uint32_t uiBytes);

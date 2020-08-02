@@ -45,6 +45,7 @@ ACMD(do_tp);
 ACMD(do_channel_switch);
 ACMD(do_goto);
 ACMD(do_item);
+ACMD(do_itemrange);
 ACMD(do_mob);
 ACMD(do_mob_ld);
 ACMD(do_mob_aggresive);
@@ -58,6 +59,11 @@ ACMD(do_notice);
 ACMD(do_notice_name);
 ACMD(do_map_notice);
 ACMD(do_big_notice);
+#ifdef __FULL_NOTICE_SYSTEM__
+ACMD(do_notice_test);
+ACMD(do_big_notice_test);
+ACMD(do_map_big_notice);
+#endif
 ACMD(do_who);
 ACMD(do_user);
 ACMD(do_disconnect);
@@ -74,6 +80,7 @@ ACMD(do_fishing);
 ACMD(do_refine_rod);
 
 ACMD(do_save);
+ACMD(do_suicide);
 
 ACMD(do_max_pick);
 ACMD(do_refine_pick);
@@ -116,11 +123,12 @@ ACMD(do_setskillother);
 ACMD(do_level);
 ACMD(do_polymorph);
 ACMD(do_polymorph_item);
+ACMD(do_give);
 
 ACMD(do_close_shop);
 ACMD(do_set_walk_mode);
 ACMD(do_set_run_mode);
-ACMD(do_set_skill_group);
+//ACMD(do_set_skill_group);
 ACMD(do_set_skill_point);
 ACMD(do_cooltime);
 ACMD(do_detaillog);
@@ -295,6 +303,11 @@ struct command_info cmd_info[] =
 	{ "nnotice",	do_notice_name,		0,		POS_DEAD,	GM_HIGH_WIZARD	},
 	{ "notice_map",	do_map_notice,	0,			POS_DEAD,	GM_LOW_WIZARD	},
 	{ "big_notice",	do_big_notice,	0,			POS_DEAD,	GM_HIGH_WIZARD	},
+#ifdef __FULL_NOTICE_SYSTEM__
+	{ "big_notice_map",	do_map_big_notice,	0,	POS_DEAD,	GM_HIGH_WIZARD	},
+	{ "notice_test",	do_notice_test,		0,	POS_DEAD,	GM_HIGH_WIZARD	},
+	{ "big_notice_test",do_big_notice_test,	0,	POS_DEAD,	GM_HIGH_WIZARD	},
+#endif
 	{ "nowar",		do_nowar,		0,			POS_DEAD,	GM_PLAYER	},
 	{ "purge",		do_purge,		0,			POS_DEAD,	GM_WIZARD	},
 	{ "weaken",		do_weaken,		0,			POS_DEAD,	GM_GOD		},
@@ -306,6 +319,8 @@ struct command_info cmd_info[] =
 	{ "geteventflag",	do_get_event_flag,	0,			POS_DEAD,	GM_LOW_WIZARD	},
 
 	{ "item",		do_item,		0,			POS_DEAD,	GM_GOD		},
+	{ "ir",		do_itemrange,		0,			POS_DEAD,	GM_GOD		},
+	{ "itemrange",		do_itemrange,		0,			POS_DEAD,	GM_GOD		},
 
 	{ "mob",		do_mob,			0,			POS_DEAD,	GM_HIGH_WIZARD	},
 	{ "mob_ld",		do_mob_ld,			0,			POS_DEAD,	GM_HIGH_WIZARD	},
@@ -320,6 +335,7 @@ struct command_info cmd_info[] =
 	{ "save",		do_save,			0,			POS_DEAD,	GM_IMPLEMENTOR	},
 
 	{ "set",		do_set,			0,			POS_DEAD,	GM_IMPLEMENTOR	},
+	{ "give",		do_give,			0,			POS_DEAD,	GM_IMPLEMENTOR	},
 	{ "reset",		do_reset,		0,			POS_DEAD,	GM_HIGH_WIZARD	},
 	{ "greset",		do_greset,		0,			POS_DEAD,	GM_HIGH_WIZARD	},
 	{ "advance",	do_advance,		0,			POS_DEAD,	GM_GOD		},
@@ -382,7 +398,7 @@ struct command_info cmd_info[] =
 
 	{ "set_walk_mode",	do_set_walk_mode,	0,			POS_DEAD,	GM_PLAYER	},
 	{ "set_run_mode",	do_set_run_mode,	0,			POS_DEAD,	GM_PLAYER	},
-	{ "setjob",do_set_skill_group,	0,			POS_DEAD,	GM_IMPLEMENTOR	},
+	//{ "setjob",do_set_skill_group,	0,			POS_DEAD,	GM_IMPLEMENTOR	},
 	{ "setskill",	do_setskill,		0,			POS_DEAD,	GM_LOW_WIZARD	},
 	{ "setskillother",	do_setskillother,	0,			POS_DEAD,	GM_HIGH_WIZARD	},
 	{ "setskillpoint",  do_set_skill_point,	0,			POS_DEAD,	GM_IMPLEMENTOR	},
@@ -542,6 +558,8 @@ struct command_info cmd_info[] =
 	{ "click_mall",			do_click_mall,			0,	POS_DEAD,	GM_PLAYER		},
 
 	{ "ride",				do_ride,				0,	POS_DEAD,	GM_PLAYER	},
+
+	{ "suicide",				do_suicide,				0,	POS_DEAD,	GM_PLAYER },
 
 	{ "item_id_list",	do_get_item_id_list,	0,	POS_DEAD,	GM_LOW_WIZARD	},
 	{ "set_socket",		do_set_socket,			0,	POS_DEAD,	GM_LOW_WIZARD	},

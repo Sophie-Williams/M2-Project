@@ -354,7 +354,7 @@ class PetSystemMain(ui.ScriptWindow):
 
 	def OpenPetInfo(self):
 		questionDialog = uiCommon.QuestionDialogHizliCikis()
-		questionDialog.SetText("Petinizin durumunu öðrenmek istiyor musun?")
+		questionDialog.SetText(uiScriptLocale.PET_SYSTEM_INFO)
 		questionDialog.SetAcceptEvent(ui.__mem_func__(self.__Evet))
 		questionDialog.SetCancelEvent(ui.__mem_func__(self.__Hayir))
 		questionDialog.Open()
@@ -461,7 +461,7 @@ class PetSystemMain(ui.ScriptWindow):
 	##Pet YaÅŸ Bugu Fixi##
 	def SetDurationYas(self, dur_yas):
 		merhaba_canim = int(dur_yas)/60/24
-		self.SetAges(str(merhaba_canim)+" Gun")
+		self.SetAges(str(merhaba_canim) + uiScriptLocale.PET_GUN)
 	##Pet YaÅŸ Bugu Fixi##
 
 	def SetHp(self, hp):

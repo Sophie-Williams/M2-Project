@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Security.Principal;
 
 namespace config
 {
@@ -29,12 +30,26 @@ namespace config
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ConfigurationFileInit();
+            bool isElevated;
+            using (WindowsIdentity identity = WindowsIdentity.GetCurrent())
+            {
+                WindowsPrincipal principal = new WindowsPrincipal(identity);
+                isElevated = principal.IsInRole(WindowsBuiltInRole.Administrator);
+            }
 
-            InitComponentList();
-
-            InitComponentValue();
-
+            if (!isElevated)
+            {
+                const string message = "Vous devez exécuter ce programme en tant qu'administrateur.";
+                const string caption = "Metin2 Project Config Files #ASIKOO";
+                var result = MessageBox.Show(message, caption, MessageBoxButtons.OK);
+                Application.Exit();
+            }
+            else
+            {
+                ConfigurationFileInit();
+                InitComponentList();
+                InitComponentValue();
+            }
         }
 
         private void InitComponentValue()

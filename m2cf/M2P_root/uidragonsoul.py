@@ -242,6 +242,31 @@ class DragonSoulWindow(ui.ScriptWindow):
 					
 		self.wndEquip.RefreshSlot()
 
+
+
+
+
+
+
+	def ActivateEquipSlotWindow(self, deck):
+		for i in xrange(6):
+			if deck == 2:
+				plusCount = 6
+			else:
+				plusCount = 0
+			self.wndEquip.ActivateSlot(player.DRAGON_SOUL_EQUIPMENT_SLOT_START + i + plusCount)
+
+	def DeactivateEquipSlotWindow(self):
+		for i in xrange(12):
+			self.wndEquip.DeactivateSlot(player.DRAGON_SOUL_EQUIPMENT_SLOT_START + i)
+
+
+
+
+
+
+
+
 	def RefreshStatus(self):
 		self.RefreshItemSlot()
 		
@@ -661,10 +686,12 @@ class DragonSoulWindow(ui.ScriptWindow):
 		self.deckTab[deck].Down()
 		self.deckTab[(deck+1)%2].SetUp()
 		self.RefreshEquipSlotWindow()
+		self.ActivateEquipSlotWindow(deck)
 
 	def DeactivateDragonSoul(self):
 		self.isActivated = False
 		self.activateButton.SetUp()
+		self.DeactivateEquipSlotWindow()
 
 	def ActivateButtonClick(self):
 		self.isActivated = self.isActivated ^ True

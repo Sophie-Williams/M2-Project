@@ -1,0 +1,140 @@
+Diamant 50621 sur Ceinture > ROUGE au lieu de JAUNE
+25040	Parchemin de Bénédiction ===> ANOMALIE (UITOOLTIP SURVOLAGE DE L'ITEM ROUGE ?)
+25041	Pierre magique ===> ANOMALIE (UITOOLTIP SURVOLAGE DE L'ITEM ROUGE ?)
+39001	Pierre magique ===> ANOMALIE (VISUEL ROUGE QUAND UP ?)
+90000	Certificat d'inversion ===> https://fr-wiki.metin2.gameforge.com/index.php/Certificat_d%27inversion
+39046	Certificat d'inversion+ ===> ANOMALIE (NE FONCTIONNE PAS ?)
+25042	Pierre rituelle ===> ANOMALIE (NE FONCTIONNE PAS ?)
+
+
+
+27110	Potion verte (p) ===> ANOMALIE (DOUBLON 1 ?)
+27100	Potion verte (p) ===> ANOMALIE (DOUBLON 1 ?) OK
+27123	Potion verte (p) ===> ANOMALIE (DOUBLON 2 ?)
+27053	Potion verte (p) ===> ANOMALIE (DOUBLON 2 ?) OK
+
+
+27122	Potion rouge (p) ===> ANOMALIE (DOUBLON 3 ?)
+27051	Potion rouge (p) ===> ANOMALIE (DOUBLON 3 ?) OK
+
+27101	Potion Verte (m) ===> ANOMALIE (DOUBLON 4 ?) OK
+27111	Potion Verte(M) ===> ANOMALIE (DOUBLON 4 ?)
+
+27102	Potion Verte (g) ===> ANOMALIE (DOUBLON 6 ?) OK
+27112	Potion Verte (g) ===> ANOMALIE (DOUBLON 6 ?)
+
+
+
+27103	Potion violette (p) ===> ANOMALIE (DOUBLON 5 ?) OK
+27113	Potion Violette (p) ===> ANOMALIE (DOUBLON 5 ?)
+
+27104	Potion Violette (m) ===> ANOMALIE (DOUBLON 7 ?) OK
+27114	Potion Violette (m) ===> ANOMALIE (DOUBLON 7 ?)
+
+27105	Potion Violette (g) ===> ANOMALIE (DOUBLON 8 ?) +40
+27115	Potion Violette (g) ===> ANOMALIE (DOUBLON 8 ?) +30
+
+39010	Potion d'attaque +10 ===> ANOMALIE (DOUBLON ?) en %
+39026	Potion de vitesse ===> ANOMALIE (DOUBLON ?) +60
+71014	Potion d'attaque +10 ===> ANOMALIE (NE FONCTIONNE PAS ?)
+71034	Potion d'attaque +15 ===> ANOMALIE (NE FONCTIONNE PAS ?)
+
+
+55029	Familier Reverti KO https://fr-wiki.metin2.gameforge.com/index.php/Familier_Reverti
+55030	Familier Revertus >>> renommage ? alors que c'est censé être : https://fr-wiki.metin2.gameforge.com/index.php/Parchemin_des_noms_de_familiers >>> https://fr-wiki.metin2.gameforge.com/index.php/Familier_Revertus
+
+71047	Color. Pierre Fantôme ===> ANOMALIE (NE FONCTIONNE PAS ?)
+71056	Coloration du Ciel ===> ANOMALIE (NE FONCTIONNE PAS ?)
+
+
+
+
+
+
+
+
+
+
+/// A REVOIR INTEGRALEMENT ///
+/// A REVOIR INTEGRALEMENT ///
+/// A REVOIR INTEGRALEMENT ///
+
+Système de veine ? > Petit arbuste qui spawn ou arbuste permnanent, on clique dessus donne entre 1 et 8 fleurs
+Cliquable toutes les 3mn ?
+
+Actuellement :
+
+50801	Sirop de Fleur de pêcher	+15 Vitesse de déplacement (3mn) (lv16)
+50802	Sirop de Campanule			+5 force (3mn) (lv20)
+50803	Sirop de Fleur Kaki			+50 PM (lv24)
+50804	Sirop de Racine de Gango	+50 PV (lv28)
+
+50813	Eau de Sim					+10 coup perçant (3mn) (lv32)
+50814	Eau de Dok					+10 coup critique (3mn) (lv36)
+50815	Eau de Bo					+100 PM (lv40)
+50816	Eau de Yuong				+100 PV (lv44)
+50817	Eau de Zin (icone à corriger)					+50 str (3mn) (lv46)
+50818	Eau de SamBo (icone à corriger)				+70 def (3mn) (lv48)
+50819	Eau de Mong (icone à corriger)					+10% def magique (3mn) (lv50)
+50820	Eau de Hwal	(icone à corriger)				+3 vit d'att (3mn) (lv52)
+
+50821	Rosée rouge					+12% coup critique (3mn) (lv55)
+50822	Rosée orange				+12% coup perçant (3mn) (lv55)
+50823	Rosée jaune					+5% vit d'att (2mn) (lv55)
+50824	Rosée verte					+12% resit magie (3mn) (lv55)
+50825	Rosée bleue					+70 val d'att (1mn) (lv55)
+50826	Rosée blanche				+150 def (10mn) (lv55)
+
+Ajout / Activation (Sirops) :
+
+XXXXX	Eau de MiaW					A définir
+XXXXX	Eau de Nargoth				A définir
+XXXXX	Eau de Roulian				A définir
+XXXXX	Eau de Mylka				A définir
+XXXXX	Eau de Fany					A définir
+
+XXXXX	Rosée turquoise				A définir
+XXXXX	Rosée cyan					A définir
+XXXXX	Rosée rose					A définir
+XXXXX	Rosée violette				A définir
+XXXXX	Rosée marron				A définir
+XXXXX	Rosée Arc en Ciel			A définir
+
+50805	Sirop de Lilas				Soigne les effets negatif (relaxant)
+50806	Sirop de Champignon Tue		+10 int (3mn)
+50807	Sirop de Rose des monts		+10 dex (3mn)
+50808	Sirop de baie				+10 vit (3mn)
+50809	Sirop de Pissenlit			+5% coup critique (3mn)
+50810	Sirop de Chardon			+5% coup perçant (3mn)
+50811	Sirop de Datte				+5%DM (3mn) (lv30)
+50812	Sirop de Plante Sam-Zi		+5%DC (3mn) (lv30)
+
+/// A REVOIR INTEGRALEMENT ///
+/// A REVOIR INTEGRALEMENT ///
+/// A REVOIR INTEGRALEMENT ///
+
+IMG UITOOLTIP HS (EX: 73556.tga 404 Not Found)
+
+74522	Bandeau ===> ANOMALIE (IMG PREVIEW KO ?)
+74523	Cheveux longs (blond) ===> ANOMALIE (IMG PREVIEW KO ?)
+74524	Coupe à la mode (or) ===> ANOMALIE (IMG PREVIEW KO ?)
+74525	Bandeau (noir) ===> ANOMALIE (IMG PREVIEW KO ?)
+74526	Cheveux longs (rubis) ===> ANOMALIE (IMG PREVIEW KO ?)
+74527	Queue de cheval (rouge) ===> ANOMALIE (IMG PREVIEW KO ?)
+74528	Coupe aux épaules (aqua) ===> ANOMALIE (IMG PREVIEW KO ?)
+74529	Coupe courte (brun) ===> ANOMALIE (IMG PREVIEW KO ?)
+74530	Queue de cheval (rouge) ===> ANOMALIE (IMG PREVIEW KO ?)
+74531	Coupe aux épaules (noir) ===> ANOMALIE (IMG PREVIEW KO ?)
+74532	Coupe courte (gris) ===> ANOMALIE (IMG PREVIEW KO ?)
+74533	Coupe sportive (noir) ===> ANOMALIE (IMG PREVIEW KO ?)
+74534	Coupe respectable (bld) ===> ANOMALIE (IMG PREVIEW KO ?)
+74535	Longue natte (rose) ===> ANOMALIE (IMG PREVIEW KO ?)
+74536	Coupe sportive (violet) ===> ANOMALIE (IMG PREVIEW KO ?)
+74537	Coupe respectable (bld) ===> ANOMALIE (IMG PREVIEW KO ?)
+74538	Longue natte (royal) ===> ANOMALIE (IMG PREVIEW KO ?)
+74539	Coiffure noble (violet) ===> ANOMALIE (IMG PREVIEW KO ?)
+74540	Cheveux mi-longs (foncé) ===> ANOMALIE (IMG PREVIEW KO ?)
+74541	Coiffure tradi. (blanc) ===> ANOMALIE (IMG PREVIEW KO ?)
+74542	Coiffure noble (rouge) ===> ANOMALIE (IMG PREVIEW KO ?)
+74543	Cheveux mi-longs (blanc) ===> ANOMALIE (IMG PREVIEW KO ?)
+74544	Coiffure tradi. (noir) ===> ANOMALIE (IMG PREVIEW KO ?)

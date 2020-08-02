@@ -550,7 +550,7 @@ void ITEM_MANAGER::RemoveItem(LPITEM item, const char * c_pszReason)
 		}
 		else
 		{
-			o->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 255);
+			o->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 999);
 			item->RemoveFromCharacter();
 		}
 	}

@@ -3504,13 +3504,18 @@ EVENTFUNC(skill_gyeongGong_event)
 
 void CHARACTER::StartGyeongGongEvent()
 {
+	ChatPacket(CHAT_TYPE_INFO, "test 1");
+
 	if (m_pkGyeongGongEvent)
 		return;
+
+	ChatPacket(CHAT_TYPE_INFO, "test 2");
 
 	char_event_info* info = AllocEventInfo<char_event_info>();
 
 	info->ch = this;
 	m_pkGyeongGongEvent = event_create(skill_gyeongGong_event, info, PASSES_PER_SEC(1));
+	ChatPacket(CHAT_TYPE_INFO, "test 3");
 }
 
 void CHARACTER::StopGyeongGongEvent()

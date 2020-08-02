@@ -1,7 +1,7 @@
 quest M2TeleportRing begin
 	state start begin
-		when 40008.use begin
 
+		function teleport()
 	--------------------------------------------------
 	--------------------------------------------------
 	--------------------------------------------------
@@ -56,6 +56,12 @@ quest M2TeleportRing begin
 				M2SF.teleport.map_3,
 			}
 
+			map_2_list = {
+				M2SF.teleport.map_17,
+				M2SF.teleport.map_18,
+				M2SF.teleport.map_19,
+			}
+
 			map_3_list = {
 				M2SF.teleport.map_4,
 				M2SF.teleport.map_5,
@@ -75,6 +81,7 @@ quest M2TeleportRing begin
 			}
 
 			map_1 = map_1_list[e]
+			map_2 = map_2_list[e]
 			map_3 = map_3_list[e]
 			map_4 = map_4_list[e]
 			map_6 = map_6_list[e]
@@ -84,45 +91,43 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			s = select (
-				map_1,							-- 1
-				map_3,							-- 2
-				map_4,							-- 3
-				M2SF.teleport.map_13,			-- 4
-				map_6,							-- 5
-				M2SF.teleport.map_17,			-- 6
-				M2SF.teleport.map_18,			-- 7
-				M2SF.teleport.map_19,			-- 8
-				M2SF.teleport.map_20,			-- 9
-				M2SF.teleport.map_21,			-- 10
-				M2SF.teleport.map_22,			-- 11
-				M2SF.teleport.map_23,			-- 12
-				M2SF.teleport.map_24,			-- 13
-				M2SF.teleport.map_25,			-- 14
-				M2SF.teleport.map_26,			-- 15
-				M2SF.teleport.map_27,			-- 16
-				M2SF.teleport.map_31,			-- 17
-				M2SF.teleport.map_32,			-- 18
-				M2SF.teleport.map_33,			-- 19
-				M2SF.teleport.map_36,			-- 20
-				M2SF.teleport.map_37,			-- 21
-				M2SF.teleport.map_38,			-- 22
-				M2SF.teleport.map_39,			-- 23
-				M2SF.teleport.map_40,			-- 24
-				M2SF.teleport.map_41,			-- 25
-				M2SF.teleport.map_46,			-- 26
-				M2SF.teleport.map_47,			-- 27
-				M2SF.teleport.map_48,			-- 28
-				M2SF.teleport.map_49,			-- 29
-				M2SF.teleport.map_50,			-- 30
-				M2SF.teleport.map_51,			-- 31
-				M2SF.teleport.close				-- 32
+				map_1,							-- 1 (Map 1)
+				map_3,							-- 2 (Map 2)
+				map_4,							-- 3 (Map 3)
+				M2SF.teleport.map_13,			-- 4 (Singes)
+				map_6,							-- 5 (Map 4)
+				map_2,							-- 6 (Vallées)
+				M2SF.teleport.map_55,			-- 7 (Temple)
+				M2SF.teleport.map_21,			-- 8
+				M2SF.teleport.map_22,			-- 9
+				M2SF.teleport.map_23,			-- 10
+				M2SF.teleport.map_24,			-- 11
+				M2SF.teleport.map_25,			-- 12
+				M2SF.teleport.map_26,			-- 13
+				M2SF.teleport.map_27,			-- 14
+				M2SF.teleport.map_31,			-- 15
+				M2SF.teleport.map_32,			-- 16
+				M2SF.teleport.map_33,			-- 17
+				M2SF.teleport.map_36,			-- 18
+				M2SF.teleport.map_37,			-- 19
+				M2SF.teleport.map_38,			-- 20
+				M2SF.teleport.map_39,			-- 21
+				M2SF.teleport.map_40,			-- 22
+				M2SF.teleport.map_41,			-- 23
+				M2SF.teleport.map_46,			-- 24
+				M2SF.teleport.map_47,			-- 25
+				M2SF.teleport.map_48,			-- 26
+				M2SF.teleport.map_49,			-- 27
+				M2SF.teleport.map_50,			-- 28
+				M2SF.teleport.map_51,			-- 29
+				M2SF.teleport.close				-- 30
 			)
 
 	--------------------------------------------------
 	--------------------------------------------------
 	--------------------------------------------------
 
-			if s == 32 then
+			if s == 30 then
 				return
 			end
 
@@ -165,7 +170,7 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			-- Donjon des Arraignées
-			if s == 16 then
+			if s == 14 then
 				t = select (
 					M2SF.teleport.map_28,
 					M2SF.teleport.map_29,
@@ -192,7 +197,7 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			-- Grotte de l'Exil
-			if s == 19 then
+			if s == 17 then
 				t = select (
 					M2SF.teleport.map_34,
 					M2SF.teleport.map_35,
@@ -216,7 +221,7 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			-- Zone de Guerre
-			if s == 25 then
+			if s == 23 then
 				t = select (
 					M2SF.teleport.map_42,
 					M2SF.teleport.map_43,
@@ -246,7 +251,7 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			-- OX
-			if s == 27 then
+			if s == 25 then
 				if game.get_event_flag("oxevent_status") == 0 then
 					syschat(M2SF.teleport.not_ox)
 					return
@@ -289,7 +294,7 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			-- T2
-			if s == 30 then
+			if s == 28 then
 				t = select (
 					M2SF.teleport.pos_1,
 					M2SF.teleport.pos_2,
@@ -313,7 +318,7 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 
 			-- Sungzi
-			if s == 31 then
+			if s == 29 then
 				t = select (
 					M2SF.teleport.map_52,
 					M2SF.teleport.map_53,
@@ -477,22 +482,10 @@ quest M2TeleportRing begin
 					{640100, 411200},
 					{281700, 846400},
 				},
-			-- Vallée de Seungryoung
+			-- Map 2 ( Vallées )
 				{
 					{402100, 673900},
-					{270400, 739900},
-					{321300, 808000},
-				},
-			-- Vallée d'Imji
-				{
-					{243000, 65500},
 					{113200, 132500},
-					{176400, 193700},
-				},
-			-- Vallée de Bangsan
-				{
-					{805300, 296500},
-					{809300, 397600},
 					{725500, 421600},
 				},
 			-- Temple de la Vallée
@@ -639,7 +632,17 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 	--------------------------------------------------
 
-			if check_price then
+			if check_price then			
+				if pc.getqf("use") == 70058 then
+					item.set_socket(1, item.get_socket(1) - 1)
+					pc.setqf("limit_time", 30 * 1 + pc.get_playtime())
+				end
+
+				if item.get_socket(1) == 0 and pc.getqf("use") == 70058 then
+					syschat(M2SF.teleport.remove_item)
+					item.remove()
+				end
+
 				pc.change_money(-price)
 				pc.warp(w[s][e][1], w[s][e][2])
 			else
@@ -650,7 +653,32 @@ quest M2TeleportRing begin
 	--------------------------------------------------
 	--------------------------------------------------
 	--------------------------------------------------
+		end
 
+		when 40008.use begin
+			pc.setqf("use", 40008)
+			M2TeleportRing.teleport()
+		end
+
+		when 70058.use begin
+			pc.setqf("use", 70058)
+			
+			if item.get_socket(0) == 0 then
+				item.set_socket(0, 1)
+				item.set_socket(1, 50)
+			end
+
+			if item.get_socket(1) == 0 then
+				syschat(M2SF.teleport.remove_item)
+				item.remove()
+			else
+				if pc.getqf("limit_time") > pc.get_playtime() then
+					syschat(M2SF.teleport.limit_time)
+				else
+					pc.setqf("limit_time", 0)
+					M2TeleportRing.teleport()
+				end
+			end
 		end
 	end
 end

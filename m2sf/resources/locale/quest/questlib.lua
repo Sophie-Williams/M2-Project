@@ -61,6 +61,24 @@ function notice_multiline( str , func )
     end
 end 
 
+function setenergy(typ,value,timez)
+    pc.setqf("energy_value", value)
+    pc.setqf("energy_date", get_time() + timez)
+    pc.setqf("energy_typ", typ)
+end
+function setenergytime(timez)
+    pc.setqf("energy_date", timez)
+end
+function getenergytyp()
+    return pc.getqf("energy_typ")
+end
+function getenergyvalue()
+    return pc.getqf("energy_value")
+end
+function getenergytime()
+    return pc.getqf("energy_date")
+end
+
 function makequestbutton(name)
     raw_script("[QUESTBUTTON idx;")
     raw_script(""..q.getcurrentquestindex()) 
@@ -1985,6 +2003,9 @@ end
 -- 6151
 Szel_4thfloor_affectlimit	= {AFF_HOSIN}
 Szel_7thfloor_affectlimit	= {AFF_GICHEON}
+
+
+DragonLair_racelimit			= {WARRIOR_M,WARRIOR_W,NINJA_W,NINJA_M,SURA_M,SURA_W, SHAMAN_M, SHAMAN_W}
 
 -- 8058
 IceMetin_racelimit			= {WARRIOR_M,WARRIOR_W,NINJA_W,NINJA_M,SURA_M,SURA_W}

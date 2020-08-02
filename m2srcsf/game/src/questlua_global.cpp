@@ -922,6 +922,60 @@ namespace quest
 		return 1;
 	}
 
+
+
+
+
+
+
+#ifdef __FULL_NOTICE_SYSTEM__
+	int32_t _big_notice(lua_State* L)
+	{
+		ostringstream s;
+		combine_lua_string(L, s);
+		CQuestManager::Instance().GetCurrentCharacterPtr()->ChatPacket(CHAT_TYPE_BIG_NOTICE, "%s", s.str().c_str());
+		return 0;
+	}
+
+	int32_t _big_notice_in_map(lua_State* L)
+	{
+		const LPCHARACTER pChar = CQuestManager::instance().GetCurrentCharacterPtr();
+
+		if (NULL != pChar)
+		{
+			SendNoticeMap(lua_tostring(L, 1), pChar->GetMapIndex(), true);
+		}
+
+		return 0;
+	}
+
+	int32_t _big_notice_all(lua_State* L)
+	{
+		ostringstream s;
+		combine_lua_string(L, s);
+
+		TPacketGGNotice p;
+		p.bHeader = HEADER_GG_BIG_NOTICE;
+		p.lSize = strlen(s.str().c_str()) + 1;
+
+		TEMP_BUFFER buf;
+		buf.write(&p, sizeof(p));
+		buf.write(s.str().c_str(), p.lSize);
+
+		P2P_MANAGER::instance().Send(buf.read_peek(), buf.size()); // HEADER_GG_NOTICE
+
+		SendNotice(s.str().c_str(), true);
+		return 1;
+	}
+#endif
+
+
+
+
+
+
+
+
 	int32_t _notice_all( lua_State* L )
 	{
 		ostringstream s;
@@ -1457,6 +1511,11 @@ namespace quest
 			{	"notice",						_notice							},
 			{	"notice_all",					_notice_all						},
 			{	"notice_in_map",				_notice_in_map					},
+#ifdef __FULL_NOTICE_SYSTEM__
+			{	"big_notice",					_big_notice						},
+			{	"big_notice_all",				_big_notice_all					},
+			{	"big_notice_in_map",			_big_notice_in_map				},
+#endif
 			{	"warp_all_to_village",			_warp_all_to_village			},
 			{	"warp_to_village",				_warp_to_village				},	
 			{	"say_in_map",					_say_in_map						},	

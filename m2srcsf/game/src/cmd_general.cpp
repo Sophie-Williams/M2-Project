@@ -386,14 +386,15 @@ ACMD(do_cmd)
 			{
 				TimedEventInfo* info = AllocEventInfo<TimedEventInfo>();
 
-				{
+				/*{
 					if (ch->IsPosition(POS_FIGHTING))
 						info->left_second = 10;
 					else
 						info->left_second = 3;
-				}
+				}*/
 
-				info->ch		= ch;
+				info->left_second	= 3;
+				info->ch			= ch;
 				info->subcmd		= subcmd;
 				strlcpy(info->szReason, argument, sizeof(info->szReason));
 
@@ -1370,12 +1371,12 @@ ACMD(do_unmount)
 	}
 #endif
 	
-	LPITEM item = ch->GetWear(WEAR_UNIQUE1);
+	LPITEM item1 = ch->GetWear(WEAR_UNIQUE1);
 	LPITEM item2 = ch->GetWear(WEAR_UNIQUE2);
 	LPITEM item3 = ch->GetWear(WEAR_COSTUME_MOUNT);
 
-	if (item && item->IsRideItem())
-		ch->UnequipItem(item);
+	if (item1 && item1->IsRideItem())
+		ch->UnequipItem(item1);
 
 	if (item2 && item2->IsRideItem())
 		ch->UnequipItem(item2);
@@ -1476,6 +1477,15 @@ ACMD(do_party_request)
 	if (tch)
 		if (!ch->RequestToParty(tch))
 			ch->ChatPacket(CHAT_TYPE_COMMAND, "PartyRequestDenied");
+}
+
+ACMD(do_suicide)
+{
+	if (!ch)
+		return;
+
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-3865774263099662"));
+	ch->Dead();
 }
 
 ACMD(do_party_request_accept)
@@ -1808,7 +1818,7 @@ struct GotoInfo
 	}
 };
 
-extern void BroadcastNotice(const char * c_pszBuf);
+//extern void BroadcastNotice(const char * c_pszBuf);
 
 ACMD(do_monarch_tax)
 {
@@ -2675,12 +2685,12 @@ ACMD(do_PetChangeName)
 
 	if (ch->GetNewPetSystem()->IsActivePet())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("ONCE_PETINI_GONDER"));
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-4928401387263276"));
 		return;
 	}
 
 	DBManager::instance().DirectQuery("UPDATE new_petsystem SET name = '%s' WHERE id = '%d'", arg2, item->GetID());
-	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("PET_ISMI_DEGISTIRILDI"));
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-2077189767303499"));
 	ch->RemoveSpecifyItem(55030, 1);
 }
 #endif

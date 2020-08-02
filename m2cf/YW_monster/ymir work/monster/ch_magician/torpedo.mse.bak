@@ -1,4 +1,4 @@
-BoundingSphereRadius   70.000000
+BoundingSphereRadius   0.000000
 BoundingSpherePosition 0.000000 0.000000 0.000000
 
 Group Particle
@@ -11,16 +11,16 @@ Group Particle
     
     Group EmitterProperty
     {
-        MaxEmissionCount        5
+        MaxEmissionCount        1
     
         CycleLength             0.500000
-        CycleLoopEnable         1
+        CycleLoopEnable         0
         LoopCount               0
     
         EmitterShape            0
         EmitterAdvancedType     0
         EmitterEmitFromEdgeFlag  0
-        EmittingDirection       0.000000 0.010000 0.000000
+        EmittingDirection       0.000000 0.000000 0.000000
     
         List TimeEventEmittingSize
         {
@@ -44,7 +44,7 @@ Group Particle
         }
         List TimeEventEmittingVelocity
         {
-            0.000000 6.185567
+            0.000000 0.000000
         }
         List TimeEventEmissionCountPerSecond
         {
@@ -56,11 +56,11 @@ Group Particle
         }
         List TimeEventSizeX
         {
-            0.000000 100.000000
+            0.000000 64.000000
         }
         List TimeEventSizeY
         {
-            0.000000 100.000000
+            0.000000 64.000000
         }
     }
     
@@ -71,12 +71,12 @@ Group Particle
         ColorOperationType           4
         BillboardType                3
         RotationType                 2
-        RotationSpeed                8.000000
-        RotationRandomStartingBegin  90
-        RotationRandomStartingEnd    90
+        RotationSpeed                0.000000
+        RotationRandomStartingBegin  0
+        RotationRandomStartingEnd    0
     
-        AttachEnable                 1
-        StretchEnable                1
+        AttachEnable                 0
+        StretchEnable                0
     
         TexAniType                   3
         TexAniDelay                  0.008000
@@ -90,11 +90,11 @@ Group Particle
         }
         List TimeEventScaleX
         {
-            0.000000 0.700000
+            0.000000 1.000000
         }
         List TimeEventScaleY
         {
-            0.000000 0.700000
+            0.000000 1.000000
         }
         List TimeEventColorRed
         {
@@ -119,12 +119,12 @@ Group Particle
         }
         List TextureFiles
         {
-            "0001.tga"
-            "0002.tga"
-            "0003.tga"
-            "0004.tga"
-            "0005.tga"
-            "0006.tga"
+            "D:\Ymir work\pc\shaman\effect\0001.tga"
+            "D:\Ymir work\pc\shaman\effect\0002.tga"
+            "D:\Ymir work\pc\shaman\effect\0003.tga"
+            "D:\Ymir work\pc\shaman\effect\0004.tga"
+            "D:\Ymir work\pc\shaman\effect\0005.tga"
+            "D:\Ymir work\pc\shaman\effect\0006.tga"
         }
     }
 }

@@ -1769,8 +1769,9 @@ OBJDIR/Monarch.o: ../../libthecore/include/utils.h
 OBJDIR/Monarch.o: ../../libthecore/include/crypt.h
 OBJDIR/Monarch.o: ../../libthecore/include/memcpy.h ../../common/singleton.h
 OBJDIR/Monarch.o: ../../common/tables.h ../../common/length.h
-OBJDIR/Monarch.o: ../../common/service.h ../../common/utils.h Main.h
-OBJDIR/Monarch.o: ClientManager.h ../../common/stl.h ../../common/building.h
+OBJDIR/Monarch.o: ../../common/item_length.h ../../common/service.h
+OBJDIR/Monarch.o: ../../common/utils.h Main.h ClientManager.h
+OBJDIR/Monarch.o: ../../common/stl.h ../../common/building.h
 OBJDIR/Monarch.o: ../../common/auction_table.h ../../common/tables.h Peer.h
 OBJDIR/Monarch.o: PeerBase.h NetBase.h DBManager.h
 OBJDIR/Monarch.o: ../../../data/mysql_8_0_20/mysql/mysql.h

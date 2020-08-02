@@ -15,6 +15,7 @@ class CPlayerTableCache;
 class CItemCache;
 class CItemPriceListTableCache;
 
+
 class CPacketInfo
 {
     public:
@@ -25,6 +26,40 @@ class CPacketInfo
 };
 
 uint32_t CreatePlayerSaveQuery(char * pszQuery, uint32_t querySize, TPlayerTable * pkTab);
+
+bool LC_IsEnglish();
+bool LC_IsFrance();
+bool LC_IsYMIR();
+bool LC_IsJapan();
+bool LC_IsHongKong();
+bool LC_IsNewCIBN();
+bool LC_IsGermany();
+bool LC_IsKorea();
+bool LC_IsItaly();
+bool LC_IsSpain();
+bool LC_IsGreek();
+bool LC_IsUK();
+bool LC_IsTurkey();
+bool LC_IsPoland();
+bool LC_IsPortugal();
+bool LC_IsCanada();
+bool LC_IsBrazil();
+bool LC_IsRussia();
+bool LC_IsDenmark();
+bool LC_IsBulgaria();
+bool LC_IsCroatia();
+bool LC_IsMexico();
+bool LC_IsArabia();
+bool LC_IsCzech();
+bool LC_IsRomania();
+bool LC_IsHungary();
+bool LC_IsNetherlands();
+bool LC_IsSingapore();
+bool LC_IsVietnam();
+bool LC_IsThailand();
+bool LC_IsUSA();
+bool LC_IsWE_Korea();
+bool LC_IsTaiwan();
 
 class CClientManager : public CNetBase, public singleton<CClientManager>
 {

@@ -268,6 +268,9 @@ CPacketInfoGG::CPacketInfoGG()
 	Set(HEADER_GG_LOGOUT,		sizeof(TPacketGGLogout),	"Logout", false);
 	Set(HEADER_GG_RELAY,		sizeof(TPacketGGRelay),		"Relay", false);
 	Set(HEADER_GG_NOTICE,		sizeof(TPacketGGNotice),	"Notice", false);
+#ifdef __FULL_NOTICE_SYSTEM__
+	Set(HEADER_GG_BIG_NOTICE, sizeof(TPacketGGNotice), "BigNotice", false);
+#endif
 	Set(HEADER_GG_SHUTDOWN,		sizeof(TPacketGGShutdown),	"Shutdown", false);
 	Set(HEADER_GG_GUILD,		sizeof(TPacketGGGuild),		"Guild", false);
 	Set(HEADER_GG_SHOUT,		sizeof(TPacketGGShout),		"Shout", false);

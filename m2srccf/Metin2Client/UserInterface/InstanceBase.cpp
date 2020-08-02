@@ -3074,23 +3074,23 @@ void CInstanceBase::SetAcce(DWORD dwAcce)
 
 	float fSpecular = 65.0f;
 
-	if (dwAcce > 95000)
+	/*if (dwAcce > 95000) +itemcpp server
 	{
 		dwAcce -= 10000;
 		fSpecular += 35;
 
 		m_dwAcceEffect = EFFECT_REFINED + EFFECT_ACCE;
 		__EffectContainer_AttachEffect(m_dwAcceEffect);
-	}
+	}*/
 
-	/*if (dwAcce > 86000)
+	if (dwAcce > 86000)
 	{
 		dwAcce -= 1000;
 		fSpecular += 35;
 
 		m_dwAcceEffect = EFFECT_REFINED + EFFECT_ACCE;
 		__EffectContainer_AttachEffect(m_dwAcceEffect);
-	}*/
+	}
 
 	fSpecular /= 100.0f;
 	m_awPart[CRaceData::PART_ACCE] = dwAcce;
@@ -3104,9 +3104,10 @@ void CInstanceBase::SetAcce(DWORD dwAcce)
 	DWORD dwRace = GetRace(), dwPos = RaceToJob(dwRace), dwSex = RaceToSex(dwRace);
 
 	dwPos += 1;
-	if (dwSex == 0){
+
+	/*if (dwSex == 0){
 		dwPos += 6;
-	}
+	}*/
 
 	float fScaleX, fScaleY, fScaleZ, fPositionX, fPositionY, fPositionZ;
 	if (pItemData->GetItemScale(dwPos, fScaleX, fScaleY, fScaleZ, fPositionX, fPositionY, fPositionZ))

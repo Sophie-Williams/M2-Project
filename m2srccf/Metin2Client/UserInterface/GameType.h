@@ -339,7 +339,7 @@ enum
 typedef struct SQuickSlot
 {
 	BYTE Type;
-	BYTE Position;
+	uint16_t Position;
 } TQuickSlot;
 
 typedef struct TPlayerItemAttribute

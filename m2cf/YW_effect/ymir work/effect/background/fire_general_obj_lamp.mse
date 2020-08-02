@@ -118,7 +118,7 @@ Group Particle
         }
         List TextureFiles
         {
-            "chip.dds"
+            "chip.tga"
         }
     }
 }
@@ -271,7 +271,7 @@ Group Particle
         }
         List TextureFiles
         {
-            "chip.dds"
+            "chip.tga"
         }
     }
 }

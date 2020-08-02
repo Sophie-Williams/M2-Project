@@ -1,3 +1,7 @@
+800	Nourriture pour Familier	Restaure jusqu'à 10 % de la faim de votre Familier.
+801	Nourriture pour Familier	Restaure jusqu'à 25 % de la faim de votre Familier.
+802	Nourriture pour Familier	Restaure jusqu'à 40 % de la faim de votre Familier.
+803	Nourriture pour Familier	Restaure jusqu'à 50 % de la faim de votre Familier.
 100000	Élixir temporel (p)	Recharge la durée d'action d'une pierre-dragon.
 100001	Élixir temporel (m)	Recharge la durée d'action d'une pierre-dragon.
 100002	Élixir temporel (g)	Recharge la durée d'action d'une pierre-dragon.
@@ -1014,6 +1018,9 @@
 39060	Coffre Chamane Drag. (g)	Gros paquet d'équipement contenant des objets utiles pour les Chamanes Dragon
 39061	Coffre Chamane Soin (p)	Paquet d'équipement contenant des objets utiles pour les Chamanes Soin
 39062	Coffre Chamane Soin (g)	Gros paquet d'équipement contenant des objets utiles pour les Chamanes Soin
+40008	Anneau de Téléportation	Utilisation illimitée. Il vous permet de vous téléporter ou vous voulez.
+40009	Gestion de l'Expérience	Contrôler le gain d'expérience et vous controlerez la direction de votre vie.
+40010	Orbe du Temps	Contrôler l'utilisation du temps et vous controlerez la direction de leur vie.
 40101	Lame crantée	Une apparence d'arme qui transforme votre épée en tronçonneuse pour Halloween.
 40102	Dague crantée	Une apparence d'arme qui transforme votre dague en tronçonneuse pour Halloween.
 40103	Arc cranté	Une apparence d'arme qui transforme votre arc en double tronçonneuse pour Halloween.
@@ -1721,14 +1728,14 @@
 45203	Turban blanc+	Un noble turban blanc, fait de tissu résistant pour guerrier. Il vous donne droit à au moins un bonus déterminé au hasard.
 45204	Voile brun+	Un voile brun en tissu léger pour guerrière. Il vous donne droit à au moins un bonus déterminé au hasard.
 45205	Voile blanc+	Un voile blanc en tissu léger pour guerrière. Il vous donne droit à au moins un bonus déterminé au hasard.
-45206	Casque à crocs	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
-45207	Casque à crocs	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
-45208	Casque à crocs	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
-45209	Casque à crocs	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
-45210	Casque à crocs+	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
-45211	Casque à crocs+	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
-45212	Casque à crocs+	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
-45213	Casque à crocs+	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
+45206	Casque à crocs (Orange) (H)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
+45207	Casque à crocs (Bleu) (H)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
+45208	Casque à crocs (Orange) (F)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
+45209	Casque à crocs (Bleu) (F)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires.
+45210	Casque à crocs+ (Orange) (H)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
+45211	Casque à crocs+ (Bleu) (H)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
+45212	Casque à crocs+ (Orange) (F)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
+45213	Casque à crocs+ (Bleu) (F)	Un casque d'Halloween terrifiant fait pour tourmenter vos adversaires. Vous confère au moins un bonus déterminé au hasard.
 45214	Bonnet à pompon rouge	Bonnet en feutre rouge avec pompon blanc. Non échangeable.
 45215	Bonnet à pompon bleu	Bonnet en feutre bleu avec pompon blanc. Non échangeable.
 45216	Capuche à pompon rouge	Bonnet en feutre rouge avec pompon blanc. Vous confère au moins un bonus déterminé au hasard. L'objet est échangeable.
@@ -2571,6 +2578,7 @@
 70054	Charme Karma 3	Un charme utilisé par les bouddhistes pour se protéger contre la malchance.
 70056	Grenadine+	Potion qui régénérera immédiatement vos points de vie (PV) de 1000 points.
 70057	Cape de bravoure	Une cape colorée qui attire une kyrielle de monstres. Les guerriers s'en servaient autrefois pour prouver leur bravoure. Cet objet est échangeable.
+70058	Anneau de Téléportation	Utilisable 50x. Il vous permet de vous téléporter ou vous voulez.
 70063	Transformer le costume	Retire les bonus d'un de vos costumes et en ajoute de nouveaux. Avec un peu de chance le nombre de bonus change (jusqu'à 3 maximums).
 70064	Enchanter le costume	Retire les bonus d'un de vos costumes et en ajoute de nouveaux.
 70065	Transfert de bonus	Transfère les bonus d'un costume à un autre. Un des costumes est détruit.

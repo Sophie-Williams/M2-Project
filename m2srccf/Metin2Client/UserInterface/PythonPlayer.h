@@ -338,7 +338,7 @@ class CPythonPlayer : public CSingleton<CPythonPlayer>, public IAbstractPlayer
 		// Quickslot
 		int		GetQuickPage();
 		void	SetQuickPage(int nPageIndex);
-		void	AddQuickSlot(int QuickslotIndex, char IconType, char IconPosition);
+		void	AddQuickSlot(int QuickslotIndex, char IconType, uint16_t IconPosition);
 		void	DeleteQuickSlot(int QuickslotIndex);
 		void	MoveQuickSlot(int Source, int Target);
 

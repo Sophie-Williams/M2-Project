@@ -983,6 +983,21 @@ PyObject * playerGetItemFlags(PyObject* poSelf, PyObject* poArgs)
 	}
 }
 
+/*PyObject* playerGetItemSize(PyObject* poSelf, PyObject* poArgs)
+{
+	CItemData* pItemData = CItemManager::Instance().GetSelectedItemDataPointer();
+	if (!pItemData)
+		return Py_BuildException("no selected item data");
+
+	return Py_BuildValue("(ii)", 1, pItemData->GetSize());
+}*/
+
+
+
+
+
+
+
 
 PyObject * playerGetItemCount(PyObject* poSelf, PyObject* poArgs)
 {
@@ -2454,6 +2469,7 @@ void initPlayer()
 		{ "GetItemIndex",						playerGetItemIndex,							METH_VARARGS },
 		{ "GetItemFlags",						playerGetItemFlags,							METH_VARARGS },
 		{ "GetItemCount",						playerGetItemCount,							METH_VARARGS },
+		//{ "GetItemSize",						playerGetItemSize,							METH_VARARGS },
 		{ "GetItemCountByVnum",					playerGetItemCountByVnum,					METH_VARARGS },
 		{ "GetItemMetinSocket",					playerGetItemMetinSocket,					METH_VARARGS },
 		{ "GetItemAttribute",					playerGetItemAttribute,						METH_VARARGS },

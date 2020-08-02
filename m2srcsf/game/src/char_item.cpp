@@ -27,6 +27,7 @@
 #include "xmas_event.h"
 #include "marriage.h"
 #include "monarch.h"
+#include "battle.h"
 
 #ifdef NEW_PET_SYSTEM
 #include "New_PetSystem.h"
@@ -530,7 +531,7 @@ void CHARACTER::ClearItem()
 			item->RemoveFromCharacter();
 			M2_DESTROY_ITEM(item);
 
-			SyncQuickslot(QUICKSLOT_TYPE_ITEM, i, 255);
+			SyncQuickslot(QUICKSLOT_TYPE_ITEM, i, 999);
 		}
 	}
 	for (i = 0; i < DRAGON_SOUL_INVENTORY_MAX_NUM; ++i)
@@ -829,6 +830,10 @@ void CHARACTER::CopyDragonSoulItemGrid(std::vector<uint16_t>& vDragonSoulItemGri
 int32_t CHARACTER::CountEmptyInventory() const
 {
 	int32_t	count = 0;
+
+
+
+
 #ifdef ENABLE_EXTEND_INVEN_SYSTEM
 	for (int32_t i = 0; i < Inventory_Size(); ++i)
 #else
@@ -1862,6 +1867,102 @@ int32_t CalculateConsume(LPCHARACTER ch)
 	
 	return consumeLife;
 }
+#ifdef ENABLE_YMIR_AFFECT_FIX
+bool CHARACTER::CheckTimeUsed(LPITEM item)
+{
+	switch (item->GetVnum())
+	{
+		case 50821:
+		case 50822:
+		case 50823:
+		case 50824:
+		case 50825:
+		case 50826:
+
+		case 27866:
+		case 27868:
+		case 27870:
+		case 27873:
+		case 39026:
+		case 50093:
+		case 50094:
+		case 50123:
+		case 50801:
+		case 50802:
+		case 50817:
+		case 50818:
+		case 50819:
+		case 50820:
+
+		case 39010:
+		case 39017:
+		case 39018:
+		case 39019:
+		case 39020:
+		case 39024:
+		case 39025:
+		case 39031:
+		case 50813:
+		case 50814:
+		case 71014:
+		case 71015:
+		case 71016:
+		case 71017:
+		case 71027:
+		case 71028:
+		case 71029:
+		case 71030:
+		case 71034:
+		case 71044:
+		case 71045:
+		case 71101:
+		case 71102:
+		case 71153:
+		case 71154:
+		case 71155:
+		case 71156:
+		case 72025:
+		case 72026:
+		case 72027:
+		case 72031:
+		case 72032:
+		case 72033:
+		case 72034:
+		case 72035:
+		case 72036:
+		case 72037:
+		case 72038:
+		case 72039:
+		case 72040:
+		case 72041:
+		case 72042:
+		case 72046:
+		case 72047:
+		case 72048:
+		case 72312:
+		case 72313:
+		case 72501:
+		case 72502:
+		case 76003:
+		case 76017:
+		case 76018:
+
+		int32_t pGetTime = 10;
+		int32_t pGetFlag = GetQuestFlag("item.last_time");
+
+		if (pGetFlag) 
+		{
+			if (get_global_time() < pGetFlag + pGetTime)
+			{
+				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-1254224200385727-%s-%u"), item->GetName(), pGetTime);
+				return false;
+			}
+		}
+		break;
+	}
+	return true;
+}
+#endif
 
 int32_t CalculateConsumeSP(LPCHARACTER lpChar)
 {
@@ -1993,7 +2094,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 			return false;
 	}
 
-	if (item->GetVnum() >= 55701 && item->GetVnum() <= 55710) {
+	if (item->GetVnum() >= 55701 && item->GetVnum() <= 55711) {
 		LPITEM item2;
 
 		if (item2 = GetItem(DestCell)) {
@@ -2150,6 +2251,14 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 				{
 					case USE_ABILITY_UP:
 						{
+
+#ifdef ENABLE_YMIR_AFFECT_FIX
+							if ((CheckTimeUsed(item) == false))
+							{
+								return false;
+							}
+#endif
+
 							switch (item->GetValue(0))
 							{
 								case APPLY_MOV_SPEED:
@@ -2536,6 +2645,14 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 					switch (item->GetSubType())
 					{
 						case USE_ABILITY_UP:
+
+#ifdef ENABLE_YMIR_AFFECT_FIX
+							if ((CheckTimeUsed(item) == false))
+							{
+								return false;
+							}
+#endif
+
 							if (FindAffect(affect_type, apply_type))
 							{
 								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이미 효과가 걸려 있습니다."));
@@ -2579,6 +2696,14 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 					case USE_AFFECT :
 						{
+
+#ifdef ENABLE_YMIR_AFFECT_FIX
+							if ((CheckTimeUsed(item) == false))
+							{
+								return false;
+							}
+#endif
+
 							if (FindAffect(AFFECT_EXP_BONUS_EURO_FREE, aApplyInfo[item->GetValue(1)].bPointType))
 							{
 								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("이미 효과가 걸려 있습니다."));
@@ -3295,7 +3420,12 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 							case 27996: 
 								item->SetCount(item->GetCount() - 1);
-								
+								Dead();
+								break;
+
+							case 70007:
+								item->SetCount(item->GetCount() - 1);
+								AddAffect(AFFECT_STUN, POINT_NONE, 0, AFF_STUN, 60, 0, false);
 								break;
 
 							case 27987: 
@@ -4171,10 +4301,6 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 							case 71051 : 
 								{
-									
-									
-										
-
 									LPITEM item2;
 
 									if (!IsValidItemPosition(DestCell) || !(item2 = GetInventoryItem(wDestCell)))
@@ -4196,13 +4322,13 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 #endif
 									if (item2->GetAttributeSetIndex() == -1)
 									{
-										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("속성을 변경할 수 없는 아이템입니다."));
+										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-2935011734224395"));
 										return false;
 									}
 
 									if (item2->AddRareAttribute() == true)
 									{
-										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("성공적으로 속성이 추가 되었습니다"));
+										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-2326292017161050"));
 
 										int32_t iAddedIdx = item2->GetRareAttrCount() + 4;
 										char buf[21];
@@ -4222,17 +4348,13 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 									}
 									else
 									{
-										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("더 이상 이 아이템으로 속성을 추가할 수 없습니다"));
+										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-5809694258873208"));
 									}
 								}
 								break;
 
 							case 71052 : 
 								{
-									
-									
-										
-
 									LPITEM item2;
 
 									if (!IsValidItemPosition(DestCell) || !(item2 = GetItem(DestCell)))
@@ -4243,7 +4365,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 									if (item2->GetAttributeSetIndex() == -1)
 									{
-										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("속성을 변경할 수 없는 아이템입니다."));
+										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-2935011734224395"));
 										return false;
 									}
 									
@@ -4267,7 +4389,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 									}
 									else
 									{
-										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("변경 시킬 속성이 없습니다"));
+										ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-4827448395931836"));
 									}
 								}
 								break;
@@ -4587,7 +4709,42 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 							}
 						}
 						
-						if (item->GetValue(1) != 0)
+						// PINK POTION // CYAN POTION
+
+						if (item->GetVnum() >= 27116 && item->GetVnum() <= 27121)
+						{
+							if ((GetPoint(POINT_HP_RECOVERY) + GetHP() >= GetMaxHP()) && (GetPoint(POINT_SP_RECOVERY) + GetSP() >= GetMaxSP()))
+							{
+								return false;
+							}
+
+							if (item->GetValue(0) != 0)
+							{
+								if (!(GetPoint(POINT_HP_RECOVERY) + GetHP() >= GetMaxHP()))
+								{
+									PointChange(POINT_HP_RECOVERY, item->GetValue(0)* MIN(200, (100 + GetPoint(POINT_POTION_BONUS))) / 100);
+									StartAffectEvent();
+									EffectPacket(SE_HPUP_RED);
+								}
+							}
+
+							if (item->GetValue(1) != 0)
+							{
+								if (!(GetPoint(POINT_SP_RECOVERY) + GetSP() >= GetMaxSP()))
+								{
+									PointChange(POINT_SP_RECOVERY, item->GetValue(1) * MIN(200, (100 + GetPoint(POINT_POTION_BONUS))) / 100);
+									StartAffectEvent();
+									EffectPacket(SE_SPUP_BLUE);
+								}
+							}
+						}
+
+						// PINK POTION // CYAN POTION
+
+
+						// NORMAL POTION
+
+						if ((item->GetValue(1) != 0) && !(item->GetVnum() >= 27116 && item->GetVnum() <= 27121))
 						{
 							if (GetPoint(POINT_SP_RECOVERY) + GetSP() >= GetMaxSP())
 							{
@@ -4599,7 +4756,7 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 							EffectPacket(SE_SPUP_BLUE);
 						}
 
-						if (item->GetValue(0) != 0)
+						if ((item->GetValue(0) != 0) && !(item->GetVnum() >= 27116 && item->GetVnum() <= 27121))
 						{
 							if (GetPoint(POINT_HP_RECOVERY) + GetHP() >= GetMaxHP())
 							{
@@ -4610,6 +4767,8 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 							StartAffectEvent();
 							EffectPacket(SE_HPUP_RED);
 						}
+
+						// NORMAL POTION
 
 						if (GetDungeon())
 							GetDungeon()->UsePotion(this);
@@ -4646,6 +4805,14 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 					case USE_ABILITY_UP:
 						{
+
+#ifdef ENABLE_YMIR_AFFECT_FIX
+							if ((CheckTimeUsed(item) == false))
+							{
+								return false;
+							}
+#endif
+
 							switch (item->GetValue(0))
 							{
 								case APPLY_MOV_SPEED:
@@ -5475,11 +5642,13 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 
 							pBottle->SetCount(pBottle->GetCount() - 1);
 
-							if (number(1, 100) > item->GetValue(5))
-							{
-								ChatPacket(CHAT_TYPE_INFO, LC_TEXT("물약 제조에 실패했습니다."));
-								return false;
-							}
+							// int32 luck = 25;
+
+							// if (number(1, 100) > luck)
+							// {
+								// ChatPacket(CHAT_TYPE_INFO, LC_TEXT("물약 제조에 실패했습니다."));
+								// return false;
+							// }
 
 							AutoGiveItem(item->GetValue(0));
 						}
@@ -5547,8 +5716,22 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 				for (i = 0; i < ITEM_SOCKET_MAX_NUM; ++i)
 					if (item2->GetSocket(i) >= 1 && item2->GetSocket(i) <= 2 && item2->GetSocket(i) >= item->GetValue(2))
 					{
-						
-						if (number(1, 100) <= 30)
+						/*LPITEM iMetinLuck = FindSpecifyItem(71056);
+						if (iMetinLuck != NULL)
+						{
+							int32_t prctsuccess = 66;
+
+							//AUGMENTER CHANCE
+							//COMING SOON
+
+							iMetinLuck->SetCount(iMetinLuck->GetCount() - 1);
+						}
+						else
+						{
+							int32_t prctsuccess = 33;
+						}*/
+
+						if (number(1, 100) <= 33)
 						{
 							ChatPacket(CHAT_TYPE_INFO, LC_TEXT("메틴석 부착에 성공하였습니다."));
 							item2->SetSocket(i, item->GetVnum());
@@ -5586,6 +5769,14 @@ bool CHARACTER::UseItemEx(LPITEM item, TItemPos DestCell)
 		case ITEM_BLEND:
 			
 			sys_log(0,"ITEM_BLEND!!");
+
+#ifdef ENABLE_YMIR_AFFECT_FIX
+			if ((CheckTimeUsed(item) == false))
+			{
+				return false;
+			}
+#endif
+
 			if (Blend_Item_find(item->GetVnum()))
 			{
 				int32_t		affect_type		= AFFECT_BLEND;
@@ -5893,7 +6084,7 @@ bool CHARACTER::DestroyItem(TItemPos Cell, uint8_t bCount)
 	if (bCount == 0 || bCount > item->GetCount())
 		bCount = item->GetCount();
 
-	SyncQuickslot(QUICKSLOT_TYPE_ITEM, Cell.cell, 255);
+	SyncQuickslot(QUICKSLOT_TYPE_ITEM, Cell.cell, 999);
 	
 	int32_t iCountBefore = CountSpecifyItem(item->GetVnum());
 
@@ -5980,7 +6171,7 @@ bool CHARACTER::DropItem(TItemPos Cell, uint8_t bCount)
 	if (bCount == 0 || bCount > item->GetCount())
 		bCount = item->GetCount();
 
-	SyncQuickslot(QUICKSLOT_TYPE_ITEM, Cell.cell, 255);
+	SyncQuickslot(QUICKSLOT_TYPE_ITEM, Cell.cell, 999);
 
 	LPITEM pkItemToDrop;
 
@@ -6080,18 +6271,6 @@ bool CHARACTER::DropGold(int64_t gold)
 
 		if (item->AddToGround(GetMapIndex(), pos))
 		{
-			
-			
-			
-			
-			
-			
-			
-			
-
-			
-
-
 			LogManager::instance().DropGold(
 				GetPlayerID(),
 				GetGold(),
@@ -6103,31 +6282,11 @@ bool CHARACTER::DropGold(int64_t gold)
 				GetZ()
 			);
 
-
-
 			PointChange(POINT_GOLD, -gold, true);
 
-			if (LC_IsBrazil() == true)
-			{
-				if (gold >= 213)
-					LogManager::instance().CharLog(this, gold, "DROP_GOLD", "");
-			}
-			else
-			{
-				if (gold > 1000) 
-					LogManager::instance().CharLog(this, gold, "DROP_GOLD", "");
-			}
-
-			if (false == LC_IsBrazil())
-			{
-				item->StartDestroyEvent(32);
-				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("떨어진 아이템은 %d분 후 사라집니다."), 1);
-			}
-			else
-			{
-				item->StartDestroyEvent(32);
-				ChatPacket(CHAT_TYPE_INFO, LC_TEXT("떨어진 아이템은 %d분 후 사라집니다."), 1);
-			}
+			item->StartDestroyEvent(32);
+			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-6147653470815929-%lld"), gold);
+			
 		}
 
 		Save();
@@ -6142,17 +6301,21 @@ bool CHARACTER::DropGold(int64_t gold)
 #ifdef ENABLE_CHEQUE_SYSTEM
 bool CHARACTER::DropCheque(int32_t cheque)
 {
-	
 	if (cheque <= 0 || cheque > GetCheque())
 		return false;
+
 	if (cheque >= CHEQUE_MAX)
 		return false;
+
 	if (!CanHandleItem())
 		return false;
+
 	LPITEM item = ITEM_MANAGER::instance().CreateItem(80020, cheque);
 	if (item)
 	{
-
+		PIXEL_POSITION pos = GetXYZ();
+		if (item->AddToGround(GetMapIndex(), pos))
+		{
 			LogManager::instance().DropCheque(
 				GetPlayerID(),
 				GetCheque(),
@@ -6164,12 +6327,12 @@ bool CHARACTER::DropCheque(int32_t cheque)
 				GetZ()
 			);
 
-		PIXEL_POSITION pos = GetXYZ();
-		if (item->AddToGround(GetMapIndex(), pos))
-		{
 			PointChange(POINT_CHEQUE, -cheque, true);
-			item->StartDestroyEvent();
+
+			item->StartDestroyEvent();			
+			ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-7031934914194017-%d"), cheque);
 		}
+
 		Save();
 		return true;
 	}
@@ -8193,7 +8356,6 @@ bool CHARACTER::ItemProcess_Polymorph(LPITEM item)
 
 	if (dwVnum == 0)
 	{
-		ChatPacket(CHAT_TYPE_INFO, "Debug 1");
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("잘못된 둔갑 아이템입니다."));
 		item->SetCount(item->GetCount() - 1);
 		return false;
@@ -8203,7 +8365,6 @@ bool CHARACTER::ItemProcess_Polymorph(LPITEM item)
 
 	if (pMob == NULL)
 	{
-		ChatPacket(CHAT_TYPE_INFO, "Debug 2");
 		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("잘못된 둔갑 아이템입니다."));
 		item->SetCount(item->GetCount() - 1);
 		return false;

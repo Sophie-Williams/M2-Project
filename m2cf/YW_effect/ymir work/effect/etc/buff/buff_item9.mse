@@ -518,7 +518,7 @@ Group Particle
         }
         List TextureFiles
         {
-            "D:\Ymir Work\effect\monster2\boom2.dds"
+            "D:\Ymir Work\effect\monster\boom2.dds"
         }
     }
 }
@@ -649,7 +649,7 @@ Group Particle
         }
         List TextureFiles
         {
-            "D:\Ymir Work\effect\monster2\boom2.dds"
+            "D:\Ymir Work\effect\monster\boom2.dds"
         }
     }
 }

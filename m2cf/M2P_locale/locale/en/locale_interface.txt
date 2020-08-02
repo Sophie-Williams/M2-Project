@@ -1,56 +1,69 @@
 COMB_SKILLBOOK_TILE	Trade books
-LOGIN_ID	Login
+LOGIN_ID	Username
 LOGIN_PASSWORD	Password
 M2CF_BUTTON	M2SF
-SASH_RESULT	Résultat
+SASH_RESULT	Result
 PET_ATTR_CHANGE_ITEM_TEXT	Enchant Pet
 PET_ATTR_CHANGE_TITLE	Change Pet Type
 PET_ATTR_CONFIRMATION	Change
 PET_ATTR_DETERMINE_TITLE	New Pet Type
 PET_ATTR_OK	Close
-PET_BESLE	Nourrir
-PET_CELIK_TOPLA	Il vous permet uniquement de récupérer des aciers.
+PET_BESLE	Feed
+PET_CELIK_TOPLA	It only allows you to recover steels.
 PET_CHANGE_TEXT	Pet
-PET_COR_TOPLA	Il vous permet uniquement de récupérer des Cor Draconis.
-PET_DENEYIM	Expérience
-PET_EVENT_TOPLA	Il vous permet uniquement de collecter des objets d'événement.
-PET_EVRIM	Développement
-PET_FIYAT	Prix: 100.000 Yang
-PET_GIZLE	Il permet de cacher les animaux de compagnie.
-PET_HEPSINI_TOPLA	Il vous permet de collecter tous les objets.
-PET_ISMI	Nom du familier
-PET_KITAP_TOPLA	Il vous permet uniquement de collecter des livres de compétences.
-PET_KOSTUM_TOPLA	Il vous permet simplement de récupérer les costumes.
-PET_KULUCKA	Couveuse
+PET_COR_TOPLA	It only allows you to collect Cor Draconis.
+PET_DENEYIM	Exp�rience
+PET_EVENT_TOPLA	It only allows you to collect event objects.
+PET_EVRIM	Development
+PET_FIYAT	Price: 100.000 Yang
+PET_GIZLE	It allows to hide pets.
+PET_HEPSINI_TOPLA	It allows you to collect all the items.
+PET_ISMI	Pet name
+PET_KITAP_TOPLA	It only allows you to collect skill books.
+PET_KOSTUM_TOPLA	It just lets you collect the costumes.
+PET_KULUCKA	Incubator
+PET_GUN	Day(s)
+PET_UI_LEVEL	Level
+PET_ITEM_NO_FEED	You can't feed that to your pet...
+PET_FEED_STACK_ITEM	You cannot supply stacked items.
 PET_LV3_SPECIAL_EVO	Level 3 (Special Evolution)
-PET_NESNE_EXP	Objet d'EXP
-PET_RUH_TASI_TOPLA	Il vous permet uniquement de collecter les pierres.
-PET_SANDIK_TOPLA	Il vous permet uniquement de collecter les coffres.
+PET_NESNE_EXP	EXP Item
+PET_RUH_TASI_TOPLA	It only allows you to collect stones.
+PET_SANDIK_TOPLA	It only allows you to collect chests.
 PET_SILAH_TOPLA	Seul lvl75 vous donnera des armes.
 PET_SUPER_BABY_WHITE_DRAGON	Super White Baby Dragon
-PET_SURE	Durée
-PET_SYSTEM_AGE	Âge
+PET_SURE	Duration
+PET_SYSTEM_FEED_DIALOG	Do you want to feed your pet with this?
+PET_CREATE_YANG	are needed to hatch the egg!
+PET_SYSTEM_AGE	Age
+PET_SYSTEM_SKILLS	Skills
+PET_UI_TITLE	Pet
+PET_SYSTEM_INFO	Do you want to know the status of your pet?
 PET_SYSTEM_PM	PM
 PET_SYSTEM_BONUSES	Bonus
-PET_SYSTEM_DEF	Défense
-PET_SYSTEM_DURATION	Temps restant
-PET_SYSTEM_EVOLVE	Développement
-PET_SYSTEM_EXP	Expérience
-PET_SYSTEM_FEED	Nourrir
-PET_SYSTEM_HATCH	Créer
+PET_SYSTEM_CREATE_NAME	The name for your pet is too short!
+PET_NOT_ACCESS	You can not do this...
+PET_SYSTEM_DEF	Defense
+PET_RENAME_TITLE	Rename your Familiar
+PET_RENAME_TEXT	Choose a new name
+PET_SYSTEM_DURATION	Time left
+PET_SYSTEM_EVOLVE	Development
+PET_SYSTEM_EXP	Experience
+PET_SYSTEM_FEED	Feed
+PET_SYSTEM_HATCH	Create
 PET_SYSTEM_HP	PV
-PET_SYSTEM_INCUBATOR	Couveuse
-PET_SYSTEM_ITEM_EXP	EXP d'Objet
-PET_SYSTEM_LEVEL	Niveau
-PET_SYSTEM_PET_NAME	Nom du familier
-PET_TAKI_TOPLA	Il vous permet uniquement de collecter des bijoux.
-PET_YAS	Âge
-PET_YUKSELTME_TOPLA	Il vous permet uniquement de collecter des éléments de mise à niveau.
-PET_YUMURTADAN_CIK	Couver
+PET_SYSTEM_INCUBATOR	Incubator
+PET_SYSTEM_ITEM_EXP	Item EXP
+PET_SYSTEM_LEVEL	Level
+PET_SYSTEM_PET_NAME	Pet name
+PET_TAKI_TOPLA	It only allows you to collect jewelry.
+PET_YAS	Age
+PET_YUKSELTME_TOPLA	It only allows you to collect upgrade items.
+PET_YUMURTADAN_CIK	Incubate
 TASKBAR_MONEY_EXPAND	Money
 ACCEPT	OK
 ACCEPT	OK
-DESTROY	Détruire
+DESTROY	Destroy
 BONUSGUI_TITLE	Bonus
 ACCE_ABSORB	Bonus Absorption
 ACCE_COMBINE	Combination
@@ -316,7 +329,7 @@ OPTION_SOUND	Sound Effects
 OPTION_TARGET_BOARD	Target Menu
 OPTION_TARGET_BOARD_NO_VIEW	Close
 OPTION_TARGET_BOARD_VIEW	Show
-OPTION_TILING	Mém. graph.
+OPTION_TILING	M�m. graph.
 OPTION_TILING_APPLY	Appliquer
 OPTION_TILING_CPU	CPU
 OPTION_TILING_GPU	GPU
@@ -394,9 +407,8 @@ WHISPER_REPORT	WHISPER_REPORT
 WHISPER_SEND	Send
 YES	Yes
 ZONE_MAP	Large Map
-BLOCK_EXP	Gestion de l'Expérience
-Block	Bloquer \ Débloquer
+BLOCK_EXP	Experience management
+Block	Block \ Unblock
 SELECT_SAVE_SLOT1	Sauver en Slot 1
 SELECT_SAVE_SLOT2	Sauver en Slot 2
 SELECT_DL_ERROR	Erreur lors de la sauvegarde.
-

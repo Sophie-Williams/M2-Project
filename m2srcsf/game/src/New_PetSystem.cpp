@@ -328,7 +328,7 @@ void CNewPetActor::ItemCubeFeed(int32_t type)
 					}
 					else
 					{
-						m_pkOwner->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("pet_exp_max"));
+						m_pkOwner->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-9214266293781933"));
 					}
 				}
 				else if (itemxp->GetType() == 36)
@@ -358,7 +358,7 @@ void CNewPetActor::ItemCubeFeed(int32_t type)
 					}
 					else
 					{
-						m_pkOwner->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("pet_exp_max"));
+						m_pkOwner->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-9214266293781933"));
 					}
 				}
 				else

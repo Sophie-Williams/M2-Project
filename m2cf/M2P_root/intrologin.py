@@ -1063,9 +1063,6 @@ class LoginWindow(ui.ScriptWindow):
 
 	def __OpenLoginBoard(self):
 
-		self.serverExitButton.SetEvent(ui.__mem_func__(self.__OnClickExitServerButton))
-		self.serverExitButton.SetText(localeInfo.UI_CLOSE)
-
 		# RUNUP_MATRIX_AUTH
 		if IsRunupMatrixAuth():
 			self.matrixQuizBoard.Hide()
@@ -1293,9 +1290,6 @@ class LoginWindow(ui.ScriptWindow):
 			return		
 
 		self.__SaveChannelInfo()
-
-		self.serverExitButton.SetEvent(ui.__mem_func__(self.__OnClickExitServerButton))
-		self.serverExitButton.SetText(localeInfo.UI_CLOSE)
 
 		self.__RefreshServerList()
 		self.__OpenServerBoard()

@@ -380,9 +380,11 @@
             this.Controls.Add(this.IMEBox);
             this.Controls.Add(this.WindowBox);
             this.Controls.Add(this.DisplayBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "config";
-            this.Text = "config";
+            this.Text = "Metin2 Project Config Files #ASIKOO";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.DisplayBox.ResumeLayout(false);
             this.DisplayBox.PerformLayout();

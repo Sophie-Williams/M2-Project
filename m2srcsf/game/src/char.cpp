@@ -1202,6 +1202,9 @@ void CHARACTER::UpdatePacket()
 {
 	if (GetSectree() == NULL) return;
 
+	if (IsPC() && (!GetDesc() || !GetDesc()->GetCharacter()))
+		return;
+
 	TPacketGCCharacterUpdate pack;
 	TPacketGCCharacterUpdate pack2;
 
@@ -1645,8 +1648,15 @@ void CHARACTER::Disconnect(const char * c_pszReason)
 
 	if (GetDesc())
 	{
-		GetDesc()->BindCharacter(NULL);
+		packet_point_change pack;
+		pack.header = HEADER_GC_CHARACTER_POINT_CHANGE;
+		pack.dwVID = m_vid;
+		pack.type = POINT_PLAYTIME;
+		pack.value = GetRealPoint(POINT_PLAYTIME) + (get_dword_time() - m_dwPlayStartTime) / 60000;
+		pack.amount = 0;
+		GetDesc()->Packet(&pack, sizeof(struct packet_point_change));
 
+		GetDesc()->BindCharacter(NULL);
 	}
 
 	
@@ -7703,7 +7713,7 @@ void CHARACTER::IncreaseComboHackCount(int32_t k)
 	if (m_iComboHackCount >= 10)
 	{
 		if (GetDesc())
-			if (GetDesc()->DelayedDisconnect(number(2, 7)))
+			if (GetDesc()->DelayedDisconnect(3))
 			{
 				sys_log(0, "COMBO_HACK_DISCONNECT: %s count: %d", GetName(), m_iComboHackCount);
 				LogManager::instance().HackLog("Combo", this);
@@ -8575,8 +8585,17 @@ void CHARACTER::SortInven(uint8_t option)
 {
 	if (IsDead())
 		return;
-	if (GetLastSortTime() > get_global_time()) {
-		ChatPacket(CHAT_TYPE_INFO, "You need to wait %d sec.", GetLastSortTime() - get_global_time());
+
+	if (GetLastSortTime() > get_global_time())
+	{
+		int32_t TimeToLeft = (GetLastSortTime() - get_global_time());
+		if (TimeToLeft < 0)
+		{
+			ChatPacket(CHAT_TYPE_INFO, "TEST - Will be removed - Reset Time...");
+			SetLastSortTime(get_global_time() + 15);
+		}
+
+		ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-6965544046818066-%d"), TimeToLeft);
 		return;
 	}
 
@@ -8588,7 +8607,7 @@ void CHARACTER::SortInven(uint8_t option)
 		if (myitems = GetInventoryItem(i)) {
 			all.emplace_back(myitems);
 			myitems->RemoveFromCharacter();
-			SyncQuickslot(QUICKSLOT_TYPE_ITEM, static_cast<uint8_t>(i), 255);
+			SyncQuickslot(QUICKSLOT_TYPE_ITEM, static_cast<uint8_t>(i), 999);
 		}
 	}
 	if (all.empty())
@@ -8615,6 +8634,7 @@ void CHARACTER::SortInven(uint8_t option)
 		else
 			AutoGiveItem(getitem);
 	};
+
 	SetLastSortTime(get_global_time() + 15); 
 }
 #endif

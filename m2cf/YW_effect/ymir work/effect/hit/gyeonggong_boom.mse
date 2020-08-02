@@ -522,7 +522,7 @@ Group Particle
         }
         List TextureFiles
         {
-            "D:\Ymir Work\effect\monster2\gatein_16.dds"
+            "D:\Ymir Work\effect\monster\gatein_16.dds"
         }
     }
 }
@@ -658,7 +658,7 @@ Group Particle
         }
         List TextureFiles
         {
-            "D:\Ymir Work\effect\monster2\gatein_16.dds"
+            "D:\Ymir Work\effect\monster\gatein_16.dds"
         }
     }
 }

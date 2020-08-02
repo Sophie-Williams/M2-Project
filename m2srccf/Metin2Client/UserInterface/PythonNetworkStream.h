@@ -189,9 +189,9 @@ class CPythonNetworkStream : public CNetworkStream, public CSingleton<CPythonNet
 		bool SendItemMovePacket(TItemPos pos, TItemPos change_pos, BYTE num);
 		bool SendItemPickUpPacket(DWORD vid);
 
-		bool SendQuickSlotAddPacket(BYTE wpos, BYTE type, BYTE pos);
-		bool SendQuickSlotDelPacket(BYTE wpos);
-		bool SendQuickSlotMovePacket(BYTE wpos, BYTE change_pos);
+		bool SendQuickSlotAddPacket(uint16_t wpos, BYTE type, uint16_t pos);
+		bool SendQuickSlotDelPacket(uint16_t wpos);
+		bool SendQuickSlotMovePacket(uint16_t wpos, uint16_t change_pos);
 
 		bool SendPointResetPacket();
 

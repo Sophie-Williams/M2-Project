@@ -1,12 +1,3 @@
-#########################################
-# title_name		: System Pack		#
-# filename			: uiscript			#
-# author			: Bvural41			#
-# version			: Version 0.0.2		#
-# date				: 2015 04 11		#
-# update			: 2019 02 05		#
-#########################################
-
 import uiScriptLocale
 
 ICON_SLOT_FILE = "d:/ymir work/ui/public/Slot_Base.sub"
@@ -128,7 +119,7 @@ window = {
 					"outline" : 1,
 					"x" : 15+18,
 					"y" : 70+34,
-					"text" : "Yeni evcil hayvan ismini giriniz",
+					"text" : uiScriptLocale.PET_RENAME_TEXT,
 				},
 				## Input Slot
 				{

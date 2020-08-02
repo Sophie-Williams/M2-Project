@@ -311,7 +311,7 @@ bool CItem::SetCount(uint32_t count)
 				}
 				else
 				{
-					pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, wCell, 255);
+					pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, wCell, 999);
 				}
 			}
 
@@ -321,7 +321,7 @@ bool CItem::SetCount(uint32_t count)
 		{
 			if (!IsDragonSoul())
 			{
-				m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, m_wCell, 255);
+				m_pOwner->SyncQuickslot(QUICKSLOT_TYPE_ITEM, m_wCell, 999);
 			}
 			M2_DESTROY_ITEM(RemoveFromCharacter());
 		}
@@ -1041,7 +1041,7 @@ void CItem::ModifyPoints(bool bAdd)
 				{
 					toSetValue -= 85000;
 					if (GetSocket(ACCE_ABSORPTION_SOCKET) >= ACCE_EFFECT_FROM_ABS)
-						toSetValue += 10000;
+						toSetValue += 1000; //10000
 						
 					
 					toSetValue = (bAdd == true) ? toSetValue : 0;

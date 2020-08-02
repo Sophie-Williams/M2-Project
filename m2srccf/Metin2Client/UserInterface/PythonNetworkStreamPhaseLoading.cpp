@@ -349,8 +349,24 @@ bool CPythonNetworkStream::__RecvPlayerPoints()
 	if (!Recv(sizeof(TPacketGCPoints), &PointsPacket))
 		return false;
 
+	//for (DWORD i = 0; i < POINT_MAX_NUM; ++i)
+	//	CPythonPlayer::Instance().SetStatus(i, PointsPacket.points[i]);
+
 	for (DWORD i = 0; i < POINT_MAX_NUM; ++i)
+	{
 		CPythonPlayer::Instance().SetStatus(i, PointsPacket.points[i]);
+		if (i == POINT_LEVEL)
+			m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byLevel = PointsPacket.points[i];
+		else if (i == POINT_ST)
+			m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byST = PointsPacket.points[i];
+		else if (i == POINT_HT)
+			m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byHT = PointsPacket.points[i];
+		else if (i == POINT_DX)
+			m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byDX = PointsPacket.points[i];
+		else if (i == POINT_IQ)
+			m_akSimplePlayerInfo[m_dwSelectedCharacterIndex].byIQ = PointsPacket.points[i];
+
+	}
 
 	PyCallClassMemberFunc(m_apoPhaseWnd[PHASE_WINDOW_GAME], "RefreshStatus", Py_BuildValue("()"));
 	return true;

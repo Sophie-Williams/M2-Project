@@ -602,6 +602,10 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		void			FlushDelayedSaveItem();
 
 		const char *	GetName() const;
+#ifdef ENABLE_YMIR_AFFECT_FIX
+		bool            CheckTimeUsed(LPITEM item);
+#endif
+
 		const VID &		GetVID() const		{ return m_vid;		}
 
 		void			SetName(const std::string& name) { m_stName = name; }
@@ -896,12 +900,12 @@ class CHARACTER : public CEntity, public CFSM, public CHorseRider
 		bool			m_bStaminaConsume;
 
 	public:
-		void			SyncQuickslot(uint8_t bType, uint8_t bOldPos, uint8_t bNewPos);
-		bool			GetQuickslot(uint8_t pos, TQuickslot ** ppSlot);
-		bool			SetQuickslot(uint8_t pos, TQuickslot & rSlot);
-		bool			DelQuickslot(uint8_t pos);
-		bool			SwapQuickslot(uint8_t a, uint8_t b);
-		void			ChainQuickslotItem(LPITEM pItem, uint8_t bType, uint8_t bOldPos);
+		void			SyncQuickslot(uint8_t bType, uint16_t bOldPos, uint16_t bNewPos);
+		bool			GetQuickslot(uint16_t pos, TQuickslot ** ppSlot);
+		bool			SetQuickslot(uint16_t pos, TQuickslot & rSlot);
+		bool			DelQuickslot(uint16_t pos);
+		bool			SwapQuickslot(uint16_t a, uint16_t b);
+		void			ChainQuickslotItem(LPITEM pItem, uint8_t bType, uint16_t bOldPos);
 
 	protected:
 		TQuickslot		m_quickslot[QUICKSLOT_MAX_NUM];

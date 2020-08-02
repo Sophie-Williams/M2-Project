@@ -2276,7 +2276,7 @@
 "Vous ne pouvez pas monter votre monture en étant transformé.";
 
 "MSG-7312474338483286";
-"Vous devez dabord invoquer votre monture.";
+"Vous devez d'abord invoquer votre monture.";
 
 "MSG-7417537886378140";
 "Vous ne pouvez pas ouvrir un magasin avec un familier invoqué.";
@@ -2301,3 +2301,270 @@
 
 "MSG-2617309755001827";
 "Votre pierre n'a pas été taillée.";
+
+"MSG-2935011734224395";
+"Cet élément ne peut pas être modifié.";
+
+"MSG-2326292017161050";
+"La propriété a été ajoutée avec succès.";
+
+"MSG-5809694258873208";
+"Vous ne pouvez plus ajouter d'attributs à cet élément.";
+
+"MSG-4827448395931836";
+"Il n'y a aucune propriété à changer.";
+
+"MSG-6147653470815929-%lld";
+"Vous avez jeté %lld Yang(s).";
+
+"MSG-7031934914194017-%d";
+"Vous avez jeté %d Won(s).";
+
+"MSG-3865774263099662";
+"Vous vous êtes suicidé...";
+
+"MSG-9214266293781933";
+"Votre familier ne peut plus recevoir d'expérience.";
+
+"MSG-8038170085772019";
+"Vous avez besoin d'une loupe magique.";
+
+"MSG-5678538990522985";
+"Vous ne pouvez pas faire ça...";
+
+"MSG-1254224200385727-%s-%u";
+"Vous pouvez utiliser %s seulement après %u secondes de la connexion.";
+
+"MSG-4928401387263276";
+"Vous devez renvoyer votre familier !";
+
+"MSG-2077189767303499";
+"Votre familier a été renommé.";
+
+"MSG-1933659993546856";
+"Vous avez tout vendu. Votre magasin a été fermé.";
+
+"MSG-6965544046818066-%d";
+"Vous devez attendre %d seconde(s).";
+
+"MSG-3286899712070310-%s-%d";
+"Vous entrez dans la zone : %s (%d)";
+
+"MSG-7330915099629627-%d";
+"Vous êtes connecté sur le channel %d.";
+
+"MSG-3912155184853894";
+"Aucun joueur s'est connecté récemment.";
+
+"MSG-3814671232744432-%d";
+"%d joueur s'est connecté récemment.";
+
+"MSG-4133105597520761-%d";
+"%d joueurs se sont connectés récemment.";
+
+"MSG-6822539516642009";
+"Vous n'avez plus de place dans votre inventaire.";
+
+"MSG-1246291814486632";
+"Le joueur est introuvable.";
+
+"MSG-4606695582441378-%s";
+"Utilisation : %s {nom}";
+
+"MSG-7076904017514038";
+"Utilisation : /transfer {nom}";
+
+"MSG-1517872124220185-%d-%d";
+"Le joueur est sur le channel %d et vous êtes sur le channel %d.";
+
+"MSG-9629476788281219";
+"Transfert du joueur en cours...";
+
+"MSG-9640625234991603";
+"Il n'y a aucun joueur portant ce nom.";
+
+"MSG-9711594402655770";
+"Vous ne pouvez pas vous transférer sur vous même !";
+
+"MSG-2878586761131224-%d-%d";
+"Téléportation en cours vers les coordonnées temporelles X(%d) Y(%d).";
+
+"MSG-1457486471374280";
+"Utilisation : /goto {X} {Y}";
+
+"MSG-4828534644482906";
+"Utilisation : /warp {X} {Y}";
+
+"MSG-3291305093696017";
+"Utilisation : /tp {playerfrom} {playerto}";
+
+"MSG-3460213677706296";
+"Téléportation en cours...";
+
+"MSG-2366307935382382";
+"Un des joueurs est introuvable.";
+
+"MSG-8947917486051059";
+"Utilisation : /itemrange {vnum} {0 <> 100}";
+
+"MSG-2483347982393274-%u";
+"#%u n'existe pas.";
+
+"MSG-6578452213936695-%u";
+"#%u est une âme du dragon, suppression...";
+
+"MSG-5869303198470409";
+"Vous n'avez plus de place dans votre inventaire.";
+
+"MSG-4544804682277517";
+"Vous n'avez plus de place dans votre inventaire de l'âme du dragon.";
+
+"MSG-2980777566777904";
+"Vous n'êtes pas qualifié pour obtenir cet objet.";
+
+"MSG-3486965259298200";
+"Utilisation : /item {id}";
+
+"MSG-5078905080481853";
+"Utilisation : /grrandom {id}";
+
+"MSG-1740025788424548";
+"Utilisation : /group {id}";
+
+"MSG-3009435637392772";
+"Utilisation : /mc {id}";
+
+"MSG-6689711103071324";
+"Ce monstre est introuvable.";
+
+"MSG-5176133547991576";
+"Utilisation : /mm {id} {0 <> 100}";
+
+"MSG-2620344896624025-%s-%d-%d";
+"%s est apparu aux coordonnés X(%d) Y(%d).";
+
+"MSG-9231395769040750";
+"L'apparition a échoué.";
+
+"MSG-5314056084171894";
+"Utilisation : /ma {id}";
+
+"MSG-1831074664290563";
+"Utilisation : /mob {id}";
+
+"MSG-3788609993079961";
+"Utilisation : /mob_ld {id}";
+
+"MSG-8068340398403043";
+"Vous ne pouvez pas faire ça quand votre familier est invoqué.";
+
+"MSG-8180492907380914";
+"Utilisation : /ippurge {window}";
+
+"MSG-2477778765129753";
+"Cette fonctionnalité n'est disponible que pour l'Empereur.";
+
+"MSG-3489395466395372-%d-%d-%d-%d";
+"Total : [%d] / %d Shinsoo(s) / %d Chunjo(s) / %d Jinno(s)";
+
+"MSG-7402664467414219-%d";
+"Total : %d";
+
+"MSG-1043082831447516";
+"Utilisation : /dc {nom}";
+
+"MSG-9847370471734260";
+"Vous ne pouvez pas vous déconnecter vous même !";
+
+"MSG-6678804931081274";
+"Vous ne pouvez pas faire cela contre un membre de l'équipe.";
+
+"MSG-4625050227914494";
+"Utilisation : /kill {nom}";
+
+"MSG-4072968769852523-%s";
+"Vous avez tué %s.";
+
+"MSG-6641243841797692-%s";
+"Les Dieux Dragons ont décidé de vous sanctionner en vous tuant.";
+
+"MSG-4004747940229600";
+"Utilisation : /set {nom} {type} {quantité}";
+
+"MSG-3338724943966942";
+"Votre personnage a été sauvegardé.";
+
+"MSG-6918686488139762";
+"Utilisation : /give {nom} {id} {quantité}";
+
+"MSG-2737131923314711";
+"Utilisation : /advance {nom} {niveau}";
+
+"MSG-2799188303202012";
+"Ce nom de guilde n'est pas autorisé.";
+
+"MSG-7779308786047300-%s";
+"La guilde %s a été créée avec succès !";
+
+"MSG-9884807785453651";
+"Utilisation : /fishing_simul {niveau} {probabilité} {quantité}";
+
+"MSG-8008516668346019-%s-%d";
+"La variable d'évènement %s a été modifiée par %d.";
+
+"MSG-7924832643906042";
+"Utilisation : /private {id}";
+
+"MSG-9112492709938666";
+"La carte est introuvable.";
+
+"MSG-6695801150843408-%s-%s-%d";
+"La variable %s de la quête %s a été défini sur %d.";
+
+"MSG-8436198957001883";
+"La modification de la variable de quête à echouée.";
+
+"MSG-1618709893719623";
+"La compétence est introuvable.";
+
+"MSG-7037993915396739";
+"Utilisation : /setskillother {nom} {id} {niveau}";
+
+"MSG-5454637724652252";
+"Utilisation : /setskill {id} {niveau}";
+
+"MSG-1577580007993420";
+"Les données ont été actualisées.";
+
+"MSG-2342716037921009";
+"Toutes les données ont été actualisées.";
+
+"MSG-1138667771191647";
+"Utilisation : /level {niveau}";
+
+"MSG-1525115597306338";
+"La guilde est introuvable.";
+
+"MSG-3823130614041877-%d-%d-%d";
+"ID Guilde %d | ID Chef %d | Guerre(s) %d";
+
+"MSG-3657908445530528";
+"Utilisation : /setqf {nom} {valeur} {joueur}";
+
+"MSG-3821470142259015-%s-%d-%s";
+"La variable %s a été défini sur %d pour le joueur %s.";
+
+"MSG-4956309952287147";
+"Utilisation : /delqf {nom} {joueur}";
+
+"MSG-9784650802512024-%s";
+"La variable a été supprimée avec succès pour le joueur %s.";
+
+"MSG-6490157836810759-%s";
+"La variable n'existe pas pour le joueur %s.";
+
+"MSG-6325933554827204";
+"Impossible de définir la statistique sous la statistique initiale.";
+
+"MSG-6020021162470812";
+"Utilisation : /flush {id}";

@@ -979,7 +979,7 @@ bool CPythonMiniMap::LoadAtlas()
 	//snprintf(atlasFileName, sizeof(atlasFileName), "d:/%s/atlas.sub", rkMap.GetName().c_str());
 	
 #ifdef _DEBUG
-	TraceError("Loading AtlasSub 1 : %s", atlasFileName);
+	TraceError("LoadingAtlasSub: %s", atlasFileName);
 #endif
 
 	if (!CEterPackManager::Instance().isExist(atlasFileName))		

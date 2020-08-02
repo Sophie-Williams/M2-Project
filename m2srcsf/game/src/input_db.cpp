@@ -1889,9 +1889,9 @@ void CInputDB::BillingExpire(const char * c_pData)
 
 	if (p->dwRemainSeconds <= 60)
 	{
-		int32_t i = MAX(5, p->dwRemainSeconds);
+		//int32_t i = MAX(5, p->dwRemainSeconds);
 		sys_log(0, "BILLING_EXPIRE: %s %u", p->szLogin, p->dwRemainSeconds);
-		d->DelayedDisconnect(i);
+		d->DelayedDisconnect(3); //i
 	}
 	else
 	{
@@ -1940,7 +1940,7 @@ void CInputDB::BillingCheck(const char * c_pData)
 
 void CInputDB::Notice(const char * c_pData)
 {
-	extern void SendNotice(const char * c_pszBuf);
+	//extern void SendNotice(const char * c_pszBuf);
 
 	char szBuf[256+1];
 	strlcpy(szBuf, c_pData, sizeof(szBuf));

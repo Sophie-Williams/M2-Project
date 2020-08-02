@@ -124,7 +124,7 @@ void CInputAuth::Login(LPDESC d, const char * c_pData)
 	{
 		sys_err ("CInputAuth class is not for game server. IP %s might be a hacker.", 
 			inet_ntoa(d->GetAddr().sin_addr));
-		d->DelayedDisconnect(5);
+		d->DelayedDisconnect(3);
 		return;
 	}
 
@@ -272,7 +272,7 @@ void CInputAuth::LoginOpenID(LPDESC d, const char * c_pData)
 	{
 		sys_err ("CInputAuth class is not for game server. IP %s might be a hacker.", 
 			inet_ntoa(d->GetAddr().sin_addr));
-		d->DelayedDisconnect(5);
+		d->DelayedDisconnect(3);
 		return;
 	}
 
@@ -502,7 +502,7 @@ int32_t CInputAuth::Analyze(LPDESC d, uint8_t bHeader, const char * c_pData)
 	{
 		sys_err ("CInputAuth class is not for game server. IP %s might be a hacker.", 
 			inet_ntoa(d->GetAddr().sin_addr));
-		d->DelayedDisconnect(5);
+		d->DelayedDisconnect(3);
 		return 0;
 	}
 
@@ -549,7 +549,7 @@ void CInputAuth::PasspodAnswer(LPDESC d, const char * c_pData)
 	{
 		sys_err ("CInputAuth class is not for game server. IP %s might be a hacker.", 
 			inet_ntoa(d->GetAddr().sin_addr));
-		d->DelayedDisconnect(5);		
+		d->DelayedDisconnect(3);		
 		return;
 	}
 

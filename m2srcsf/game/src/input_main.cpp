@@ -447,9 +447,9 @@ int32_t CInputMain::Whisper(LPCHARACTER ch, const char * data, uint32_t uiBytes)
 						char buf[128];
 						int32_t len;
 						if (3==processReturn)
-							len = snprintf(buf, sizeof(buf), LC_TEXT("다른 거래중(창고,교환,상점)에는 개인상점을 사용할 수 없습니다."), pTable->szLocaleName);
+							len = snprintf(buf, sizeof(buf), LC_TEXT("MSG-5678538990522985"));
 						else
-							len = snprintf(buf, sizeof(buf), LC_TEXT("%s이 필요합니다."), pTable->szLocaleName);
+							len = snprintf(buf, sizeof(buf), LC_TEXT("MSG-8038170085772019"));
 						
 
 						if (len < 0 || len >= (int32_t) sizeof(buf))
@@ -726,7 +726,7 @@ int32_t CInputMain::Chat(LPCHARACTER ch, const char * data, uint32_t uiBytes)
 		if (ch->GetChatCounter() == 10)
 		{
 			sys_log(0, "CHAT_HACK: %s", ch->GetName());
-			ch->GetDesc()->DelayedDisconnect(5);
+			ch->GetDesc()->DelayedDisconnect(3);
 		}
 
 		return iExtraLen;
@@ -770,9 +770,9 @@ int32_t CInputMain::Chat(LPCHARACTER ch, const char * data, uint32_t uiBytes)
 		if (NULL != pTable)
 		{
 			if (3==processReturn)
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("다른 거래중(창고,교환,상점)에는 개인상점을 사용할 수 없습니다."), pTable->szLocaleName);
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-5678538990522985"));
 			else
-				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("%s이 필요합니다."), pTable->szLocaleName);
+				ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-8038170085772019"));
 						
 		}
 
@@ -1572,7 +1572,7 @@ bool CheckComboHack(LPCHARACTER ch, uint8_t bArg, uint32_t dwTime, bool CheckSpe
 	}
 	else
 	{
-		if (ch->GetDesc()->DelayedDisconnect(number(2, 9)))
+		if (ch->GetDesc()->DelayedDisconnect(3))
 		{
 			LogManager::instance().HackLog("Hacker", ch);
 			sys_log(0, "HACKER: %s arg %u", ch->GetName(), bArg);
@@ -1699,12 +1699,12 @@ void CInputMain::Move(LPCHARACTER ch, const char * data)
 
 				if (test_server)
 				{
-					ch->GetDesc()->DelayedDisconnect(number(2, 8));
+					ch->GetDesc()->DelayedDisconnect(3);
 					ch->ChatPacket(CHAT_TYPE_INFO, szBuf);
 				}
 				else
 				{
-					ch->GetDesc()->DelayedDisconnect(number(150, 500));
+					ch->GetDesc()->DelayedDisconnect(3);
 				}
 			}
 
@@ -2108,7 +2108,11 @@ void CInputMain::SafeboxCheckin(LPCHARACTER ch, const char * c_pData)
 	if (!pkSafebox || !pkItem)
 		return;
 
-	
+	if (pkItem->IsEquipped())
+	{
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("Fix_Depo_Equipe"));
+		return;
+	}
 
 #ifdef ENABLE_EXTEND_INVEN_SYSTEM
 	if (pkItem->GetCell() >= ch->Inventory_Size() && IS_SET(pkItem->GetFlag(),ITEM_FLAG_IRREMOVABLE))
@@ -2146,7 +2150,7 @@ void CInputMain::SafeboxCheckin(LPCHARACTER ch, const char * c_pData)
 
 	pkItem->RemoveFromCharacter();
 	if (!pkItem->IsDragonSoul())
-		ch->SyncQuickslot(QUICKSLOT_TYPE_ITEM, p->ItemPos.cell, 255);
+		ch->SyncQuickslot(QUICKSLOT_TYPE_ITEM, p->ItemPos.cell, 999);
 	pkSafebox->Add(p->bSafePos, pkItem);
 	
 	char szHint[128];
@@ -3304,7 +3308,7 @@ int32_t CInputMain::Analyze(LPDESC d, uint8_t bHeader, const char * c_pData)
 					if (version > date)
 					{
 						ch->ChatPacket(CHAT_TYPE_NOTICE, LC_TEXT("클라이언트 버전이 틀려 로그아웃 됩니다. 정상적으로 패치 후 접속하세요."));
-						d->DelayedDisconnect(10);
+						d->DelayedDisconnect(3);
 						LogManager::instance().HackLog("VERSION_CONFLICT", d->GetAccountTable().login, ch->GetName(), d->GetHostName());
 					}
 				}

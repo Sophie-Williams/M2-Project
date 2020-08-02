@@ -49,24 +49,19 @@ static void __SendChannelInfo(LPCHARACTER ch)
 	std::unique_ptr<SQLMsg> ucount1h(DBManager::instance().DirectQuery("SELECT `last_play` FROM `player` WHERE `last_play` > DATE_SUB(NOW(), INTERVAL 60 MINUTE)"));
 	int32_t uCountLast1H = ucount1h->Get()->uiNumRows;
 
-	
-	
-
-	ch->ChatPacket(CHAT_TYPE_INFO, "Vous êtes connecté sur le channel %d.", g_bChannel);
-
-
+	ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-7330915099629627-%d"), g_bChannel);
 
 	if (uCountLast1H == 0)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "Aucun joueur s'est connecté récemment.");
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-3912155184853894"));
 	}
 	else if (uCountLast1H == 1)
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "%d joueur s'est connecté récemment.", uCountLast1H);
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-3814671232744432-%d"), uCountLast1H);
 	}
 	else
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "%d joueurs se sont connectés récemment.", uCountLast1H);
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-4133105597520761-%d"), uCountLast1H);
 	}
 }
 
@@ -148,7 +143,7 @@ static void __SendMapNameInfo(LPCHARACTER ch)
 
 	if (_SpMapNames.find(ch->GetMapIndex()) != _SpMapNames.end())
 	{
-		ch->ChatPacket(CHAT_TYPE_INFO, "Vous entrez dans la zone : %s (%d)", _SpMapNames.find(ch->GetMapIndex())->second, ch->GetMapIndex());
+		ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-3286899712070310-%s-%d"), _SpMapNames.find(ch->GetMapIndex())->second, ch->GetMapIndex());
 	}
 	else
 	{
@@ -156,7 +151,7 @@ static void __SendMapNameInfo(LPCHARACTER ch)
 
 		if (pRegionInfo)
 		{
-			ch->ChatPacket(CHAT_TYPE_INFO, "Vous entrez dans la zone : %s (%d)", pRegionInfo->strMapName.c_str(), ch->GetMapIndex());
+			ch->ChatPacket(CHAT_TYPE_INFO, LC_TEXT("MSG-3286899712070310-%s-%d"), pRegionInfo->strMapName.c_str(), ch->GetMapIndex());
 		}
 		
 	}
@@ -540,8 +535,8 @@ bool NewPlayerTable2(TPlayerTable * table, const char * name, uint8_t race, uint
 	table->part_base	= shape;
 
 	
-	table->parts[PART_MAIN] = 0;
-	table->parts[PART_HAIR] = 0;
+	//table->parts[PART_MAIN] = 0;
+	//table->parts[PART_HAIR] = 0;
 
 	table->st		= JobInitialPoints[job].st;
 	table->dx		= JobInitialPoints[job].dx;
@@ -745,6 +740,10 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 	ch->StartRecoveryEvent();
 	ch->StartCheckSpeedHackEvent();
 
+#ifdef ENABLE_YMIR_AFFECT_FIX
+	ch->SetQuestFlag("item.last_time", get_global_time());
+#endif
+
 	CPVPManager::instance().Connect(ch);
 	CPVPManager::instance().SendList(d);
 
@@ -795,7 +794,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 
 			if (!d->GetClientVersion())
 			{
-				d->DelayedDisconnect(10);
+				d->DelayedDisconnect(3);
 			}
 			else
 			{
@@ -803,7 +802,7 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 				if (version > date)
 				{
 					ch->ChatPacket(CHAT_TYPE_NOTICE, LC_TEXT("Å¬¶óÀÌ¾ðÆ® ¹öÀüÀÌ Æ²·Á ·Î±×¾Æ¿ô µË´Ï´Ù. Á¤»óÀûÀ¸·Î ÆÐÄ¡ ÈÄ Á¢¼ÓÇÏ¼¼¿ä."));
-					d->DelayedDisconnect(10);
+					d->DelayedDisconnect(3);
 					LogManager::instance().HackLog("VERSION_CONFLICT", ch);
 
 					sys_log(0, "VERSION : WRONG VERSION USER : account:%s name:%s hostName:%s server_version:%s client_version:%s",
@@ -910,6 +909,11 @@ void CInputLogin::Entergame(LPDESC d, const char * data)
 		ch->RemoveAffect(AFFECT_MOUNT_BONUS);
 		if (ch->IsRiding())
 			ch->StopRiding();
+
+
+
+		//IF ITEM QUIPE ALORS MOUNT MOB //
+
 #endif
 
 		if (COXEventManager::instance().Enter(ch) == false)

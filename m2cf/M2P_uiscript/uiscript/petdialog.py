@@ -1,12 +1,3 @@
-#########################################
-# title_name		: System Pack		#
-# filename			: uiscript			#
-# author			: Bvural41			#
-# version			: Version 0.0.2		#
-# date				: 2015 04 11		#
-# update			: 2019 02 05		#
-#########################################
-
 import uiScriptLocale
 import translate
 
@@ -73,7 +64,7 @@ window = {
 					"x" : 30,
 					"y" : 42,
 					
-					"text" : "Tümünü Topla",
+					"text" : "Tï¿½mï¿½nï¿½ Topla",
 				},
 				{
 					"name" : "pet_toplama_hepsi_on_button",
@@ -108,7 +99,7 @@ window = {
 					"x" : 30,
 					"y" : 72,
 					
-					"text" : "Kostümler",
+					"text" : "Kostï¿½mler",
 				},
 				{
 					"name" : "pet_toplama_kostum_on_button",
@@ -143,7 +134,7 @@ window = {
 					"x" : 30,
 					"y" : 102,
 					
-					"text" : "Beceri Kitaplarý",
+					"text" : "Beceri Kitaplarï¿½",
 				},
 				{
 					"name" : "pet_toplama_bk_on_button",
@@ -178,7 +169,7 @@ window = {
 					"x" : 30,
 					"y" : 132,
 					
-					"text" : "Ruh Taþlarý",
+					"text" : "Ruh Taï¿½larï¿½",
 				},
 				{
 					"name" : "pet_toplama_rt_on_button",
@@ -248,7 +239,7 @@ window = {
 					"x" : 30,
 					"y" : 192,
 					
-					"text" : "+70 Zýrhlar",
+					"text" : "+70 Zï¿½rhlar",
 				},
 				{
 					"name" : "pet_toplama_celik_on_button",
@@ -283,7 +274,7 @@ window = {
 					"x" : 30,
 					"y" : 222,
 					
-					"text" : "Takýlar",
+					"text" : "Takï¿½lar",
 				},
 				{
 					"name" : "pet_toplama_taki_on_button",
@@ -353,7 +344,7 @@ window = {
 					"x" : 30,
 					"y" : 282,
 					
-					"text" : "Sandýklar",
+					"text" : "Sandï¿½klar",
 				},
 				{
 					"name" : "pet_toplama_sandik_on_button",

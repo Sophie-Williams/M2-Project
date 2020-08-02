@@ -405,7 +405,7 @@ typedef struct SPlayerItem
 typedef struct SQuickslot
 {
 	uint8_t	type;
-	uint8_t	pos;
+	uint16_t	pos;
 } TQuickslot;
 
 

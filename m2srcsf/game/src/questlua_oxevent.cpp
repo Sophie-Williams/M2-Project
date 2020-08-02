@@ -22,7 +22,76 @@ namespace quest
 		COXEventManager::instance().ClearQuiz();
 
 		char script[256];
-		snprintf(script, sizeof(script), "%s/oxquiz.lua", LocaleService_GetBasePath().c_str());
+
+		if (LC_IsFrance())
+			snprintf(script, sizeof(script), "%s/oxquiz_fr.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsEnglish())
+			snprintf(script, sizeof(script), "%s/oxquiz_en.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsJapan())
+			snprintf(script, sizeof(script), "%s/oxquiz_jp.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsHongKong())
+			snprintf(script, sizeof(script), "%s/oxquiz_hk.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsNewCIBN())
+			snprintf(script, sizeof(script), "%s/oxquiz_cn.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsGermany())
+			snprintf(script, sizeof(script), "%s/oxquiz_de.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsKorea())
+			snprintf(script, sizeof(script), "%s/oxquiz_kr.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsItaly())
+			snprintf(script, sizeof(script), "%s/oxquiz_it.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsSpain())
+			snprintf(script, sizeof(script), "%s/oxquiz_es.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsGreek())
+			snprintf(script, sizeof(script), "%s/oxquiz_gr.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsUK())
+			snprintf(script, sizeof(script), "%s/oxquiz_en.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsTurkey())
+			snprintf(script, sizeof(script), "%s/oxquiz_tr.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsPoland())
+			snprintf(script, sizeof(script), "%s/oxquiz_pl.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsPortugal())
+			snprintf(script, sizeof(script), "%s/oxquiz_pt.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsCanada())
+			snprintf(script, sizeof(script), "%s/oxquiz_ca.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsBrazil())
+			snprintf(script, sizeof(script), "%s/oxquiz_br.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsYMIR())
+			snprintf(script, sizeof(script), "%s/oxquiz_en.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsRussia())
+			snprintf(script, sizeof(script), "%s/oxquiz_ru.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsDenmark())
+			snprintf(script, sizeof(script), "%s/oxquiz_dk.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsBulgaria())
+			snprintf(script, sizeof(script), "%s/oxquiz_bg.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsCroatia())
+			snprintf(script, sizeof(script), "%s/oxquiz_hr.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsMexico())
+			snprintf(script, sizeof(script), "%s/oxquiz_mx.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsArabia())
+			snprintf(script, sizeof(script), "%s/oxquiz_ae.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsCzech())
+			snprintf(script, sizeof(script), "%s/oxquiz_cz.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsHungary())
+			snprintf(script, sizeof(script), "%s/oxquiz_hu.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsRomania())
+			snprintf(script, sizeof(script), "%s/oxquiz_ro.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsNetherlands())
+			snprintf(script, sizeof(script), "%s/oxquiz_nl.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsSingapore())
+			snprintf(script, sizeof(script), "%s/oxquiz_sg.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsVietnam())
+			snprintf(script, sizeof(script), "%s/oxquiz_vn.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsThailand())
+			snprintf(script, sizeof(script), "%s/oxquiz_th.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsUSA())
+			snprintf(script, sizeof(script), "%s/oxquiz_en.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsWE_Korea())
+			snprintf(script, sizeof(script), "%s/oxquiz_kr.lua", LocaleService_GetBasePath().c_str());
+		else if (LC_IsTaiwan())
+			snprintf(script, sizeof(script), "%s/oxquiz_tw.lua", LocaleService_GetBasePath().c_str());
+		else
+			snprintf(script, sizeof(script), "%s/oxquiz_en.lua", LocaleService_GetBasePath().c_str());
+
 		int32_t result = lua_dofile(quest::CQuestManager::instance().GetLuaState(), script);
 
 		if (result != 0)

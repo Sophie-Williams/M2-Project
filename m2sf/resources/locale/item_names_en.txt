@@ -4585,6 +4585,7 @@ VNUM	LOCALE_NAME
 40007	Letter from Savage Boss
 40008	Anneau de Téléportation
 40009	Gestion de l'Exp.
+40010	Orbe du Temps
 40101	Riptooth Blade
 40102	Riptooth Dagger
 40103	Riptooth Bow
@@ -7037,4 +7038,3 @@ VNUM	LOCALE_NAME
 30402	Réinit. Bourse aux Gayas
 30401	Ext. Bourse aux Gayas
 30400	Gemme Précieuse
-	

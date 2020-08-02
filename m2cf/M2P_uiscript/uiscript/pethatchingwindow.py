@@ -1,12 +1,3 @@
-#########################################
-# title_name		: System Pack		#
-# filename			: uiscript			#
-# author			: Bvural41			#
-# version			: Version 0.0.2		#
-# date				: 2015 04 11		#
-# update			: 2019 02 05		#
-#########################################
-
 import uiScriptLocale
 
 HATCHING_WINDOW_WIDTH	= 176

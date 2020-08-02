@@ -1111,7 +1111,7 @@ void CHARACTER::ItemDropPenalty(LPCHARACTER pkKiller)
 					continue;
 #endif
 
-				SyncQuickslot(QUICKSLOT_TYPE_ITEM, vec_bSlots[i], 255);
+				SyncQuickslot(QUICKSLOT_TYPE_ITEM, vec_bSlots[i], 999);
 				vec_item.push_back(std::make_pair(pkItem->RemoveFromCharacter(), INVENTORY));
 			}
 		}
@@ -1157,7 +1157,7 @@ void CHARACTER::ItemDropPenalty(LPCHARACTER pkKiller)
 					continue;
 #endif
 
-				SyncQuickslot(QUICKSLOT_TYPE_ITEM, vec_bSlots[i], 255);
+				SyncQuickslot(QUICKSLOT_TYPE_ITEM, vec_bSlots[i], 999);
 				vec_item.push_back(std::make_pair(pkItem->RemoveFromCharacter(), EQUIPMENT));
 			}
 		}
@@ -1171,7 +1171,7 @@ void CHARACTER::ItemDropPenalty(LPCHARACTER pkKiller)
 
 		if (pkItem && pkItem->GetVnum() == UNIQUE_ITEM_SKIP_ITEM_DROP_PENALTY)
 		{
-			SyncQuickslot(QUICKSLOT_TYPE_ITEM, WEAR_UNIQUE1, 255);
+			SyncQuickslot(QUICKSLOT_TYPE_ITEM, WEAR_UNIQUE1, 999);
 			vec_item.push_back(std::make_pair(pkItem->RemoveFromCharacter(), EQUIPMENT));
 		}
 
@@ -1179,7 +1179,7 @@ void CHARACTER::ItemDropPenalty(LPCHARACTER pkKiller)
 
 		if (pkItem && pkItem->GetVnum() == UNIQUE_ITEM_SKIP_ITEM_DROP_PENALTY)
 		{
-			SyncQuickslot(QUICKSLOT_TYPE_ITEM, WEAR_UNIQUE2, 255);
+			SyncQuickslot(QUICKSLOT_TYPE_ITEM, WEAR_UNIQUE2, 999);
 			vec_item.push_back(std::make_pair(pkItem->RemoveFromCharacter(), EQUIPMENT));
 		}
 
@@ -1187,7 +1187,7 @@ void CHARACTER::ItemDropPenalty(LPCHARACTER pkKiller)
 
 		if (pkItem && pkItem->GetVnum() == UNIQUE_ITEM_SKIP_ITEM_DROP_PENALTY)
 		{
-			SyncQuickslot(QUICKSLOT_TYPE_ITEM, WEAR_COSTUME_MOUNT, 255);
+			SyncQuickslot(QUICKSLOT_TYPE_ITEM, WEAR_COSTUME_MOUNT, 999);
 			vec_item.push_back(std::make_pair(pkItem->RemoveFromCharacter(), EQUIPMENT));
 		}
 	}
@@ -1265,12 +1265,12 @@ void CHARACTER::Dead(LPCHARACTER pkKiller, bool bImmediateDead)
 		else if (GetMountVnum())
 		{
 			RemoveAffect(AFFECT_MOUNT_BONUS);
-			LPITEM item = GetWear(WEAR_UNIQUE1);
+			LPITEM item1 = GetWear(WEAR_UNIQUE1);
 			LPITEM item2 = GetWear(WEAR_UNIQUE2);
 			LPITEM item3 = GetWear(WEAR_COSTUME_MOUNT);
 
-			if (item && item->IsRideItem())
-				UnequipItem(item);
+			if (item1 && item1->IsRideItem())
+				UnequipItem(item1);
 
 			if (item2 && item2->IsRideItem())
 				UnequipItem(item2);

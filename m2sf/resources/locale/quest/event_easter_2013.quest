@@ -11,7 +11,7 @@ quest event_easter_2013 begin
 			table.foreach(level_table, 
 				function(index, level)
 					for i=0, 5 do
-						regen_in_map(map_index, "locale/_master/map/easter/metin_regen_level" .. level .. ".txt")
+						regen_in_map(map_index, "locale/map/easter/metin_regen_level" .. level .. ".txt")
 					end
 				end
 			)
@@ -21,7 +21,7 @@ quest event_easter_2013 begin
 			local settings = event_easter_2013.get_settings()
 			local level = settings.metins[vnum]
 			
-			regen_in_map(pc.get_map_index(), "locale/_master/map/easter/metin_regen_level" .. level .. ".txt")
+			regen_in_map(pc.get_map_index(), "locale/map/easter/metin_regen_level" .. level .. ".txt")
 			if level < pc.get_level() - settings.max_level_difference then
 				return
 			else

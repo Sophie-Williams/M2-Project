@@ -560,10 +560,77 @@ namespace quest
 			}
 		}
 
-		//if (LC_IsEurope())
 		{
 			char translateFileName[256];
-			snprintf(translateFileName, sizeof(translateFileName), "%s/translate.lua", LocaleService_GetBasePath().c_str());
+
+			if (LC_IsFrance())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_fr.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsEnglish())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_en.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsJapan())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_jp.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsHongKong())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_hk.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsNewCIBN())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_cn.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsGermany())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_de.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsKorea())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_kr.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsItaly())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_it.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsSpain())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_es.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsGreek())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_gr.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsUK())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_en.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsTurkey())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_tr.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsPoland())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_pl.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsPortugal())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_pt.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsCanada())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_ca.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsBrazil())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_br.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsYMIR())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_en.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsRussia())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_ru.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsDenmark())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_dk.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsBulgaria())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_bg.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsCroatia())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_hr.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsMexico())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_mx.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsArabia())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_ae.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsCzech())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_cz.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsHungary())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_hu.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsRomania())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_ro.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsNetherlands())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_nl.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsSingapore())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_sg.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsVietnam())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_vn.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsThailand())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_th.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsUSA())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_en.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsWE_Korea())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_kr.lua", LocaleService_GetBasePath().c_str());
+			else if (LC_IsTaiwan())
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_tw.lua", LocaleService_GetBasePath().c_str());
+			else
+				snprintf(translateFileName, sizeof(translateFileName), "%s/translate_en.lua", LocaleService_GetBasePath().c_str());
 
 			int32_t translateLoadingResult = lua_dofile(L, translateFileName);
 			sys_log(0, "LoadTranslate(%s), returns %d", translateFileName, translateLoadingResult);
@@ -576,14 +643,75 @@ namespace quest
 
 		{
 			char questLocaleFileName[256];
-			//if (LC_IsEurope())
-			{
-				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale.lua", g_stQuestDir.c_str());
-			}
-			/*else
-			{
-				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_%s.lua", g_stQuestDir.c_str(), g_stLocale.c_str());
-			}*/
+
+			if (LC_IsFrance())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_fr.lua", g_stQuestDir.c_str());
+			else if (LC_IsEnglish())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_en.lua", g_stQuestDir.c_str());
+			else if (LC_IsJapan())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_jp.lua", g_stQuestDir.c_str());
+			else if (LC_IsHongKong())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_hk.lua", g_stQuestDir.c_str());
+			else if (LC_IsNewCIBN())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_cn.lua", g_stQuestDir.c_str());
+			else if (LC_IsGermany())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_de.lua", g_stQuestDir.c_str());
+			else if (LC_IsKorea())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_kr.lua", g_stQuestDir.c_str());
+			else if (LC_IsItaly())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_it.lua", g_stQuestDir.c_str());
+			else if (LC_IsSpain())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_es.lua", g_stQuestDir.c_str());
+			else if (LC_IsGreek())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_gr.lua", g_stQuestDir.c_str());
+			else if (LC_IsUK())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_en.lua", g_stQuestDir.c_str());
+			else if (LC_IsTurkey())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_tr.lua", g_stQuestDir.c_str());
+			else if (LC_IsPoland())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_pl.lua", g_stQuestDir.c_str());
+			else if (LC_IsPortugal())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_pt.lua", g_stQuestDir.c_str());
+			else if (LC_IsCanada())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_ca.lua", g_stQuestDir.c_str());
+			else if (LC_IsBrazil())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_br.lua", g_stQuestDir.c_str());
+			else if (LC_IsYMIR())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_en.lua", g_stQuestDir.c_str());
+			else if (LC_IsRussia())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_ru.lua", g_stQuestDir.c_str());
+			else if (LC_IsDenmark())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_dk.lua", g_stQuestDir.c_str());
+			else if (LC_IsBulgaria())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_bg.lua", g_stQuestDir.c_str());
+			else if (LC_IsCroatia())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_hr.lua", g_stQuestDir.c_str());
+			else if (LC_IsMexico())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_mx.lua", g_stQuestDir.c_str());
+			else if (LC_IsArabia())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_ae.lua", g_stQuestDir.c_str());
+			else if (LC_IsCzech())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_cz.lua", g_stQuestDir.c_str());
+			else if (LC_IsHungary())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_hu.lua", g_stQuestDir.c_str());
+			else if (LC_IsRomania())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_ro.lua", g_stQuestDir.c_str());
+			else if (LC_IsNetherlands())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_nl.lua", g_stQuestDir.c_str());
+			else if (LC_IsSingapore())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_sg.lua", g_stQuestDir.c_str());
+			else if (LC_IsVietnam())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_vn.lua", g_stQuestDir.c_str());
+			else if (LC_IsThailand())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_th.lua", g_stQuestDir.c_str());
+			else if (LC_IsUSA())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_en.lua", g_stQuestDir.c_str());
+			else if (LC_IsWE_Korea())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_kr.lua", g_stQuestDir.c_str());
+			else if (LC_IsTaiwan())
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_tw.lua", g_stQuestDir.c_str());
+			else
+				snprintf(questLocaleFileName, sizeof(questLocaleFileName), "%s/locale_en.lua", g_stQuestDir.c_str());
 
 			int32_t questLocaleLoadingResult = lua_dofile(L, questLocaleFileName);
 			sys_log(0, "LoadQuestLocale(%s), returns %d", questLocaleFileName, questLocaleLoadingResult);

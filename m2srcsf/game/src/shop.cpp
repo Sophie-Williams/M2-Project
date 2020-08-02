@@ -272,6 +272,7 @@ int64_t CShop::Buy(LPCHARACTER ch, uint8_t pos)
 			return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY_CHEQUE;
 	}
 	else if ((int64_t)dwPrice>0 && (int32_t)dwCheque <= 0)
+	{
 		if (ch->GetGold() < (int32_t)dwPrice)
 			return SHOP_SUBHEADER_GC_NOT_ENOUGH_MONEY;
 	}
@@ -374,7 +375,7 @@ int64_t CShop::Buy(LPCHARACTER ch, uint8_t pos)
 
 	if (m_pkPC)
 	{
-		m_pkPC->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 255);
+		m_pkPC->SyncQuickslot(QUICKSLOT_TYPE_ITEM, item->GetCell(), 999);
 
 		if (item->GetVnum() == 90008 || item->GetVnum() == 90009) 
 		{
@@ -446,7 +447,7 @@ int64_t CShop::Buy(LPCHARACTER ch, uint8_t pos)
 	if (IsPCShop() && IsSoldOut())
 	{
 		m_pkPC->CloseMyShop();
-		m_pkPC->ChatPacket(CHAT_TYPE_NOTICE, "Your store closed automatically, reason: sold out!");
+		m_pkPC->ChatPacket(CHAT_TYPE_NOTICE, LC_TEXT("MSG-1933659993546856"));
 	}
 #endif
 

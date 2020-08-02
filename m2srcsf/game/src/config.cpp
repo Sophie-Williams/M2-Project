@@ -1213,7 +1213,7 @@ void CheckClientVersion()
 		if (version > date)
 		{
 			d->GetCharacter()->ChatPacket(CHAT_TYPE_NOTICE, LC_TEXT("클라이언트 버전이 틀려 로그아웃 됩니다. 정상적으로 패치 후 접속하세요."));
-			d->DelayedDisconnect(10);
+			d->DelayedDisconnect(3);
 		}
 	}
 }

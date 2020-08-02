@@ -7,7 +7,7 @@
 
 namespace Discord
 {
-	const auto DiscordClientID = "667352913621942276";
+	const auto DiscordClientID = "713021816180047892";
 
 	using DCDATA = std::pair<std::string, std::string>;
 

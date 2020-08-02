@@ -53,7 +53,7 @@ getenergyvalue
 mysql_query
 setenergy
 setenergytime
-string.trim 
+string.trim
 d.get_damage_from_race
 d.get_damage_from_affect
 d.set_damage_from_race

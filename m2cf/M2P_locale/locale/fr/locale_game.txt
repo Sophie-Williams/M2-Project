@@ -70,7 +70,7 @@ PET_TEXTT_3	Expérience restante : %d sur %d
 PET_TEXTT_4	Objet actuel : %.2f%%	
 PET_TEXTT_5	Objet restant : %d sur %d	
 PET_TEXTT_7	Jeune	
-PET_TEXTT_8	Voulez-vous le renommer?
+PET_TEXTT_8	 va éclore ! Voulez-vous continuer ?
 PET_YAS_TEXT	 (%d Jour)	
 PET_EXP1	Exp. Restante : %d / %d
 PET_EXP2	Exp. Actuelle : %.2f%%

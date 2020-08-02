@@ -739,21 +739,21 @@ typedef struct command_item_pickup
 typedef struct command_quickslot_add
 {
     BYTE        header;
-    BYTE        pos;
+	uint16_t        pos;
 	TQuickSlot	slot;
 }TPacketCGQuickSlotAdd;
 
 typedef struct command_quickslot_del
 {
     BYTE        header;
-    BYTE        pos;
+	uint16_t        pos;
 }TPacketCGQuickSlotDel;
 
 typedef struct command_quickslot_swap
 {
     BYTE        header;
-    BYTE        pos;
-    BYTE        change_pos;
+	uint16_t        pos;
+	uint16_t        change_pos;
 }TPacketCGQuickSlotSwap;
 
 typedef struct command_on_click
@@ -1984,21 +1984,21 @@ typedef struct packet_item_ownership
 typedef struct packet_quickslot_add
 {
     BYTE        header;
-    BYTE        pos;
+	uint16_t        pos;
 	TQuickSlot	slot;
 } TPacketGCQuickSlotAdd;
 
 typedef struct packet_quickslot_del
 {
     BYTE        header;
-    BYTE        pos;
+	uint16_t        pos;
 } TPacketGCQuickSlotDel;
 
 typedef struct packet_quickslot_swap
 {
     BYTE        header;
-    BYTE        pos;
-    BYTE        change_pos;
+	uint16_t        pos;
+	uint16_t        change_pos;
 } TPacketGCQuickSlotSwap;
 
 typedef struct packet_shop_start

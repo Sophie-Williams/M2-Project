@@ -517,7 +517,7 @@ int32_t main(int32_t argc, char **argv)
 
 #ifdef NEW_PET_SYSTEM
 	std::string temp_exp_line; 
-	std::ifstream exppet_table_open("locale/france/exppettable.txt");
+	std::ifstream exppet_table_open("locale/exppettable.txt");
 	
 
 	int32_t exppet_table_counter = 0;

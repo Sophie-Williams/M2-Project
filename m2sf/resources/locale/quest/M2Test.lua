@@ -12,7 +12,7 @@ quest M2Test begin
 		when 10.remove begin
 			syschat("--------------- (10) ---------------")
 		end
-		
+
 		-- OK
 
 		when respawn begin
@@ -25,7 +25,7 @@ quest M2Test begin
 			syschat("Echec : Vous venez de raffiner...")
 		end
 		when info or button begin
-			say("MiaW")
+			say("MiaW Corporation")
 		end
 		when mining_success begin
 			syschat("Succès : Vous venez de Miner !")

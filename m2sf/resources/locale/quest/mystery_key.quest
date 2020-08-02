@@ -20,21 +20,91 @@ quest mystery_key begin
 		function get_reward_for_chest(chest_vnum)
 			local reward_table = {
 				[50132] = {
-					{71126, 1, 20},
+					{71126, 1},
 					{71094, 1},
-					{71085, 2},
-					{70039, 2},
-					{71032, 3},
-					{70024, 3},
-					{25040, 5},
-					{71044, 7},
-					{71083, 8},
-					{71030, 10},
-					{71027, 10},
-					{71012, 12}
-					
+					{71085, 1},
+					{70039, 1},
+					{71032, 1},
+					{70024, 1},
+					{25040, 1},
+					{71044, 1},
+					{71083, 1},
+					{71030, 1},
+					{71027, 1},
+					{71012, 1}
+				},
+				[50133] = {
+					{71126, 1},
+					{25040, 1},
+					{72302, 1},
+					{72304, 1},
+					{72314, 1},
+					{39007, 1},
+					{39029, 1},
+					{39030, 1},
+					{71044, 1},
+					{39019, 1},
+					{39017, 1},
+					{39020, 1}
+				},
+				[50134] = {
+					{71124, 1},
+					{25040, 1},
+					{72302, 1},
+					{72304, 1},
+					{72314, 1},
+					{39007, 1},
+					{39029, 1},
+					{39030, 1},
+					{71044, 1},
+					{39019, 1},
+					{39017, 1},
+					{39020, 1}
+				},
+				[50135] = {
+					{71125, 1},
+					{25040, 1},
+					{72302, 1},
+					{72304, 1},
+					{72314, 1},
+					{39007, 1},
+					{39029, 1},
+					{39030, 1},
+					{71044, 1},
+					{39019, 1},
+					{39017, 1},
+					{39020, 1}
+				},
+				[50136] = {
+					{71127, 1},
+					{25040, 1},
+					{72302, 1},
+					{72304, 1},
+					{72314, 1},
+					{39007, 1},
+					{39029, 1},
+					{39030, 1},
+					{71044, 1},
+					{39019, 1},
+					{39017, 1},
+					{39020, 1}
+				},
+				[50137] = {
+					{71128, 1},
+					{25040, 1},
+					{72302, 1},
+					{72304, 1},
+					{72314, 1},
+					{39007, 1},
+					{39029, 1},
+					{39030, 1},
+					{71044, 1},
+					{39019, 1},
+					{39017, 1},
+					{39020, 1}
 				}
 			}
+
 			return get_random_vnum_from_table(reward_table[chest_vnum])
 		end
 
@@ -51,6 +121,71 @@ quest mystery_key begin
 		end
 
 		when 50132.use begin
+			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
+			local master_key_vnum = mystery_key.get_master_key()
+			say_title(item_name(item.vnum) .. ": ")
+			if pc.count_item(key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, key_vnum)
+			elseif pc.count_item(master_key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, master_key_vnum)
+			else
+				say(gameforge.mystery_key._040_say)
+			end
+		end
+
+		when 50133.use begin
+			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
+			local master_key_vnum = mystery_key.get_master_key()
+			say_title(item_name(item.vnum) .. ": ")
+			if pc.count_item(key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, key_vnum)
+			elseif pc.count_item(master_key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, master_key_vnum)
+			else
+				say(gameforge.mystery_key._040_say)
+			end
+		end
+
+		when 50134.use begin
+			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
+			local master_key_vnum = mystery_key.get_master_key()
+			say_title(item_name(item.vnum) .. ": ")
+			if pc.count_item(key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, key_vnum)
+			elseif pc.count_item(master_key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, master_key_vnum)
+			else
+				say(gameforge.mystery_key._040_say)
+			end
+		end
+
+		when 50135.use begin
+			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
+			local master_key_vnum = mystery_key.get_master_key()
+			say_title(item_name(item.vnum) .. ": ")
+			if pc.count_item(key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, key_vnum)
+			elseif pc.count_item(master_key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, master_key_vnum)
+			else
+				say(gameforge.mystery_key._040_say)
+			end
+		end
+
+		when 50136.use begin
+			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
+			local master_key_vnum = mystery_key.get_master_key()
+			say_title(item_name(item.vnum) .. ": ")
+			if pc.count_item(key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, key_vnum)
+			elseif pc.count_item(master_key_vnum) >= 1 then
+				mystery_key.open_chest(item.vnum, master_key_vnum)
+			else
+				say(gameforge.mystery_key._040_say)
+			end
+		end
+
+		when 50137.use begin
 			local key_vnum = mystery_key.get_key_for_chest(item.vnum)
 			local master_key_vnum = mystery_key.get_master_key()
 			say_title(item_name(item.vnum) .. ": ")

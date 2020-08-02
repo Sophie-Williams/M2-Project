@@ -8,6 +8,24 @@ define drop_flag "ds_drop"
 
 quest dragon_soul begin
 	state start begin
+	
+		function ds_stack_give()
+			local eye_left = pc.getf("dragon_soul", "eye_left")
+			if eye_left <= 0 then
+				return
+			end
+
+			if pc.count_item(gemstone) >= gemstone_need_count then
+				pc.setf("dragon_soul", "eye_left", eye_left - 1)
+				pc.remove_item(gemstone, gemstone_need_count)
+				pc.give_item2(reward_box)
+				if 1 == eye_left then
+					notice_multiline(gameforge.dragon_soul._1110_notice, notice)
+					set_state(state_closed_season)
+				end
+			end
+		end
+	
 		when levelup or letter with pc.level >= dragon_soul_can_use_level begin
 			send_letter(gameforge.dragon_soul._1010_sendLetter)
 			local v = find_npc_by_vnum(alchemist)
@@ -40,10 +58,14 @@ quest dragon_soul begin
 				return
 			end
 			
+			local lucky = number(1, 100)
+				
 			if pc.count_item(gemstone) < gemstone_need_count then
 				if drop_gamble_with_flag(drop_flag) then
 					-- game.drop_item_with_ownership(gemstone, 1, 300)
-					pc.give_item2(gemstone, 1)
+					if lucky <= 10 then
+						pc.give_item2(gemstone, 1)
+					end
 				end
 			end
 		end
@@ -79,10 +101,14 @@ quest dragon_soul begin
 			if drop_gamble_with_flag(drop_flag) then
 				local eye_left = pc.getf("dragon_soul", "eye_left")
 				local haved_gemstone_number = pc.count_item(gemstone)
+				local lucky = number(1, 100)
 				
 				if eye_left > haved_gemstone_number / gemstone_need_count then
 					--game.drop_item_with_ownership(gemstone, 1, 300)
-					pc.give_item2(gemstone, 1)
+					if lucky <= 10 then
+						pc.give_item2(gemstone, 1)
+						dragon_soul.ds_stack_give()
+					end
 				end
 			end
 		end

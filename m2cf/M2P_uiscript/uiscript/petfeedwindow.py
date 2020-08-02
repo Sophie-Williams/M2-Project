@@ -1,12 +1,3 @@
-#########################################
-# title_name		: System Pack		#
-# filename			: uiscript			#
-# author			: Bvural41			#
-# version			: Version 0.0.2		#
-# date				: 2015 04 11		#
-# update			: 2019 02 05		#
-#########################################
-
 import uiScriptLocale
 
 EXP_Y_ADD_POSITION = 0
@@ -49,7 +40,7 @@ window = {
 					
 					"children" :
 					(
-						{ "name":"TitleName", "type":"text", "x":0, "y":0, "text":"Besle", "all_align":"center" },
+						{ "name":"TitleName", "type":"text", "x":0, "y":0, "text": uiScriptLocale.PET_UI_TITLE, "all_align":"center" },
 					),
 				},
 				## Pet Feed Area

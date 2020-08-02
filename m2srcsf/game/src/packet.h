@@ -336,6 +336,9 @@ enum
 	HEADER_GG_PCBANG_UPDATE			= 28,
 
 	HEADER_GG_CHECK_AWAKENESS		= 29,
+#ifdef __FULL_NOTICE_SYSTEM__
+		HEADER_GG_BIG_NOTICE = 30,
+#endif
 };
 
 #pragma pack(1)
@@ -763,21 +766,21 @@ typedef struct command_item_pickup
 typedef struct command_quickslot_add
 {
 	uint8_t	header;
-	uint8_t	pos;
+	uint16_t	pos;
 	TQuickslot	slot;
 } TPacketCGQuickslotAdd;
 
 typedef struct command_quickslot_del
 {
 	uint8_t	header;
-	uint8_t	pos;
+	uint16_t	pos;
 } TPacketCGQuickslotDel;
 
 typedef struct command_quickslot_swap
 {
 	uint8_t	header;
-	uint8_t	pos;
-	uint8_t	change_pos;
+	uint16_t	pos;
+	uint16_t	change_pos;
 } TPacketCGQuickslotSwap;
 
 enum
@@ -1255,21 +1258,21 @@ typedef struct packet_item_ground_del
 struct packet_quickslot_add
 {
 	uint8_t	header;
-	uint8_t	pos;
+	uint16_t	pos;
 	TQuickslot	slot;
 };
 
 struct packet_quickslot_del
 {
 	uint8_t	header;
-	uint8_t	pos;
+	uint16_t	pos;
 };
 
 struct packet_quickslot_swap
 {
 	uint8_t	header;
-	uint8_t	pos;
-	uint8_t	pos_to;
+	uint16_t	pos;
+	uint16_t	pos_to;
 };
 
 struct packet_motion

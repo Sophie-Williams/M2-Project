@@ -4946,7 +4946,7 @@ Group	Àü¿î¼®
 	67	27993	1	05 --Perle bleue
 	68	27994	1	05 --Perle rouge
 	69	27987	1	03 --Palourde
-	70	70103	1	03 --Livre du chef (3h)
+	70	71012	1	03 --Livre du chef (3h)
 	71	50513	1	50 --Pierre d ame
 	72	50300 	1	100 --Manuel
 	73	50300 	1	100 --Manuel

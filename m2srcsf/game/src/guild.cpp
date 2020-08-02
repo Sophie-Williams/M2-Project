@@ -124,15 +124,10 @@ CGuild::~CGuild()
 
 void CGuild::RequestAddMember(LPCHARACTER ch, int32_t grade)
 {
-	
 	if (!ch)
 		return;
 
-	
-	if (ch->IsPC())
-		return;
-
-	if (ch->GetGuild())
+	if (!ch->IsPC())
 		return;
 
 	TPacketGDGuildAddMember gd;

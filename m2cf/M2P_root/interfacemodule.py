@@ -1293,12 +1293,24 @@ class Interface(object):
 		if app.ENABLE_DRAGON_SOUL_SYSTEM:
 			self.wndDragonSoul.DeactivateDragonSoul()
 		
-	def Highligt_Item(self, inven_type, inven_pos):
+	def Highlight_Item(self, inven_type, inven_pos):
 		if player.DRAGON_SOUL_INVENTORY == inven_type:
 			if app.ENABLE_DRAGON_SOUL_SYSTEM:
 				self.wndDragonSoul.HighlightSlot(inven_pos)
 		elif player.SLOT_TYPE_INVENTORY == inven_type:
 			self.wndInventory.HighlightSlot(inven_pos)
+
+	# def Highlight_Item(self, inven_type, inven_pos):
+		# if not app.ENABLE_HIGHLIGHT_SYSTEM:
+			# if player.DRAGON_SOUL_INVENTORY == inven_type:
+				# if app.ENABLE_DRAGON_SOUL_SYSTEM:
+					# self.wndDragonSoul.HighlightSlot(inven_pos)
+		# else:
+			# if inven_type == player.INVENTORY:
+				# self.wndInventory.HighlightSlot(inven_pos)
+			# elif inven_type == player.DRAGON_SOUL_INVENTORY:
+				# if app.ENABLE_DRAGON_SOUL_SYSTEM:
+					# self.wndDragonSoul.HighlightSlot(inven_pos)
 
 	def DragonSoulGiveQuilification(self):
 		self.DRAGON_SOUL_IS_QUALIFIED = TRUE
@@ -1600,7 +1612,7 @@ class Interface(object):
 
 	def OpenInputNameDialogPet(self, slot):
 		inputDialog = uiCommon.InputDialogName()
-		inputDialog.SetTitle("Pet isim de©£i©­tir")
+		inputDialog.SetTitle(uiScriptLocale.PET_RENAME_TITLE)
 		inputDialog.SetAcceptEvent(ui.__mem_func__(self.ChangePetName))
 		inputDialog.SetCancelEvent(ui.__mem_func__(self.ClosePrivateShopInputNameDialog))
 		inputDialog.Open()
