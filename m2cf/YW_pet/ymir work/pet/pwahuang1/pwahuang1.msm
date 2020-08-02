@@ -1,0 +1,21 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\pwahuang1\pwahuang1.gr2"
+
+Group	AttachingData
+{
+	AttachingDataCount	1
+
+	Group	AttachingData00
+	{
+		AttachingDataType	2
+
+		isAttaching	1
+		AttachingModelIndex	0
+		AttachingBoneName	"Bip01"
+
+		EffectScriptName	"D:\Ymir Work\effect\monster\redblack3.mse"
+		EffectPosition	0.000000	0.000000	0.000000
+		EffectRotation	0.000000	0.000000	0.000000
+	}
+}

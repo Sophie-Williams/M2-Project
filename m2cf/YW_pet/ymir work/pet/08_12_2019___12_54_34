@@ -1,0 +1,72 @@
+1208 13:00:34665 :: CRaceManager::RegisterRacePath : RACE[34001] LOAD MSMFILE[d:/ymir work/pet/phoenix1/phoenix1.msm] ERROR
+1208 13:00:34665 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34001
+1208 13:00:34665 :: CPythonCharacterManager::CreateInstance VID[6933] Race[34001]
+1208 13:00:36632 :: CRaceManager::RegisterRacePath : RACE[34002] LOAD MSMFILE[d:/ymir work/pet/reindeer_young/reindeer_young1.msm] ERROR
+1208 13:00:36632 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34002
+1208 13:00:36632 :: CPythonCharacterManager::CreateInstance VID[6936] Race[34002]
+1208 13:00:37232 :: CRaceManager::RegisterRacePath : RACE[34003] LOAD MSMFILE[d:/ymir work/mount/phoenix2/phoenix2.msm] ERROR
+1208 13:00:37232 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34003
+1208 13:00:37232 :: CPythonCharacterManager::CreateInstance VID[6939] Race[34003]
+1208 13:00:37841 :: CRaceManager::RegisterRacePath : RACE[34004] LOAD MSMFILE[d:/ymir work/pet/pwahuang1/pwahuang1.msm] ERROR
+1208 13:00:37841 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34004
+1208 13:00:37841 :: CPythonCharacterManager::CreateInstance VID[6940] Race[34004]
+1208 13:00:38793 :: CRaceManager::RegisterRacePath : RACE[34005] LOAD MSMFILE[d:/ymir work/mount/pig_young1/pig_young1.msm] ERROR
+1208 13:00:38793 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34005
+1208 13:00:38793 :: CPythonCharacterManager::CreateInstance VID[6941] Race[34005]
+1208 13:00:39546 :: CRaceManager::RegisterRacePath : RACE[34006] LOAD MSMFILE[d:/ymir work/mount/dog_young1/dog_young1.msm] ERROR
+1208 13:00:39546 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34006
+1208 13:00:39546 :: CPythonCharacterManager::CreateInstance VID[6942] Race[34006]
+1208 13:00:40184 :: CRaceManager::RegisterRacePath : RACE[34007] LOAD MSMFILE[d:/ymir work/mount/tiger_young1/tiger_young1.msm] ERROR
+1208 13:00:40184 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34007
+1208 13:00:40184 :: CPythonCharacterManager::CreateInstance VID[6943] Race[34007]
+1208 13:00:40784 :: CRaceManager::RegisterRacePath : RACE[34008] LOAD MSMFILE[d:/ymir work/mount/lion_young1/lion_young1.msm] ERROR
+1208 13:00:40784 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34008
+1208 13:00:40784 :: CPythonCharacterManager::CreateInstance VID[6944] Race[34008]
+1208 13:00:41957 :: CRaceManager::RegisterRacePath : RACE[34009] LOAD MSMFILE[d:/ymir work/pet/pwahuang1/pwahuang1_2.msm] ERROR
+1208 13:00:41957 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34009
+1208 13:00:41957 :: CPythonCharacterManager::CreateInstance VID[6948] Race[34009]
+1208 13:00:43715 :: CRaceManager::RegisterRacePath : RACE[34010] LOAD MSMFILE[d:/ymir work/pet/reindeer_young/reindeer_young1_christmas1.msm] ERROR
+1208 13:00:43715 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34010
+1208 13:00:43715 :: CPythonCharacterManager::CreateInstance VID[6952] Race[34010]
+1208 13:00:44309 :: CRaceManager::RegisterRacePath : RACE[34011] LOAD MSMFILE[d:/ymir work/pet/bear_young1/bear_young1.msm] ERROR
+1208 13:00:44309 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34011
+1208 13:00:44309 :: CPythonCharacterManager::CreateInstance VID[6954] Race[34011]
+1208 13:00:44944 :: CRaceManager::RegisterRacePath : RACE[34012] LOAD MSMFILE[d:/ymir work/pet/panda_young1/panda_young1.msm] ERROR
+1208 13:00:44944 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34012
+1208 13:00:44944 :: CPythonCharacterManager::CreateInstance VID[6958] Race[34012]
+1208 13:00:46549 :: CRaceManager::RegisterRacePath : RACE[34015] LOAD MSMFILE[d:/ymir work/pet/halloween_bonedog1/halloween_bonedog1.msm] ERROR
+1208 13:00:46549 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34015
+1208 13:00:46549 :: CPythonCharacterManager::CreateInstance VID[6962] Race[34015]
+1208 13:00:47552 :: CRaceManager::RegisterRacePath : RACE[34016] LOAD MSMFILE[d:/ymir work/pet/phoenix2/phoenix3.msm] ERROR
+1208 13:00:47552 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34016
+1208 13:00:47552 :: CPythonCharacterManager::CreateInstance VID[6963] Race[34016]
+1208 13:00:48128 :: CRaceManager::RegisterRacePath : RACE[34017] LOAD MSMFILE[d:/ymir work/pet/pig_young1/pig_young1_white.msm] ERROR
+1208 13:00:48128 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34017
+1208 13:00:48128 :: CPythonCharacterManager::CreateInstance VID[6964] Race[34017]
+1208 13:00:48702 :: CRaceManager::RegisterRacePath : RACE[34018] LOAD MSMFILE[d:/ymir work/pet/dog_young1/dog_young1_white.msm] ERROR
+1208 13:00:48702 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34018
+1208 13:00:48702 :: CPythonCharacterManager::CreateInstance VID[6965] Race[34018]
+1208 13:00:55704 :: CRaceManager::RegisterRacePath : RACE[34019] LOAD MSMFILE[d:/ymir work/pet/tiger_young1/tiger_young1_white.msm] ERROR
+1208 13:00:55704 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34019
+1208 13:00:55704 :: CPythonCharacterManager::CreateInstance VID[6968] Race[34019]
+1208 13:00:56703 :: CRaceManager::RegisterRacePath : RACE[34020] LOAD MSMFILE[d:/ymir work/pet/lion_young1/lion_young1_white.msm] ERROR
+1208 13:00:56703 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34020
+1208 13:00:56703 :: CPythonCharacterManager::CreateInstance VID[6969] Race[34020]
+1208 13:00:57345 :: CRaceManager::RegisterRacePath : RACE[34021] LOAD MSMFILE[d:/ymir work/pet/egg_pet/egg_pet.msm] ERROR
+1208 13:00:57345 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34021
+1208 13:00:57346 :: CPythonCharacterManager::CreateInstance VID[6970] Race[34021]
+1208 13:00:57904 :: CRaceManager::RegisterRacePath : RACE[34022] LOAD MSMFILE[d:/ymir work/pet/rabbit_pet/rabbit_pet.msm] ERROR
+1208 13:00:57904 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34022
+1208 13:00:57905 :: CPythonCharacterManager::CreateInstance VID[6971] Race[34022]
+1208 13:00:58470 :: CRaceManager::RegisterRacePath : RACE[34023] LOAD MSMFILE[d:/ymir work/pet/leopard_young1/leopard_young1_black.msm] ERROR
+1208 13:00:58470 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34023
+1208 13:00:58470 :: CPythonCharacterManager::CreateInstance VID[6972] Race[34023]
+1208 13:00:59043 :: CRaceManager::RegisterRacePath : RACE[34024] LOAD MSMFILE[d:/ymir work/pet/leopard_young1/leopard_young1_yellow.msm] ERROR
+1208 13:00:59043 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34024
+1208 13:00:59043 :: CPythonCharacterManager::CreateInstance VID[6973] Race[34024]
+1208 13:00:00068 :: CRaceManager::RegisterRacePath : RACE[34026] LOAD MSMFILE[d:/ymir work/pet/halloween_pumpkin_pet/halloween_pumpkin_pet.msm] ERROR
+1208 13:00:00068 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34026
+1208 13:00:00068 :: CPythonCharacterManager::CreateInstance VID[6974] Race[34026]
+1208 13:00:00631 :: CRaceManager::RegisterRacePath : RACE[34027] LOAD MSMFILE[d:/ymir work/pet/halloween_broom/halloween_broom.msm] ERROR
+1208 13:00:00631 :: CRaceManager::GetRaceDataPointer: cannot load data by dwRaceIndex 34027
+1208 13:00:00631 :: CPythonCharacterManager::CreateInstance VID[6975] Race[34027]

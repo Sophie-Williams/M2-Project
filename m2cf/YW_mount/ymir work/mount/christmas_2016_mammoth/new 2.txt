@@ -1,0 +1,16 @@
+	//%%% <함수 설명> %%%//
+	//1. 요약 : 'mob_proto.txt', 'mob_proto_test.txt', 'mob_names.txt' 파일을 읽고,
+	//		m_pMobTable 를 구성한다.
+	//2. 순서
+	//	1)'mob_names.txt' 파일을 읽어서 vnum:name 맵을 만든다.
+	//	2)'mob_proto_test.txt' 파일을 읽어서,
+	//		test_mob_table 를 만들고,
+	//		vnum:TMobTable 맵을 만든다.
+	//	3)'mob_proto.txt' 파일을 읽고, m_pMobTable를 구성한다.
+	//		test_mob_table에 있는 vnum은 테스트 데이터를 넣는다.
+	//	4)test_mob_table 데이터중에, m_pMobTable 에 없는 데이터를 추가한다.
+	//3. 테스트
+	//	1)'mob_proto.txt' 정보가 m_pMobTable에 잘 들어갔는지. -> 완료
+	//	2)'mob_names.txt' 정보가 m_pMobTable에 잘 들어갔는지. -> 완료
+	//	3)'mob_proto_test.txt' 에서 [겹치는] 정보가 m_pMobTable 에 잘 들어갔는지. -> 완료
+	//	4)'mob_proto_test.txt' 에서 [새로운] 정보가 m_pMobTable 에 잘 들어갔는지. -> 완료

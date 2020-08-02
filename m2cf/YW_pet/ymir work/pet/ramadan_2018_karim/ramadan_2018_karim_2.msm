@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\ramadan_2018_karim\ramadan_2018_karim.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\ramadan_2018_karim\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"ramadan_2018_karim.gr2"
+		SourceSkin	"ramadan_2018_karim_1.dds"
+		TargetSkin	"ramadan_2018_karim_2.dds"
+	}
+}

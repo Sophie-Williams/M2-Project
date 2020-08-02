@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\zshop_griffon\zshop_griffon.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\zshop_griffon\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"zshop_griffon.gr2"
+		SourceSkin	"zshop_griffon_1.dds"
+		TargetSkin	"zshop_griffon_2.dds"
+	}
+}

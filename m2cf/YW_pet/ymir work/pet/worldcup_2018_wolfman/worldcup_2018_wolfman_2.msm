@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\worldcup_2018_wolfman\worldcup_2018_wolfman.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\worldcup_2018_wolfman\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"worldcup_2018_wolfman.gr2"
+		SourceSkin	"worldcup_2018_wolfman_1.dds"
+		TargetSkin	"worldcup_2018_wolfman_2.dds"
+	}
+}

@@ -1,0 +1,1668 @@
+0	MOUNT	pony_normal	pony
+0	MOUNT	pony_member	pony
+0	MOUNT	pony_master	pony
+0	MOUNT	horse_normal	horse
+0	MOUNT	horse_member	horse
+0	MOUNT	horse_master	horse
+0	MOUNT	horse2_normal	horse2
+0	MOUNT	horse2_member	horse2
+0	MOUNT	horse2_master	horse2
+0	MOUNT	boar	boar
+0	MOUNT	dog_god	dog_god
+0	MONSTER	fire_tiger	fire_tiger
+0	MOUNT	fire_tiger_violet	fire_tiger
+0	MOUNT	lion	lion
+0	MOUNT	boar_0	boar
+0	MOUNT	dog_god_0	dog_god
+0	MOUNT	fire_tiger_0	fire_tiger
+0	MOUNT	lion_0	lion
+0	MOUNT	boar_3	boar
+0	MOUNT	dog_god_3	dog_god
+0	MOUNT	fire_tiger_3	fire_tiger
+0	MOUNT	lion_3	lion
+0	MOUNT	fire_tiger_blue	fire_tiger
+0	MOUNT	fire_tiger_darkred	fire_tiger
+0	MOUNT	fire_tiger_gold	fire_tiger
+0	MOUNT	fire_tiger_green	fire_tiger
+0	MOUNT	fire_tiger_pied	fire_tiger
+0	MOUNT	fire_tiger_white	fire_tiger
+0	MOUNT	reindeer_male1	reindeer_male
+0	MOUNT	reindeer_male2	reindeer_male
+0	MOUNT	reindeer_male3	reindeer_male
+0	MOUNT	reindeer_female1	reindeer_female
+0	MOUNT	reindeer_female2	reindeer_female
+0	MOUNT	reindeer_female3	reindeer_female
+0	PET	reindeer_young1	reindeer_young
+0	NPC	goods_02	goods
+0	NPC	bank_02	bank
+0	NPC	diamond	mineral
+0	NPC	amber	mineral
+0	NPC	fossil_tree	mineral
+0	NPC	copper	mineral
+0	NPC	silver	mineral
+0	NPC	gold	mineral
+0	NPC	jade	mineral
+0	NPC	ebony	mineral
+0	NPC	white_gold	mineral
+0	NPC	quartz	mineral
+0	NPC	amethyst	mineral
+0	NPC	chunru	mineral
+0	NPC	pearl	mineral
+0	NPC	mineral2_fivestone	mineral2
+0	NPC	mineral2_sapphire	mineral2
+0	NPC	mineral2_ruby	mineral2
+0	NPC	mineral2_garnet	mineral2
+0	NPC	mineral2_bery	mineral2
+0	MONSTER	red_wild_boar	wild_boar
+0	MONSTER	wolf_gray	wolf
+0	MONSTER	wolf_blue	wolf
+0	MONSTER	bear_gray	bear
+0	MONSTER	bear_black	bear
+0	MONSTER	bear_brown	bear
+0	MONSTER	tiger_big	tiger
+0	MONSTER	tiger_god	tiger
+0	MONSTER	metinstone_01	metinstone
+0	MONSTER	metinstone_02	metinstone
+0	MONSTER	metinstone_03	metinstone
+0	MONSTER	metinstone_04	metinstone
+0	MONSTER	metinstone_05	metinstone
+0	MONSTER	metinstone_06	metinstone
+0	MONSTER	metinstone_07	metinstone
+0	MONSTER	metinstone_08	metinstone
+0	MONSTER	metinstone_09	metinstone
+0	MONSTER	metinstone_10	metinstone_02
+0	MONSTER	metinstone_11	metinstone_02
+0	MONSTER	metinstone_12	metinstone_02
+0	MONSTER	metinstone_13	metinstone_02
+0	MONSTER	metinstone_14	metinstone_02
+0	MONSTER	metinstone_15	metinstone_02
+0	MONSTER	metinstone_16	metinstone
+0	MONSTER	metinstone_egg01	metinstone_egg
+0	MONSTER	metinstone_egg02	metinstone_egg
+0	MONSTER	v_01	metinstone_valentine02
+0	MONSTER	v_02	metinstone_valentine02
+0	MONSTER	v_03	metinstone_valentine02
+0	MONSTER	v_04	metinstone_valentine02
+0	MONSTER	v_05	metinstone_valentine02
+0	MONSTER	v_06	metinstone_valentine02
+0	MONSTER	v_07	metinstone_valentine02
+0	MONSTER	v_08	metinstone_valentine02
+0	MONSTER	v_09	metinstone_valentine02
+0	MONSTER	v_10	metinstone_valentine02
+0	MONSTER	v_11	metinstone_valentine02
+0	MONSTER	v_12	metinstone_valentine02
+0	MONSTER	v_13	metinstone_valentine02
+0	MONSTER	v_14	metinstone_valentine02
+0	MONSTER	v_15	metinstone_valentine02
+0	NPC	christmas_tree_01	christmas_tree
+0	NPC	christmas_tree_02	christmas_tree
+0	NPC	christmas_tree_03	christmas_tree
+0	NPC	flag_red	guild_war_flag
+0	NPC	flag_blue	guild_war_flag
+0	NPC	flag_yellow	guild_war_flag
+0	MONSTER	haitai	fire_tiger_boss
+0	MONSTER	monkey_range	monkey
+0	NPC	sura_skeleton1	sura_skeleton
+0	NPC	sura_skeleton2	sura_skeleton
+0	NPC	sura_skeleton3	sura_skeleton
+0	NPC	sura_skeleton4	sura_skeleton
+0	NPC	sura_skeleton5	sura_skeleton
+0	NPC	starveling	starveling
+0	NPC	starveling2	starveling
+0	NPC	starveling3	starveling
+0	NPC	starveling4	starveling
+0	NPC	starveling5	starveling
+0	PET	pwahuang1_2	pwahuang1
+0	NPC	jinno_patrol_spear_01	jinno_patrol_spear
+0	NPC	gangyo_patrol_spear_01	gangyo_patrol_spear
+0	NPC	spy1_01	spy1
+0	PET	reindeer_young1_christmas1	reindeer_young
+0	PET	defensewave_hydra_pet_1	defensewave_hydra_pet
+0	PET	defensewave_hydra_pet_2	defensewave_hydra_pet
+0	PET	pwahuang1_3	pwahuang1
+0	PET	pwahuang1_4	pwahuang1
+0	PET	redthief2_officer_young3	redthief2_officer_young1
+0	PET	redthief2_officer_young4	redthief2_officer_young1
+0	PET	luck_sheep_young1	luck_sheep_young1
+0	PET	luck_sheep_young2	luck_sheep_young1
+0	MOUNT	reindeer_male1_christmas1	reindeer_male
+0	MONSTER	fire_ghost1	fire_ghost
+0	MONSTER	fire_tiger_boss1	fire_tiger_boss
+0	MONSTER	fire_man1	fire_man
+0	MONSTER	fire_knight1	fire_knight
+0	MONSTER	fire_king1	fire_king
+0	MONSTER	ice_snow_monster1	ice_snow_monster
+0	MONSTER	ice_snow_insect1	ice_snow_insect
+0	MONSTER	ice_snow_man1	ice_snow_man
+0	MONSTER	ice_snow_giant_man1	ice_snow_giant_man
+0	MONSTER	ice_snow_golem1	ice_snow_golem
+0	MONSTER	ice_snow_monster2	ice_snow_monster
+0	MONSTER	ice_snow_insect2	ice_snow_insect
+0	MONSTER	ice_snow_man2	ice_snow_man
+0	MONSTER	ice_snow_giant_man2	ice_snow_giant_man
+0	MONSTER	ice_snow_golem2	ice_snow_golem
+0	NPC	bridge_block_chain	flame_bridge_block_chain
+0	NPC	flame_npc	flame_dungeon_npc
+0	PET	redthief2_officer_young2	redthief2_officer_young1
+0	MOUNT	unicorn1	unicorn
+0	PET	phoenix3	phoenix2
+0	PET	pig_young1_white	pig_young1
+0	PET	dog_young1_white	dog_young1
+0	PET	tiger_young1_white	tiger_young1
+0	PET	lion_young1_white	lion_young1
+0	MOUNT	turkey_1	turkey
+0	MOUNT	turkey_2	turkey
+0	MOUNT	turkey_3	turkey
+0	MOUNT	dinosaur_1	dinosaur
+0	MOUNT	dinosaur_2	dinosaur
+0	MOUNT	dinosaur_3	dinosaur
+0	MOUNT	leopard_black	leopard
+0	MOUNT	leopard_yellow	leopard
+0	PET	leopard_young1_black	leopard_young1
+0	PET	leopard_young1_yellow	leopard_young1
+0	MOUNT	chick_yellow1	chick
+0	MOUNT	chick_yellow2	chick
+0	MOUNT	chick_yellow3	chick
+0	MOUNT	chick_white1	chick
+0	MOUNT	chick_white2	chick
+0	MOUNT	chick_white3	chick
+0	MOUNT	chick_pink1	chick
+0	MOUNT	chick_blue1	chick
+0	PET	ramadan_pet_02	ramadan_pet
+0	PET	ramadan_pet_03	ramadan_pet
+0	PET	ramadan_pet_04	ramadan_pet
+0	PET	monkey_young2	monkey_young1
+0	PET	spider_redpoison_young2	spider_redpoison_young1
+0	PET	yamachun_young2	yamachun_young1
+0	PET	hanma_young2	hanma_young1
+0	PET	red_dragon_young2	red_dragon_young1
+0	MONSTER	trent_soldier2	trent_soldier
+0	MONSTER	trent_magic2	trent_magic
+0	PET	lamb_white_pet	lamb_pet
+0	PET	lamb_blue_pet	lamb_pet
+0	MONSTER	lemures_soldier_2	lemures_soldier
+0	MONSTER	lemures_soldier2_2	lemures_soldier2
+0	MONSTER	lemures_magic_2	lemures_magic
+0	MONSTER	lemures_officer_2	lemures_officer
+0	MONSTER	lemures_general_2	lemures_general
+0	MONSTER	lemures_boss_2	lemures_boss
+0	MONSTER	lemures_boss2_2	lemures_boss2
+0	NPC	redguild_guard_M_2	redguild_guard_M
+0	NPC	redguild_guard_M_3	redguild_guard_M
+0	NPC	redguild_guard_M_4	redguild_guard_M
+0	NPC	japanese_pirate_2	japanese_pirate
+0	NPC	warp_blue	warp
+0	PET	halloween_bet_pet1	halloween_bet_pet1
+0	PET	halloween_bet_pet2	halloween_bet_pet1
+0	PET	blue_dragon_young2	blue_dragon_young1
+0	MOUNT	horse_pepsi	horse_event1
+0	NPC	old_magic_M1	old_magic_M
+0	NPC	old_magic_M2	old_magic_M
+0	MONSTER	reddragon_room_human_boss2	reddragon_room_human_boss
+0	NPC	yu_hwa_rang_event_NPC	yu_hwa_rang
+101	MONSTER	stray_dog	
+102	MONSTER	wolf	
+103	MONSTER	wolf	
+104	MONSTER	wolf_blue	
+105	MONSTER	wolf_blue	
+106	MONSTER	wolf_gray	
+107	MONSTER	wolf_gray	
+108	MONSTER	wild_boar	
+109	MONSTER	red_wild_boar	
+110	MONSTER	bear	
+111	MONSTER	bear_gray	
+112	MONSTER	bear_black	
+113	MONSTER	bear_brown	
+114	MONSTER	tiger	
+115	MONSTER	tiger_big	
+131	MONSTER	wolf	
+132	MONSTER	wolf	
+133	MONSTER	wolf_blue	
+134	MONSTER	wolf_blue	
+135	MONSTER	wolf_gray	
+136	MONSTER	wolf_gray	
+137	MONSTER	wild_boar	
+138	MONSTER	red_wild_boar	
+139	MONSTER	bear	
+140	MONSTER	bear_gray	
+141	MONSTER	bear_black	
+142	MONSTER	bear_brown	
+143	MONSTER	tiger	
+144	MONSTER	tiger_big	
+151	MONSTER	wolf_blue	
+152	MONSTER	wolf_gray	
+153	MONSTER	red_wild_boar	
+154	MONSTER	bear_brown	
+155	MONSTER	tiger_big	
+171	MONSTER	stray_dog	
+172	MONSTER	wolf	
+173	MONSTER	wolf	
+174	MONSTER	wolf_blue	
+175	MONSTER	wolf_blue	
+176	MONSTER	wolf_gray	
+177	MONSTER	wolf_gray	
+178	MONSTER	wild_boar	
+179	MONSTER	red_wild_boar	
+180	MONSTER	bear	
+181	MONSTER	bear_gray	
+182	MONSTER	bear_black	
+183	MONSTER	bear_brown	
+184	MONSTER	tiger	
+185	MONSTER	tiger_big	
+191	MONSTER	mountain_dog_god	
+192	MONSTER	wild_boar_god	
+193	MONSTER	bear	
+194	MONSTER	tiger_god	
+301	MONSTER	bksoldier	
+302	MONSTER	bkarcher	
+303	MONSTER	bkknight	
+304	MONSTER	bkknight	
+331	MONSTER	bksoldier	
+332	MONSTER	bkarcher	
+333	MONSTER	bkknight	
+334	MONSTER	bkknight	
+351	MONSTER	bksoldier	
+352	MONSTER	bkarcher	
+353	MONSTER	bkknight	
+354	MONSTER	bkknight	
+391	MONSTER	bksecond	
+392	MONSTER	bkthird	
+393	MONSTER	bkfourth	
+394	MONSTER	bkboss	
+395	MONSTER	bksecond	
+396	MONSTER	bkthird	
+397	MONSTER	bkfourth	
+398	MONSTER	bkboss	
+401	MONSTER	thief1	
+402	MONSTER	thief2	
+403	MONSTER	thief3	
+404	MONSTER	thiefboss1	
+405	MONSTER	thiefboss2	
+406	MONSTER	thiefboss3	
+431	MONSTER	thief1	
+432	MONSTER	thief2	
+433	MONSTER	thief3	
+434	MONSTER	thiefboss1	
+435	MONSTER	thiefboss2	
+436	MONSTER	thiefboss3	
+451	MONSTER	thief1	
+452	MONSTER	thief2	
+453	MONSTER	thief3	
+454	MONSTER	thiefboss1	
+455	MONSTER	thiefboss2	
+456	MONSTER	thiefboss3	
+491	MONSTER	maenghwan	
+492	MONSTER	bou	
+493	MONSTER	gupae	
+494	MONSTER	chuhen	
+501	MONSTER	barbarian_infantry	
+502	MONSTER	barbarian_soldier	
+503	MONSTER	barbarian_bow	
+504	MONSTER	barbarian_knight	
+531	MONSTER	barbarian_infantry	
+532	MONSTER	barbarian_soldier	
+533	MONSTER	barbarian_bow	
+534	MONSTER	barbarian_knight	
+551	MONSTER	barbarian_infantry	
+552	MONSTER	barbarian_soldier	
+553	MONSTER	barbarian_bow	
+554	MONSTER	barbarian_knight	
+591	MONSTER	barbarian_boss	
+595	MONSTER	barbarian_bow	
+601	MONSTER	orc_soldier	
+602	MONSTER	orc_scouter	
+603	MONSTER	orc_knight	
+604	MONSTER	orc_magician	
+631	MONSTER	orc_soldier	
+632	MONSTER	orc_scouter	
+633	MONSTER	orc_knight	
+634	MONSTER	orc_magician	
+635	MONSTER	orc_general	
+636	MONSTER	orc_black	
+637	MONSTER	orc_bigblack	
+651	MONSTER	orc_soldier	
+652	MONSTER	orc_scouter	
+653	MONSTER	orc_knight	
+654	MONSTER	orc_magician	
+655	MONSTER	orc_general	
+656	MONSTER	orc_black	
+657	MONSTER	orc_bigblack	
+691	MONSTER	orc_lord	
+692	MONSTER	orc_lord	
+693	MONSTER	orc_lord_e	
+701	MONSTER	milgyo_religionist	
+702	MONSTER	milgyo_nahan1	
+703	MONSTER	milgyo_nahan2	
+704	MONSTER	milgyo_nahan_general	
+705	MONSTER	milgyo_executor	
+706	MONSTER	milgyo_monster1	
+707	MONSTER	milgyo_monster2	
+731	MONSTER	milgyo_religionist	
+732	MONSTER	milgyo_nahan1	
+733	MONSTER	milgyo_nahan2	
+734	MONSTER	milgyo_nahan_general	
+735	MONSTER	milgyo_executor	
+736	MONSTER	milgyo_monster1	
+737	MONSTER	milgyo_monster2	
+751	MONSTER	milgyo_religionist	
+752	MONSTER	milgyo_nahan1	
+753	MONSTER	milgyo_nahan2	
+754	MONSTER	milgyo_nahan_general	
+755	MONSTER	milgyo_executor	
+756	MONSTER	milgyo_monster1	
+757	MONSTER	milgyo_monster2	
+771	MONSTER	milgyo_religionist	
+772	MONSTER	milgyo_nahan1	
+773	MONSTER	milgyo_nahan2	
+774	MONSTER	milgyo_nahan_general	
+775	MONSTER	milgyo_executor	
+776	MONSTER	milgyo_monster1	
+777	MONSTER	milgyo_monster2	
+791	MONSTER	milgyo_founder	
+792	MONSTER	milgyo_founder	
+793	MONSTER	milgyo_founder	
+794	MONSTER	milgyo_founder	
+795	MONSTER	milgyo_founder_e	
+796	MONSTER	milgyo_founder_e	
+901	MONSTER	misterious_diseased_kid	
+902	MONSTER	misterious_diseased_dog	
+903	MONSTER	misterious_diseased_infector	
+904	MONSTER	misterious_diseased_sword	
+905	MONSTER	misterious_diseased_spear	
+906	MONSTER	misterious_diseased_bow	
+907	MONSTER	misterious_diseased_boss	
+931	MONSTER	misterious_diseased_kid	
+932	MONSTER	misterious_diseased_dog	
+933	MONSTER	misterious_diseased_infector	
+934	MONSTER	misterious_diseased_sword	
+935	MONSTER	misterious_diseased_spear	
+936	MONSTER	misterious_diseased_bow	
+937	MONSTER	misterious_diseased_boss	
+991	MONSTER	misterious_diseased_egg	
+992	MONSTER	misterious_diseased_host	
+993	MONSTER	misterious_diseased_bosshost	
+1001	MONSTER	skeleton_soldier_scythe	
+1002	MONSTER	skeleton_soldier_bow	
+1003	MONSTER	skeleton_soldier_spear	
+1004	MONSTER	skeleton_magician	
+1031	MONSTER	skeleton_soldier_scythe	
+1032	MONSTER	skeleton_soldier_bow	
+1033	MONSTER	skeleton_soldier_spear	
+1034	MONSTER	skeleton_magician	
+1035	MONSTER	spite_ghost	
+1036	MONSTER	chaos_ghost	
+1037	MONSTER	skeleton_general	
+1038	MONSTER	skeleton_bigboss	
+1039	MONSTER	skeleton_wizard	
+1040	MONSTER	immotal_ghost	
+1041	MONSTER	recycle_monster	
+1061	MONSTER	skeleton_soldier_scythe	
+1062	MONSTER	skeleton_soldier_bow	
+1063	MONSTER	skeleton_soldier_spear	
+1064	MONSTER	skeleton_magician	
+1065	MONSTER	spite_ghost	
+1066	MONSTER	chaos_ghost	
+1067	MONSTER	skeleton_general	
+1068	MONSTER	skeleton_bigboss	
+1069	MONSTER	skeleton_wizard	
+1070	MONSTER	immotal_ghost	
+1071	MONSTER	recycle_monster	
+1091	MONSTER	skeleton_king	
+1092	MONSTER	skeleton_king	
+1093	MONSTER	skeleton_god	
+1094	MONSTER	skeleton_king_e	
+1095	MONSTER	skeleton_god_e	
+1096	MONSTER	skeleton_king	
+1101	MONSTER	ice_snow_monster	
+1102	MONSTER	ice_snow_whale	
+1103	MONSTER	ice_snow_insect	
+1104	MONSTER	ice_snow_dog	
+1105	MONSTER	ice_snow_man	
+1106	MONSTER	ice_snow_giant_man	
+1107	MONSTER	ice_snow_golem	
+1131	MONSTER	ice_snow_monster	
+1132	MONSTER	ice_snow_whale	
+1133	MONSTER	ice_snow_insect	
+1134	MONSTER	ice_snow_dog	
+1135	MONSTER	ice_snow_man	
+1136	MONSTER	ice_snow_giant_man	
+1137	MONSTER	ice_snow_golem	
+1151	MONSTER	ice_snow_monster	
+1152	MONSTER	ice_snow_whale	
+1153	MONSTER	ice_snow_insect	
+1154	MONSTER	ice_snow_dog	
+1155	MONSTER	ice_snow_man	
+1156	MONSTER	ice_snow_giant_man	
+1157	MONSTER	ice_snow_golem	
+1171	MONSTER	ice_snow_monster	
+1172	MONSTER	ice_snow_whale	
+1173	MONSTER	ice_snow_insect	
+1174	MONSTER	ice_snow_dog	
+1175	MONSTER	ice_snow_man	
+1176	MONSTER	ice_snow_giant_man	
+1177	MONSTER	ice_snow_golem	
+1191	MONSTER	ice_snow_witch	
+1192	MONSTER	ice_snow_witch	
+1301	MONSTER	greenfrog_soldier	
+1302	MONSTER	greenfrog_general	
+1303	MONSTER	goblin_leafhead	
+1304	MONSTER	yellow_tigerman	
+1305	MONSTER	sugu_general	
+1306	MONSTER	yellow_tigerman	
+1307	MONSTER	yellow_tigerman_e	
+1308	MONSTER	yellow_tigerman	
+1309	MONSTER	yellow_tigerman	
+1310	MONSTER	yellow_tigerman	
+1331	MONSTER	greenfrog_soldier	
+1332	MONSTER	greenfrog_general	
+1333	MONSTER	goblin_leafhead	
+1334	MONSTER	yellow_tigerman	
+1335	MONSTER	sugu_general	
+1401	MONSTER	mutant_1	
+1402	MONSTER	mutant_2	
+1403	MONSTER	mutant_3	
+1501	MONSTER	golem_1	
+1502	MONSTER	golem_2	
+1503	MONSTER	golem_3	
+1601	MONSTER	nersluck_1	
+1602	MONSTER	nersluck_2	
+1603	MONSTER	nersluck_3	
+1901	MONSTER	fox_ninetail	
+1902	MONSTER	fox_ninetail	
+1903	MONSTER	fox_ninetail_e	
+1904	MONSTER	fox_ninetail	
+1905	MONSTER	fox_ninetail	
+1906	MONSTER	fox_ninetail	
+2001	MONSTER	spider_young	
+2002	MONSTER	spider_poison	
+2003	MONSTER	spider_redpoison	
+2004	MONSTER	spider_nipper	
+2005	MONSTER	spider_soldier	
+2031	MONSTER	spider_young	
+2032	MONSTER	spider_poison	
+2033	MONSTER	spider_redpoison	
+2034	MONSTER	spider_nipper	
+2035	MONSTER	spider_soldier	
+2036	MONSTER	spider_soldier	
+2051	MONSTER	spider_young	
+2052	MONSTER	spider_poison	
+2053	MONSTER	spider_redpoison	
+2054	MONSTER	spider_nipper	
+2055	MONSTER	spider_soldier	
+2061	MONSTER	spider_young	
+2062	MONSTER	spider_poison	
+2063	MONSTER	spider_redpoison	
+2064	MONSTER	spider_nipper	
+2065	MONSTER	spider_soldier	
+2071	MONSTER	spider_young	
+2072	MONSTER	spider_poison	
+2073	MONSTER	spider_redpoison	
+2074	MONSTER	spider_nipper	
+2075	MONSTER	spider_soldier	
+2076	MONSTER	spider_soldier	
+2091	MONSTER	spider_queen	
+2092	MONSTER	spider_king	
+2093	MONSTER	spider_queen_e	
+2094	MONSTER	spider_queen_e	
+2095	MONSTER	spider_spawn	
+2101	MONSTER	fennec_fox	
+2102	MONSTER	evil_eye	
+2103	MONSTER	giant_scorpion	
+2104	MONSTER	scorpionman_sword	
+2105	MONSTER	scorpionman_bow	
+2106	MONSTER	snakeman_sword	
+2107	MONSTER	snakeman_bow	
+2108	MONSTER	outlaw	
+2131	MONSTER	scorpionman_sword	
+2132	MONSTER	scorpionman_bow	
+2133	MONSTER	snakeman_sword	
+2134	MONSTER	snakeman_bow	
+2135	MONSTER	outlaw	
+2151	MONSTER	fennec_fox	
+2152	MONSTER	evil_eye	
+2153	MONSTER	giant_scorpion	
+2154	MONSTER	scorpionman_sword	
+2155	MONSTER	scorpionman_bow	
+2156	MONSTER	snakeman_sword	
+2157	MONSTER	snakeman_bow	
+2158	MONSTER	outlaw	
+2191	MONSTER	giant_desert_turtle	
+2192	MONSTER	giant_desert_turtle_e	
+2201	MONSTER	fire_tiger	
+2202	MONSTER	fire_ghost	
+2203	MONSTER	fire_tiger_boss	
+2204	MONSTER	fire_man	
+2205	MONSTER	fire_knight	
+2206	MONSTER	fire_king	
+2207	MONSTER	fire_king	
+2231	MONSTER	fire_tiger	
+2232	MONSTER	fire_ghost	
+2233	MONSTER	fire_tiger_boss	
+2234	MONSTER	fire_man	
+2235	MONSTER	fire_knight	
+2291	MONSTER	fire_dragon	
+2301	MONSTER	ent_trent	
+2302	MONSTER	ent_guru	
+2303	MONSTER	ent_hu	
+2304	MONSTER	ent_red	
+2305	MONSTER	ent_black	
+2306	MONSTER	ent_huge	
+2307	MONSTER	ent_elder	
+2311	MONSTER	ent_trent	
+2312	MONSTER	ent_guru	
+2313	MONSTER	ent_hu	
+2314	MONSTER	ent_red	
+2315	MONSTER	ent_black	
+2401	MONSTER	ch_footman	
+2402	MONSTER	ch_bowman	
+2403	MONSTER	ch_magician	
+2404	MONSTER	ch_officer	
+2411	MONSTER	ch_footman	
+2412	MONSTER	ch_bowman	
+2413	MONSTER	ch_magician	
+2414	MONSTER	ch_officer	
+2415	MONSTER	ch_officer	
+2431	MONSTER	ch_footman	
+2432	MONSTER	ch_bowman	
+2433	MONSTER	ch_magician	
+2434	MONSTER	ch_officer	
+2451	MONSTER	ch_footman	
+2452	MONSTER	ch_bowman	
+2453	MONSTER	ch_magician	
+2454	MONSTER	ch_officer	
+2491	MONSTER	ch_general	
+2492	MONSTER	ch_general	
+2493	MONSTER	blue_dragon	
+2494	MONSTER	ch_general	
+2495	MONSTER	ch_general	
+2501	MONSTER	zombie_diseased_kid	
+2502	MONSTER	zombie_diseased_dog	
+2503	MONSTER	zombie_diseased_infector	
+2504	MONSTER	zombie_diseased_sword	
+2505	MONSTER	zombie_diseased_spear	
+2506	MONSTER	zombie_diseased_bow	
+2507	MONSTER	zombie_diseased_boss	
+2508	MONSTER	zombie_soldier_scythe	
+2509	MONSTER	zombie_soldier_bow	
+2510	MONSTER	zombie_soldier_spear	
+2511	MONSTER	zombie_magician	
+2512	MONSTER	zombie_bigboss	
+2513	MONSTER	zombie_ghost	
+2514	MONSTER	zombie_general	
+2541	MONSTER	zombie_soldier_scythe	
+2542	MONSTER	zombie_soldier_bow	
+2543	MONSTER	zombie_soldier_spear	
+2544	MONSTER	zombie_magician	
+2545	MONSTER	zombie_bigboss	
+2546	MONSTER	zombie_ghost	
+2547	MONSTER	zombie_general	
+2591	MONSTER	zombie_king	
+2592	MONSTER	zombie_king	
+2593	MONSTER	zombie_king	
+2594	MONSTER	zombie_king	
+2595	MONSTER	zombie_king	
+2596	MONSTER	zombie_king	
+2597	MONSTER	zombie_god	
+2598	MONSTER	zombie_bigboss2	
+3001	MONSTER	gnoll_soldier	
+3002	MONSTER	gnoll_bow	
+3003	MONSTER	gnoll_soldier2	
+3004	MONSTER	gnoll_magic	
+3005	MONSTER	gnoll_general	
+3090	MONSTER	gnoll_boss	
+3091	MONSTER	gnoll_boss2	
+3101	MONSTER	cyclops_soldier	
+3102	MONSTER	cyclops_soldier2	
+3103	MONSTER	cyclops_magic	
+3104	MONSTER	cyclops_officer	
+3105	MONSTER	cyclops_general	
+3190	MONSTER	cyclops_boss	
+3191	MONSTER	cyclops_boss2	
+3201	MONSTER	manticore_soldier	
+3202	MONSTER	manticore_soldier2	
+3203	MONSTER	manticore_magic	
+3204	MONSTER	manticore_officer	
+3205	MONSTER	manticore_general	
+3290	MONSTER	manticore_boss	
+3291	MONSTER	manticore_boss2	
+3301	MONSTER	lemures_soldier	
+3302	MONSTER	lemures_soldier2	
+3303	MONSTER	lemures_magic	
+3304	MONSTER	lemures_officer	
+3305	MONSTER	lemures_general	
+3390	MONSTER	lemures_boss	
+3391	MONSTER	lemures_boss2	
+3401	MONSTER	triton_soldier	
+3402	MONSTER	triton_soldier2	
+3403	MONSTER	triton_magic	
+3404	MONSTER	triton_officer	
+3405	MONSTER	triton_general	
+3490	MONSTER	triton_boss	
+3491	MONSTER	triton_boss2	
+3501	MONSTER	redthief_bow	
+3502	MONSTER	redthief_soldier2	
+3503	MONSTER	redthief_magic	
+3504	MONSTER	redthief_officer	
+3505	MONSTER	redthief_general	
+3551	MONSTER	redthief2_bow	
+3552	MONSTER	redthief2_soldier2	
+3553	MONSTER	redthief2_magic	
+3554	MONSTER	redthief2_officer	
+3555	MONSTER	redthief2_general	
+3590	MONSTER	redthief_boss	
+3591	MONSTER	redthief_boss2	
+3595	MONSTER	redthief2_boss	
+3596	MONSTER	redthief2_boss2	
+3601	MONSTER	crustacean_soldier	
+3602	MONSTER	crustacean_bow	
+3603	MONSTER	crustacean_soldier2	
+3604	MONSTER	crustacean_officer	
+3605	MONSTER	crustacean_general	
+3690	MONSTER	crustacean_boss	
+3691	MONSTER	crustacean_boss2	
+3701	MONSTER	giant_soldier	
+3702	MONSTER	giant_soldier2	
+3703	MONSTER	giant_magic	
+3704	MONSTER	giant_officer	
+3705	MONSTER	giant_general	
+3790	MONSTER	giant_boss	
+3791	MONSTER	giant_boss2	
+3801	MONSTER	ogre_soldier	
+3802	MONSTER	ogre_bow	
+3803	MONSTER	ogre_officer	
+3804	MONSTER	ogre_magic	
+3805	MONSTER	ogre_general	
+3890	MONSTER	ogre_boss	
+3891	MONSTER	ogre_boss2	
+3901	MONSTER	ent_boss1	
+3902	MONSTER	ent_boss2	
+3903	MONSTER	ent_boss3	
+3904	MONSTER	giant_general	
+3905	MONSTER	bkfourth	
+3906	MONSTER	bkboss	
+3907	MONSTER	redthief2_magic	
+3908	MONSTER	redthief2_officer	
+3909	MONSTER	redthief2_general	
+3910	MONSTER	redthief_boss	
+3911	MONSTER	ent_huge	
+3912	MONSTER	ent_huge	
+3913	MONSTER	ent_huge	
+5001	MONSTER	japanese_pirate	
+5002	MONSTER	haitai	
+5003	MONSTER	monkey	
+5004	MONSTER	japanese_pirate	
+5101	MONSTER	monkey	
+5102	MONSTER	monkey_range	
+5103	MONSTER	monkey	
+5104	MONSTER	monkey	
+5111	MONSTER	monkey	
+5112	MONSTER	monkey_range	
+5113	MONSTER	monkey	
+5114	MONSTER	monkey	
+5115	MONSTER	stone_monkey	
+5116	MONSTER	stone_monkey	
+5121	MONSTER	monkey	
+5122	MONSTER	monkey_range	
+5123	MONSTER	monkey	
+5124	MONSTER	monkey	
+5125	MONSTER	stone_monkey	
+5126	MONSTER	gold_monkey	
+5127	MONSTER	gold_monkey	
+5131	MONSTER	monkey	
+5132	MONSTER	monkey_range	
+5133	MONSTER	monkey	
+5134	MONSTER	monkey	
+5141	MONSTER	monkey	
+5142	MONSTER	monkey_range	
+5143	MONSTER	monkey	
+5144	MONSTER	monkey	
+5145	MONSTER	stone_monkey	
+5146	MONSTER	stone_monkey	
+5151	MONSTER	monkey	
+5152	MONSTER	monkey_range	
+5153	MONSTER	monkey	
+5154	MONSTER	monkey	
+5155	MONSTER	stone_monkey	
+5156	MONSTER	gold_monkey	
+5157	MONSTER	gold_monkey	
+5161	MONSTER	stone_monkey	
+5162	MONSTER	gold_monkey	
+5163	MONSTER	god_monkey	
+5201	MONSTER	stray_dog	
+5202	MONSTER	wild_boar	
+5203	MONSTER	red_wild_boar	
+5204	MONSTER	bear	
+5205	MONSTER	bear_gray	
+5206	MONSTER	bear_black	
+5207	MONSTER	bear_brown	
+5208	MONSTER	tiger	
+5209	MONSTER	tiger_big	
+6001	MONSTER	fire_ghost1	
+6002	MONSTER	fire_tiger_boss1	
+6003	MONSTER	fire_man1	
+6004	MONSTER	fire_knight1	
+6005	MONSTER	fire_king1	
+6006	MONSTER	firegolem_soldier	
+6007	MONSTER	firegolem_magician	
+6008	MONSTER	firegolem_general	
+6009	MONSTER	firegolem_boss	
+6051	MONSTER	firegolem_boss	
+6091	MONSTER	yamachun_boss	
+6101	MONSTER	ice_snow_monster1	
+6102	MONSTER	ice_snow_insect1	
+6103	MONSTER	ice_snow_man1	
+6104	MONSTER	ice_snow_giant_man1	
+6105	MONSTER	ice_snow_golem1	
+6106	MONSTER	icegolem_soldier	
+6107	MONSTER	icegolem_magician	
+6108	MONSTER	icegolem_general	
+6109	MONSTER	icegolem_boss	
+6110	MONSTER	ice_snow_giant_man2	
+6111	MONSTER	ice_snow_golem2	
+6112	MONSTER	ice_snow_insect2	
+6113	MONSTER	ice_snow_man2	
+6114	MONSTER	ice_snow_monster2	
+6115	MONSTER	reddragon_room_fly	
+6116	MONSTER	reddragon_room_human_boss	
+6117	MONSTER	reddragon_room_human_boss2	
+6118	MONSTER	metinstone_reddragon_statue	
+6151	MONSTER	icegolem_boss	
+6191	MONSTER	hanma_boss	
+6192	MONSTER	thunder_boss	
+6193	MONSTER	reddragon_room_boss2	
+6301	MONSTER	lemures_soldier_2	
+6302	MONSTER	lemures_soldier2_2	
+6303	MONSTER	lemures_magic_2	
+6304	MONSTER	lemures_officer_2	
+6305	MONSTER	lemures_general_2	
+6306	MONSTER	lemures_soldier_2	
+6307	MONSTER	lemures_soldier2_2	
+6308	MONSTER	lemures_magic_2	
+6309	MONSTER	lemures_officer_2	
+6310	MONSTER	lemures_general_2	
+6391	MONSTER	lemures_boss_2	
+6392	MONSTER	lemures_boss2_2	
+6393	MONSTER	ogre_boss	
+6394	MONSTER	ogre_boss2	
+6401	MONSTER	trent_soldier	
+6402	MONSTER	trent_soldier2	
+6403	MONSTER	trent_magic	
+6404	MONSTER	trent_magic2	
+6405	MONSTER	trent_officer	
+6406	MONSTER	trent_general	
+6407	MONSTER	trent_boss	
+6408	MONSTER	trent_boss2	
+6409	MONSTER	lemures_magic_2	
+6410	MONSTER	trent_soldier	
+6411	MONSTER	trent_soldier2	
+6412	MONSTER	trent_magic	
+6413	MONSTER	trent_magic2	
+6414	MONSTER	trent_general	
+6415	MONSTER	blue_dragon	
+6416	MONSTER	hanma_boss	
+6417	MONSTER	yamachun_boss	
+6418	MONSTER	thunder_boss	
+6419	MONSTER	fire_dragon	
+7001	MONSTER	monkey	
+7002	MONSTER	monkey_range	
+7003	MONSTER	monkey	
+7004	MONSTER	monkey	
+7005	MONSTER	stone_monkey	
+7006	MONSTER	gold_monkey	
+7007	MONSTER	gold_monkey	
+7008	MONSTER	nersluck_1	
+7009	MONSTER	nersluck_2	
+7010	MONSTER	nersluck_3	
+7012	MONSTER	evil_eye	
+7013	MONSTER	giant_scorpion	
+7014	MONSTER	scorpionman_sword	
+7015	MONSTER	scorpionman_bow	
+7016	MONSTER	snakeman_sword	
+7017	MONSTER	snakeman_bow	
+7018	MONSTER	outlaw	
+7019	MONSTER	fire_tiger	
+7020	MONSTER	fire_ghost	
+7021	MONSTER	fire_tiger_boss	
+7022	MONSTER	fire_man	
+7023	MONSTER	fire_knight	
+7024	MONSTER	ent_trent	
+7025	MONSTER	ent_guru	
+7026	MONSTER	ent_hu	
+7027	MONSTER	ent_red	
+7028	MONSTER	ent_black	
+7029	MONSTER	ice_snow_monster	
+7030	MONSTER	ice_snow_whale	
+7031	MONSTER	ice_snow_insect	
+7032	MONSTER	ice_snow_dog	
+7033	MONSTER	ice_snow_man	
+7034	MONSTER	ice_snow_giant_man	
+7035	MONSTER	ice_snow_golem	
+7036	MONSTER	ice_snow_monster	
+7037	MONSTER	ice_snow_whale	
+7038	MONSTER	ice_snow_insect	
+7039	MONSTER	ice_snow_dog	
+7040	MONSTER	ice_snow_man	
+7041	MONSTER	ice_snow_giant_man	
+7042	MONSTER	ice_snow_golem	
+7043	MONSTER	ice_snow_monster	
+7044	MONSTER	ice_snow_whale	
+7045	MONSTER	ice_snow_insect	
+7046	MONSTER	ice_snow_dog	
+7047	MONSTER	ice_snow_man	
+7048	MONSTER	ice_snow_giant_man	
+7049	MONSTER	ice_snow_golem	
+7050	MONSTER	evil_eye	
+7051	MONSTER	giant_scorpion	
+7052	MONSTER	scorpionman_sword	
+7053	MONSTER	scorpionman_bow	
+7054	MONSTER	snakeman_sword	
+7055	MONSTER	snakeman_bow	
+7056	MONSTER	outlaw	
+7057	MONSTER	evil_eye	
+7058	MONSTER	giant_scorpion	
+7059	MONSTER	scorpionman_sword	
+7060	MONSTER	scorpionman_bow	
+7061	MONSTER	snakeman_sword	
+7062	MONSTER	snakeman_bow	
+7063	MONSTER	outlaw	
+7064	MONSTER	evil_eye	
+7065	MONSTER	giant_scorpion	
+7066	MONSTER	scorpionman_sword	
+7067	MONSTER	scorpionman_bow	
+7068	MONSTER	snakeman_sword	
+7069	MONSTER	snakeman_bow	
+7070	MONSTER	outlaw	
+7071	MONSTER	fire_tiger	
+7072	MONSTER	fire_ghost	
+7073	MONSTER	fire_tiger_boss	
+7074	MONSTER	fire_man	
+7075	MONSTER	fire_knight	
+7076	MONSTER	fire_tiger	
+7077	MONSTER	fire_ghost	
+7078	MONSTER	fire_tiger_boss	
+7079	MONSTER	fire_man	
+7080	MONSTER	fire_knight	
+7081	MONSTER	fire_tiger	
+7082	MONSTER	fire_ghost	
+7083	MONSTER	fire_tiger_boss	
+7084	MONSTER	fire_man	
+7085	MONSTER	fire_knight	
+7086	MONSTER	ent_guru	
+7087	MONSTER	ent_hu	
+7088	MONSTER	ent_red	
+7089	MONSTER	ent_black	
+7090	MONSTER	ent_guru	
+7091	MONSTER	ent_hu	
+7092	MONSTER	ent_red	
+7093	MONSTER	ent_black	
+7094	MONSTER	ent_guru	
+7095	MONSTER	ent_hu	
+7096	MONSTER	ent_red	
+7101	MONSTER	guild_target_daepo	
+7102	MONSTER	guild_target_daepo	
+7103	MONSTER	guild_target_hwacha	
+7104	MONSTER	guild_target_hwacha	
+7105	MONSTER	guild_target_bonghwa	
+7106	MONSTER	signal_fire	
+7107	MONSTER	signal_fire	
+7108	MONSTER	signal_fire	
+7109	MONSTER	signal_fire	
+7110	MONSTER	signal_fire	
+7111	MONSTER	signal_fire	
+7112	MONSTER	signal_fire	
+7113	MONSTER	monkey	
+7114	MONSTER	monkey_range	
+7115	MONSTER	monkey	
+7116	MONSTER	monkey	
+7117	MONSTER	stone_monkey	
+7118	MONSTER	gold_monkey	
+7119	MONSTER	gold_monkey	
+7120	MONSTER	nersluck_1	
+7121	MONSTER	nersluck_2	
+7122	MONSTER	nersluck_3	
+7123	MONSTER	fox_ninetail	
+7124	MONSTER	yellow_tigerman	
+8001	MONSTER	metinstone_01	
+8002	MONSTER	metinstone_02	
+8003	MONSTER	metinstone_03	
+8004	MONSTER	metinstone_04	
+8005	MONSTER	metinstone_05	
+8006	MONSTER	metinstone_06	
+8007	MONSTER	metinstone_07	
+8008	MONSTER	metinstone_08	
+8009	MONSTER	metinstone_09	
+8010	MONSTER	metinstone_04	
+8011	MONSTER	metinstone_05	
+8012	MONSTER	metinstone_06	
+8013	MONSTER	metinstone_07	
+8014	MONSTER	metinstone_08	
+8015	MONSTER	metinstone_04	
+8016	MONSTER	metinstone_05	
+8017	MONSTER	metinstone_06	
+8018	MONSTER	metinstone_07	
+8019	MONSTER	metinstone_08	
+8020	MONSTER	metinstone_06	
+8021	MONSTER	metinstone_07	
+8022	MONSTER	metinstone_08	
+8023	MONSTER	metinstone_09	
+8024	MONSTER	metinstone_03	
+8025	MONSTER	metinstone_04	
+8026	MONSTER	metinstone_05	
+8027	MONSTER	metinstone_06	
+8031	MONSTER	metinstone_09	
+8032	MONSTER	metinstone_01	
+8033	MONSTER	metinstone_06	
+8034	MONSTER	metinstone_02	
+8035	MONSTER	metinstone_10	
+8036	MONSTER	metinstone_11	
+8037	MONSTER	metinstone_12	
+8038	MONSTER	metinstone_13	
+8039	MONSTER	metinstone_14	
+8040	MONSTER	metinstone_15	
+8041	MONSTER	metinstone_egg01	
+8042	MONSTER	metinstone_egg01	
+8043	MONSTER	metinstone_egg01	
+8044	MONSTER	metinstone_egg01	
+8045	MONSTER	metinstone_egg01	
+8046	MONSTER	metinstone_egg01	
+8047	MONSTER	metinstone_egg01	
+8048	MONSTER	metinstone_egg01	
+8049	MONSTER	metinstone_egg01	
+8050	MONSTER	metinstone_egg01	
+8051	MONSTER	metinstone_10	
+8052	MONSTER	metinstone_11	
+8053	MONSTER	metinstone_12	
+8054	MONSTER	metinstone_13	
+8055	MONSTER	metinstone_14	
+8056	MONSTER	metinstone_15	
+8057	MONSTER	metinstone_12	
+8058	MONSTER	metinstone_13	
+8059	MONSTER	metinstone_16	
+8060	MONSTER	metinstone_halloween	
+8061	MONSTER	metinstone_16	
+8101	MONSTER	metinstone_01	
+8102	MONSTER	metinstone_02	
+8103	MONSTER	metinstone_03	
+8104	MONSTER	metinstone_04	
+8105	MONSTER	metinstone_05	
+8106	MONSTER	metinstone_06	
+8107	MONSTER	metinstone_07	
+8108	MONSTER	metinstone_08	
+8109	MONSTER	metinstone_09	
+8110	MONSTER	metinstone_09	
+8111	MONSTER	metinstone_09	
+8112	MONSTER	metinstone_09	
+8113	MONSTER	metinstone_07	
+8114	MONSTER	metinstone_08	
+8115	MONSTER	metinstone_09	
+8200	MONSTER	metinstone_valentine01	
+8201	MONSTER	metinstone_valentine02	
+8501	MONSTER	stray_dog	
+8502	MONSTER	wild_boar	
+8503	MONSTER	bear	
+8504	MONSTER	tiger_big	
+8505	MONSTER	orc_bigblack	
+8506	MONSTER	greenfrog_general	
+8507	MONSTER	outlaw	
+8508	MONSTER	milgyo_monster1	
+8509	MONSTER	milgyo_monster2	
+8510	MONSTER	fire_knight	
+8511	MONSTER	ice_snow_golem	
+8600	MONSTER	orc_lord_e	
+8601	MONSTER	orc_lord_e	
+8602	MONSTER	milgyo_founder_e	
+8603	MONSTER	milgyo_founder_e	
+8604	MONSTER	skeleton_king_e	
+8605	MONSTER	skeleton_king_e	
+8606	MONSTER	skeleton_god_e	
+8607	MONSTER	skeleton_god_e	
+8608	MONSTER	fox_ninetail_e	
+8609	MONSTER	fox_ninetail_e	
+8610	MONSTER	yellow_tigerman_e	
+8611	MONSTER	yellow_tigerman_e	
+8612	MONSTER	spider_queen_e	
+8613	MONSTER	spider_queen_e	
+8614	MONSTER	giant_desert_turtle_e	
+8615	MONSTER	giant_desert_turtle_e	
+8616	MONSTER	blacksmith_boss	
+8617	MONSTER	blacksmith_boss	
+8618	MONSTER	blacksmith_boss	
+8619	MONSTER	blacksmith_boss	
+8620	MONSTER	blacksmith_boss	
+8621	MONSTER	blacksmith_boss	
+8622	MONSTER	blacksmith_boss	
+8623	MONSTER	blacksmith_boss	
+9001	NPC	arms	
+9002	NPC	defence	
+9003	NPC	goods	
+9004	NPC	bank	
+9005	NPC	hotel_grandfa	
+9006	NPC	hotel_grandma	
+9007	NPC	arms	
+9008	NPC	defence	
+9009	NPC	sailor	
+9010	NPC	goods_02	
+9011	NPC	bank_02	
+9012	NPC	oldster	
+10001	WARP	warp	
+10002	WARP	warp	
+10003	WARP	warp	
+10004	WARP	warp	
+10005	WARP	warp	
+10006	WARP	warp	
+10007	WARP	warp	
+10008	WARP	warp	
+10009	WARP	warp	
+10010	WARP	warp	
+10011	WARP	warp	
+10012	WARP	warp	
+10013	WARP	warp	
+10014	WARP	warp	
+10015	WARP	warp	
+10016	WARP	warp	
+10017	WARP	warp	
+10018	WARP	warp	
+10019	WARP	warp	
+10020	WARP	warp	
+10021	WARP	warp	
+10022	WARP	warp	
+10023	WARP	warp	
+10024	WARP	warp	
+10025	WARP	warp	
+10026	WARP	warp	
+10027	WARP	warp	
+10028	WARP	warp	
+10029	WARP	warp	
+10030	WARP	warp	
+10031	WARP	warp	
+10032	WARP	warp	
+10033	WARP	warp	
+10034	WARP	warp	
+10035	WARP	warp	
+10036	WARP	warp	
+10037	WARP	warp	
+10038	WARP	warp	
+10039	WARP	warp	
+10040	WARP	warp	
+10041	WARP	warp	
+10042	WARP	warp	
+10043	WARP	warp	
+10044	WARP	warp	
+10045	WARP	warp	
+10046	WARP	warp	
+10047	WARP	warp	
+10048	WARP	warp	
+10049	WARP	warp	
+10050	WARP	warp	
+10051	WARP	warp	
+10052	WARP	warp	
+10053	WARP	warp	
+10054	WARP	warp	
+10055	WARP	warp	
+10056	WARP	warp	
+10057	WARP	warp	
+10058	WARP	warp	
+10059	WARP	warp	
+10060	WARP	warp	
+10061	WARP	warp	
+10062	WARP	warp	
+10063	WARP	warp	
+10064	WARP	warp	
+10065	WARP	warp	
+10066	WARP	warp	
+10067	WARP	warp	
+10068	WARP	warp	
+10069	WARP	warp	
+10070	WARP	warp	
+10071	WARP	warp	
+10072	WARP	warp	
+10073	WARP	warp	
+10074	WARP	warp	
+10075	WARP	warp	
+10076	WARP	warp	
+10077	WARP	warp	
+10078	WARP	warp	
+10079	WARP	warp	
+10080	WARP	warp	
+10081	WARP	warp	
+10082	WARP	warp	
+10083	WARP	warp	
+10084	WARP	warp	
+10085	WARP	warp	
+10086	WARP	warp	
+10087	WARP	warp	
+10088	WARP	warp	
+10089	WARP	warp	
+10090	WARP	warp	
+10091	WARP	warp	
+10092	WARP	warp	
+10093	WARP	warp	
+10094	WARP	warp	
+10095	WARP	warp	
+10096	WARP	warp	
+10097	WARP	warp	
+10098	WARP	warp	
+10099	WARP	warp	
+10100	WARP	warp	
+10101	WARP	warp	
+10102	WARP	warp	
+10103	WARP	warp	
+10104	WARP	warp	
+10105	WARP	warp	
+10501	GOTO	warp	
+10502	GOTO	warp	
+10503	GOTO	warp	
+10504	GOTO	warp	
+10505	GOTO	warp	
+10506	GOTO	warp	
+10507	GOTO	warp	
+10508	GOTO	warp	
+10509	GOTO	warp	
+10510	GOTO	warp	
+10511	GOTO	warp	
+10512	GOTO	warp	
+10513	GOTO	warp	
+10514	GOTO	warp	
+10515	GOTO	warp	
+10516	GOTO	warp	
+10517	GOTO	warp	
+10518	GOTO	warp	
+10519	GOTO	warp	
+10520	GOTO	warp	
+10521	GOTO	warp	
+10522	GOTO	warp	
+10523	GOTO	warp	
+10524	GOTO	warp	
+10601	GOTO	warp	
+10602	GOTO	warp	
+10603	GOTO	warp	
+10604	GOTO	warp	
+10605	GOTO	warp	
+10606	GOTO	warp	
+10607	GOTO	warp	
+10608	GOTO	warp	
+10609	GOTO	warp	
+10610	GOTO	warp	
+10611	GOTO	warp	
+10612	GOTO	warp	
+10613	GOTO	warp	
+10614	GOTO	warp	
+10615	GOTO	warp	
+10616	GOTO	warp	
+10617	GOTO	warp	
+10618	GOTO	warp	
+10619	GOTO	warp	
+10620	GOTO	warp	
+10621	GOTO	warp	
+10622	GOTO	warp	
+10623	GOTO	warp	
+10624	GOTO	warp	
+10625	GOTO	warp	
+10626	GOTO	warp	
+10701	GOTO	warp	
+10702	GOTO	warp	
+10703	GOTO	warp	
+10704	GOTO	warp	
+10705	GOTO	warp	
+10706	GOTO	warp	
+10707	GOTO	warp	
+10708	GOTO	warp	
+10709	GOTO	warp	
+10710	GOTO	warp	
+10711	GOTO	warp	
+10712	GOTO	warp	
+10713	GOTO	warp	
+10714	GOTO	warp	
+10715	GOTO	warp	
+10716	GOTO	warp	
+10717	GOTO	warp	
+10718	GOTO	warp	
+10719	GOTO	warp	
+10720	GOTO	warp	
+10721	GOTO	warp	
+10722	GOTO	warp	
+10723	GOTO	warp	
+10724	GOTO	warp	
+10725	GOTO	warp	
+10726	GOTO	warp	
+10801	GOTO	warp	
+10802	GOTO	warp	
+10803	GOTO	warp	
+10804	GOTO	warp	
+10805	GOTO	warp	
+10806	GOTO	warp	
+10807	GOTO	warp	
+10808	GOTO	warp	
+10809	GOTO	warp	
+10810	GOTO	warp	
+10811	GOTO	warp	
+10812	GOTO	warp	
+10813	GOTO	warp	
+10814	GOTO	warp	
+10815	GOTO	warp	
+10816	GOTO	warp	
+10817	GOTO	warp	
+10818	GOTO	warp	
+10819	GOTO	warp	
+10820	GOTO	warp	
+10821	GOTO	warp	
+10822	GOTO	warp	
+10823	GOTO	warp	
+10824	GOTO	warp	
+10825	GOTO	warp	
+10826	GOTO	warp	
+10827	GOTO	warp	
+10828	GOTO	warp	
+10829	GOTO	warp	
+10830	GOTO	warp	
+10831	GOTO	warp	
+10832	GOTO	warp	
+10833	GOTO	warp	
+10834	GOTO	warp	
+10835	GOTO	warp	
+11000	NPC	gangyo_patrol_spear	
+11001	NPC	gangyo_patrol_bow	
+11002	NPC	jinno_patrol_spear	
+11003	NPC	jinno_patrol_bow	
+11004	NPC	sinsu_patrol_spear	
+11005	NPC	sinsu_patrol_bow	
+11100	MONSTER	gangyo_patrol_spear	
+11101	MONSTER	gangyo_patrol_bow	
+11102	MONSTER	jinno_patrol_spear	
+11103	MONSTER	jinno_patrol_bow	
+11104	MONSTER	sinsu_guard_spear	
+11105	MONSTER	sinsu_guard_bow	
+11106	MONSTER	gangyo_patrol_spear	
+11107	MONSTER	gangyo_patrol_bow	
+11108	MONSTER	jinno_patrol_spear	
+11109	MONSTER	jinno_patrol_bow	
+11110	MONSTER	sinsu_patrol_spear	
+11111	MONSTER	sinsu_patrol_bow	
+11112	MONSTER	gangyo_patrol_spear	
+11113	MONSTER	gangyo_patrol_bow	
+11114	MONSTER	jinno_patrol_spear	
+11115	MONSTER	jinno_patrol_bow	
+11116	MONSTER	sinsu_patrol_spear	
+11117	MONSTER	sinsu_patrol_bow	
+11505	MONSTER	goldenfrog	
+11506	MONSTER	signal_fire	
+11507	MONSTER	signal_fire	
+11508	MONSTER	signal_fire	
+11509	MONSTER	signal_fire	
+11510	MONSTER	signal_fire	
+12000	NPC	campfire	
+13000	MONSTER	wooden_door	
+13001	MONSTER	stone_door	
+13999	NPC	scholar_beige_M	
+20001	NPC	alchemist	
+20002	NPC	auntie	
+20003	NPC	baby_and_mom	
+20004	NPC	beggar	
+20005	NPC	ceramist	
+20006	NPC	girl_lost_elder_brother	
+20007	NPC	hotel_grandfa	
+20008	NPC	mr_restaurant	
+20009	NPC	oldster	
+20010	NPC	peddler	
+20011	NPC	plant_researcher	
+20012	NPC	rice_cake_seller	
+20013	NPC	sailor	
+20014	NPC	timid_boy	
+20015	NPC	woodcutter	
+20016	NPC	blacksmith	
+20017	NPC	musician	
+20018	NPC	doctor	
+20019	NPC	hunter	
+20020	NPC	old_pirate	
+20021	NPC	widow	
+20022	NPC	young_merchant	
+20023	NPC	bookworm	
+20024	NPC	yu_hwa_rang	
+20029	MOUNT	pony_normal	
+20030	MOUNT	pony_normal	
+20031	NPC	santa	
+20032	NPC	christmas_tree_01	
+20033	NPC	christmas_tree_02	
+20034	NPC	christmas_tree_03	
+20035	NPC	flag_red	
+20036	NPC	flag_blue	
+20037	NPC	flag_yellow	
+20040	NPC	jinno_patrol_spear	
+20041	NPC	beggar	
+20042	NPC	peddler	
+20044	NPC	blacksmith	
+20045	NPC	blacksmith	
+20046	NPC	blacksmith	
+20047	NPC	diamond	
+20048	NPC	amber	
+20049	NPC	fossil_tree	
+20050	NPC	copper	
+20051	NPC	silver	
+20052	NPC	gold	
+20053	NPC	jade	
+20054	NPC	ebony	
+20055	NPC	pearl	
+20056	NPC	white_gold	
+20057	NPC	quartz	
+20058	NPC	amethyst	
+20059	NPC	chunru	
+20060	NPC	alchemist	
+20061	NPC	alchemist	
+20062	NPC	alchemist	
+20063	NPC	alchemist	
+20064	NPC	alchemist	
+20065	NPC	alchemist	
+20066	NPC	alchemist	
+20067	NPC	alchemist	
+20068	NPC	alchemist	
+20069	NPC	alchemist	
+20070	NPC	alchemist	
+20071	NPC	alchemist	
+20072	NPC	alchemist	
+20073	NPC	seal_stone	
+20074	NPC	blacksmith	
+20075	NPC	blacksmith	
+20076	NPC	blacksmith	
+20077	NPC	jinno_patrol_spear	
+20078	NPC	jinno_patrol_spear	
+20079	NPC	jinno_patrol_spear	
+20080	NPC	plant_researcher	
+20081	NPC	seal_stone	
+20082	NPC	GM	
+20083	NPC	oldster	
+20084	NPC	chagirap	
+20086	NPC	wondaim	
+20087	NPC	handaup	
+20088	NPC	visamun	
+20089	NPC	jinmoo	
+20090	NPC	samahi	
+20091	NPC	backchon	
+20092	NPC	ayuka	
+20093	NPC	visal	
+20094	NPC	yejin	
+20095	NPC	sinseon	
+20096	NPC	seal_stone	
+20097	NPC	sinsu_warpgate	
+20098	NPC	chenjo_warpgate	
+20099	NPC	jinno_warpgate	
+20101	MOUNT	pony_normal	
+20102	MOUNT	pony_member	
+20103	MOUNT	pony_master	
+20104	MOUNT	horse_normal	
+20105	MOUNT	horse_member	
+20106	MOUNT	horse_master	
+20107	MOUNT	horse2_normal	
+20108	MOUNT	horse2_member	
+20109	MOUNT	horse2_master	
+20110	MOUNT	boar	
+20111	MOUNT	dog_god	
+20112	MOUNT	fire_tiger_violet	
+20113	MOUNT	lion	
+20114	MOUNT	lion_white	
+20115	MOUNT	boar_2	
+20116	MOUNT	dog_god_2	
+20117	MOUNT	fire_tiger_2	
+20118	MOUNT	lion_2	
+20119	MOUNT	horse_event1	
+20120	MOUNT	fire_tiger_blue	
+20121	MOUNT	fire_tiger_darkred	
+20122	MOUNT	fire_tiger_gold	
+20123	MOUNT	fire_tiger_green	
+20124	MOUNT	fire_tiger_pied	
+20125	MOUNT	fire_tiger_white	
+20126	NPC	santa	
+20201	MOUNT	boar_0	
+20202	MOUNT	dog_god_0	
+20203	MOUNT	fire_tiger_0	
+20204	MOUNT	lion_0	
+20205	MOUNT	boar_2	
+20206	MOUNT	dog_god_2	
+20207	MOUNT	fire_tiger_2	
+20208	MOUNT	lion_2	
+20209	MOUNT	boar_3	
+20210	MOUNT	dog_god_3	
+20211	MOUNT	fire_tiger_3	
+20212	MOUNT	lion_3	
+20213	MOUNT	reindeer_male1	
+20214	MOUNT	reindeer_male2	
+20215	MOUNT	reindeer_male3	
+20216	MOUNT	reindeer_female1	
+20217	MOUNT	reindeer_female2	
+20218	MOUNT	reindeer_female3	
+20219	MOUNT	horse_halloween1	
+20220	MOUNT	reindeer_male1_christmas1	
+20221	MOUNT	bear_1	
+20222	MOUNT	panda	
+20223	MOUNT	dinosaur_1	
+20224	MOUNT	dinosaur_2	
+20225	MOUNT	dinosaur_3	
+20226	MOUNT	unicorn	
+20227	MOUNT	unicorn1	
+20228	MOUNT	turkey_1	
+20229	MOUNT	turkey_2	
+20230	MOUNT	turkey_3	
+20231	MOUNT	leopard_black	
+20232	MOUNT	leopard_yellow	
+20233	MOUNT	chick_yellow1	
+20234	MOUNT	chick_white1	
+20235	MOUNT	chick_yellow2	
+20236	MOUNT	chick_white2	
+20237	MOUNT	chick_yellow3	
+20238	MOUNT	chick_white3	
+20239	MOUNT	christmas_2015_reindeer_female	
+20240	MOUNT	christmas_2015_reindeer_male	
+20241	MOUNT	chick_blue1	
+20242	MOUNT	chick_pink1	
+20243	MOUNT	horse_pepsi	
+20300	NPC	sinsu_patrol_spear	
+20301	NPC	sinsu_patrol_spear	
+20302	NPC	sinsu_patrol_spear	
+20303	NPC	sinsu_patrol_spear	
+20304	NPC	sinsu_patrol_spear	
+20305	NPC	sinsu_patrol_spear	
+20306	NPC	sinsu_patrol_spear	
+20307	NPC	sinsu_patrol_spear	
+20320	NPC	gangyo_patrol_spear	
+20321	NPC	gangyo_patrol_spear	
+20322	NPC	gangyo_patrol_spear	
+20323	NPC	gangyo_patrol_spear	
+20324	NPC	gangyo_patrol_spear	
+20325	NPC	gangyo_patrol_spear	
+20326	NPC	gangyo_patrol_spear	
+20327	NPC	gangyo_patrol_spear	
+20340	NPC	jinno_patrol_spear	
+20341	NPC	jinno_patrol_spear	
+20342	NPC	jinno_patrol_spear	
+20343	NPC	jinno_patrol_spear	
+20344	NPC	jinno_patrol_spear	
+20345	NPC	jinno_patrol_spear	
+20346	NPC	jinno_patrol_spear	
+20347	NPC	jinno_patrol_spear	
+20348	NPC	jinno_patrol_spear	
+20349	NPC	jinno_patrol_spear	
+20350	NPC	jinno_patrol_spear	
+20351	NPC	jinno_patrol_spear	
+20352	NPC	tombstone	
+20353	NPC	tombstone1	
+20354	NPC	guard_leader	
+20355	NPC	guard_leader	
+20356	NPC	mirinae_brother	
+20357	NPC	moonstone	
+20358	NPC	nnflower	
+20359	NPC	mailbox	
+20360	NPC	firestone	
+20361	NPC	waterstone	
+20362	NPC	treestone	
+20363	NPC	steelstone	
+20364	NPC	naoki	
+20365	NPC	steelstone	
+20366	NPC	keyholestone	
+20367	NPC	jinno_patrol_spear	
+20368	NPC	peddler	
+20369	NPC	leechung	
+20370	NPC	spy1	
+20371	NPC	waterstone	
+20372	NPC	tombstone	
+20373	NPC	jinno_patrol_spear	
+20374	NPC	jinno_patrol_spear	
+20375	NPC	npc_fence	
+20376	NPC	chagirap	
+20377	NPC	jinno_patrol_spear_01	
+20378	NPC	gangyo_patrol_spear_01	
+20379	NPC	spy1_01	
+20380	NPC	eojiryu	
+20381	NPC	gilaso	
+20382	NPC	nnflower	
+20383	NPC	blacksmith	
+20384	NPC	christmas_tree	
+20385	NPC	flame_npc	
+20386	NPC	seal_stone	
+20387	NPC	bridge_block_chain	
+20388	NPC	flame_door_npc	
+20389	NPC	keyholestone	
+20390	NPC	keyholestone	
+20391	NPC	nnflower	
+20392	NPC	spy1_01	
+20393	NPC	spy1	
+20394	NPC	jinno_patrol_spear	
+20395	NPC	jinno_patrol_spear	
+20397	NPC	ICE_lionstone	
+20398	NPC	ice_keybox	
+20399	MONSTER	ice_stonepillar	
+20400	NPC	wolfman_jokjang	
+20401	NPC	wolfman_guard	
+20402	NPC	wolfman_guard	
+20403	NPC	wolfman_guard	
+20404	NPC	wolfman_sangin	
+20405	NPC	wolfman_sangin	
+20408	NPC	redguild_guard_M_4	
+20409	NPC	redguild_guard_M	
+20410	NPC	redguild_guard_M_2	
+20411	NPC	redguild_guard_M_3	
+20412	NPC	jinno_patrol_spear	
+20413	NPC	japanese_pirate_2	
+20414	NPC	redguild_guard_F	
+20415	NPC	warp_blue	
+20416	NPC	halloween2	
+20417	NPC	okey_npc	
+20419	NPC	old_magic_M1	
+20420	NPC	reddragon_room_box	
+20421	NPC	old_magic_M2	
+20422	MONSTER	metinstone_egg02	
+20423	NPC	Alchemist	
+20424	NPC	Alchemist	
+20425	NPC	Alchemist	
+20426	NPC	Alchemist	
+20427	NPC	Alchemist	
+20428	NPC	Alchemist	
+30000	NPC	privateshop	
+30001	NPC	privateshop2	
+30101	NPC	zombie_key_stone	
+30102	NPC	zombie_god_stone	
+30103	NPC	zombie_security_stone	
+30104	NPC	zombie_warp_stone	
+30111	MONSTER	zombie_ghost_door	
+30112	MONSTER	zombie_ghost_door	
+30113	MONSTER	zombie_ghost_door	
+30114	MONSTER	zombie_ghost_door	
+30115	MONSTER	zombie_ghost_door	
+30116	MONSTER	zombie_ghost_door	
+30117	MONSTER	zombie_ghost_door	
+30118	MONSTER	zombie_ghost_door	
+30119	MONSTER	zombie_ghost_door	
+30120	NPC	obj_bag003	
+30121	NPC	suraghost	
+30122	NPC	warriorghost	
+30123	NPC	worship_dragon	
+30124	NPC	sura_skeleton1	
+30125	NPC	sura_skeleton2	
+30126	NPC	sura_skeleton3	
+30127	NPC	sura_skeleton4	
+30128	NPC	sura_skeleton5	
+30129	NPC	rabbit	
+30130	NPC	waterstone	
+30131	NPC	Easter_Day_rabbit	
+30301	NPC	mineral2	
+30302	NPC	mineral2_ruby	
+30303	NPC	mineral2_garnet	
+30304	NPC	mineral2_bery	
+30305	NPC	mineral2_sapphire	
+30306	NPC	mineral2_fivestone	
+30307	NPC	yu_hwa_rang_event_NPC	
+33001	NPC	sura_skeleton3	
+33002	NPC	historian	
+33003	NPC	starveling	
+33004	NPC	starveling2	
+33005	NPC	starveling3	
+33006	NPC	starveling4	
+33007	NPC	starveling5	
+33008	NPC	halloween1	
+34001	PET	phoenix1	
+34002	PET	reindeer_young1	
+34003	PET	phoenix2	
+34004	PET	pwahuang1	
+34005	PET	pig_young1	
+34006	PET	dog_young1	
+34007	PET	tiger_young1	
+34008	PET	lion_young1	
+34009	PET	pwahuang1_2	
+34010	PET	reindeer_young1_christmas1	
+34011	PET	bear_young1	
+34012	PET	panda_young1	
+34013	PET	redthief2_officer_young1	
+34014	PET	redthief2_officer_young2	
+34015	PET	halloween_bonedog1	
+34016	PET	phoenix3	
+34017	PET	pig_young1_white	
+34018	PET	dog_young1_white	
+34019	PET	tiger_young1_white	
+34020	PET	lion_young1_white	
+34021	PET	egg_pet	
+34022	PET	rabbit_pet	
+34023	PET	leopard_young1_black	
+34024	PET	leopard_young1_yellow	
+34026	PET	halloween_pumpkin_pet	
+34027	PET	halloween_broom	
+34028	PET	christmas_pet1	
+34029	PET	christmas_pet2	
+34030	PET	valentine_angel	
+34031	PET	valentine_heart	
+34032	PET	ramadan_pet	
+34033	PET	ramadan_pet_02	
+34034	PET	lamb_white_pet	
+34035	PET	lamb_blue_pet	
+34036	PET	blue_dragon_young1	
+34037	PET	blue_dragon_young2	
+34039	PET	skipia_general_young1	
+34041	PET	monkey_young1	
+34042	PET	monkey_young2	
+34045	PET	spider_redpoison_young1	
+34046	PET	spider_redpoison_young2	
+34049	PET	yamachun_young1	
+34050	PET	yamachun_young2	
+34053	PET	hanma_young1	
+34054	PET	hanma_young2	
+34055	PET	halloween_bet_pet1	
+34056	PET	halloween_bet_pet2	
+34057	PET	halloween_bet_pet1	
+34058	PET	valentine_2016_bear_M	
+34059	PET	valentine_2016_bear_F	
+34060	PET	valentine_2016_bear_M	
+34061	PET	valentine_2016_bear_F	
+34062	PET	ramadan_pet_03	
+34063	PET	ramadan_pet_04	
+34064	PET	red_dragon_young1	
+34065	PET	red_dragon_young2	
+34043	PET	defensewave_hydra_pet_1	
+34044	PET	defensewave_hydra_pet_2	
+34073	PET	pwahuang1_3	
+34074	PET	pwahuang1_4	
+34075	PET	redthief2_officer_young3	
+34076	PET	redthief2_officer_young4	
+34080	PET	luck_sheep_young1	
+34081	PET	luck_sheep_young2	
+60000	NPC	old_master_M	
+60001	NPC	old_master_M	
+60002	NPC	old_master_M	
+20504	NPC	gemshop	
+20503	NPC	scholar_brown_M	

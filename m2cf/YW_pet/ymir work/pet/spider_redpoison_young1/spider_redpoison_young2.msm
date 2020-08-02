@@ -1,0 +1,58 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\spider_redpoison_young1\spider_redpoison_young1.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\spider_redpoison_young1\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"spider_redpoison_young1.gr2"
+		SourceSkin	"spider_redpoison_young1.dds"
+		TargetSkin	"spider_redpoison_young2.dds"
+	}
+}
+
+Group	AttachingData
+{
+	AttachingDataCount	2
+
+	Group	AttachingData00
+	{
+		AttachingDataType	1
+
+		isAttaching	1
+		AttachingModelIndex	0
+		AttachingBoneName	"bone001"
+
+		CollisionType	1
+
+		SphereDataCount	1
+		Group	SphereData00
+		{
+			Radius	39.000000
+			Position	0.000000	18.000000	25.000000
+		}
+	}
+
+	Group	AttachingData01
+	{
+		AttachingDataType	1
+
+		isAttaching	1
+		AttachingModelIndex	0
+		AttachingBoneName	"bone001"
+
+		CollisionType	3
+
+		SphereDataCount	1
+		Group	SphereData00
+		{
+			Radius	45.000000
+			Position	0.000000	18.000000	25.000000
+		}
+	}
+}

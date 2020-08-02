@@ -1,0 +1,589 @@
+quest daily_95 begin
+	state start begin
+		when login or levelup with pc.level >= 95 begin
+			set_state(repet)
+		end
+	end
+	state repet begin
+		when letter begin
+			send_letter("Le gardien de la forêt")
+			local v = find_npc_by_vnum(20409) -- 20409
+			if v!= 0 then
+				target.vid("__TARGET__", v, "Gardien de la Forêt.")
+			end
+		end
+		when button or info begin
+			say_title("Le gardien de la forêt")
+			say("Le gardien de la forêt, vous cherche.")
+			say("Veuillez aller le voir et demandez-lui")
+			say("si vous pouvez l'aider.")
+		end
+		when __TARGET__.target.click or
+			20409.chat."Le gardien de la forêt !" begin
+			target.delete("__TARGET__")
+			say_title("Première exploration")
+			say("")
+			say("Coucou toi")
+			say("Faut m'aider :D")
+			set_state(repeta)
+			pc.setqf("duration",0)
+		end
+	end
+	state repeta begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Première exploration")
+			q.set_title ("Première exploration")
+			q.start()
+		end
+		when info or button begin
+			say_title("Première exploration")
+			say("")
+			say("Éliminez 50 Combattant En-Tai et retournez auprès du ")
+			say("Gardien de la forêt.")
+			say("")
+			set_state( killcentai )
+			pc.setqf("state", 0)
+			q.set_counter("Combattant En-Tai:", 0)
+		end
+	end
+	state killcentai begin
+		when letter begin
+			send_letter("Première exploration")
+		end
+		when button or info begin
+			say_title("Première exploration")
+			say("")
+			say("Éliminez 50 Combattant En-Tai et retournez auprès du ")
+			say("Gardien de la forêt.")
+			say("")
+			say_reward("Monstres déjà vaincus : "..pc.getqf("state")..".")
+			say("")
+		end
+		when 6401.kill begin
+			local count = pc.getqf("state") + 1
+
+			if count <= 50 then
+				q.set_counter("Reste :", 50 - count)
+
+				if count == 50 then
+					say_title("Première exploration")
+					say("")
+					say("Vous avez éliminé 50 Combattant En-Tai.")
+					say("Retournez aurpès du Gardien de la Forêt.")
+					say("")
+					pc.setqf("state", 0)
+					set_state(centail_reward)
+				end
+			end
+		end
+	end
+	state centail_reward begin
+			when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Première exploration")
+			q.set_title ("Première exploration")
+			q.start()
+
+			local v = find_npc_by_vnum(20409) -- 20409
+			if v!= 0 then
+			else
+				target.vid("__TARGET__",v,"Gardien de la Forêt.")
+			end
+		end
+		when info or button begin
+			say_title("Première exploration")
+			say("")
+			say("Vous avez éliminé les Combattants En-Tai. Retournez auprès ")
+			say("du Gardien de la forêt.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20409.chat."Les combattant En-Tail sont mort !" begin -- 20409
+			target.delete("__TARGET__")
+			say_title("Première exploration")
+			say("")
+			say("Test")
+			say("Voilà, prenez ceci en guise de remerciment.")
+			pc.give_exp2(776600)
+			say_title("Récompense :")
+			say("")
+			say_reward("Vous avez reçu 776.600 d'expérience.")
+			say("")
+			clear_letter()
+			set_state(repet1)
+		end
+	end
+	state repet1 begin
+		when letter begin
+			local v = find_npc_by_vnum(20409)
+			if v!= 0 then
+				target.vid("__TARGET__", v, "Gardien de la Forêt.")
+			end
+		end
+		when __TARGET__.target.click or
+			20409.chat."Cherchez la trousse de secour !" begin
+			target.delete("__TARGET__")
+			say_title("Cherchez la Trousse de secours")
+			say("")
+			say("Coucou toi")
+			say_item_vnum(31100)
+			say("Faut m'aider :D")
+			set_state(repetb)
+		end
+	end
+	state repetb begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Cherchez la Trousse de secours")
+			q.set_title ("Cherchez la Trousse de secours")
+			q.start()
+		end
+		when info or button begin
+			say_title("Cherchez la Trousse de secours")
+			say("")
+			say("Éliminez des Druides En-Tai pour récuperrez ")
+			say("une Trousse de Secours puis retournez aurpès ")
+			say("du Gardien de la forêt")
+			say("")
+			set_state( killdentai )
+		end
+	end
+	state killdentai begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Cherchez la Trousse de secours")
+			q.set_title ("Cherchez la Trousse de secours")
+			q.start()
+		end
+		when info or button begin
+			say_title("Cherchez la Trousse de secours")
+			say("")
+			say("Éliminez des Druides En-Tai pour récuperrez ")
+			say("une Trousse de Secours puis retournez aurpès ")
+			say("du Gardien de la forêt")
+			say("")
+		end
+		when 6403.kill begin
+					local s = number(1, 100)
+			if s == 1 then
+			say_title("Trousse de secours.")
+			say("")
+			say("Vous avez la trousse de secours.")
+				pc.give_item2(31100, 1)
+				set_state(dentail_reward)
+			end
+		end
+	end
+	state dentail_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Remettre la Trousse de secours")
+			q.set_title ("Remettre la Trousse de secours")
+			q.start()
+
+			local v = find_npc_by_vnum(20409)
+			if v!= 0 then
+			else
+				target.vid("__TARGET__",v,"Gardien de la forêt.")
+			end
+		end
+		when info or button begin
+			say_title("Vous avez la Trousse de Secours.")
+			say("Retournez aurpès du Gardien de la forêt.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20409.chat."J'ai la trousse de secours !" begin
+			target.delete("__TARGET__")
+			say_title("Remettre la Trousse de secours")
+			say("Remettre la Trousse de secours")
+			say("")
+			say("Vous l'avez, donner la au guetteur")
+			say("<3 !")
+			say("")
+			say("Prenez ceci en guise de remerciment.")
+			pc.give_exp2(3601600)
+			pc.give_item2("50724", 10)
+			say_title("Récompense :")
+			say("")
+			say_reward("Vous avez reçu 10 racines de gango et 3 601 600 d'expérience")
+			say("")
+			clear_letter()
+			set_state(repetc)
+		end
+	end
+	state repetc begin
+		when letter begin
+			local v = find_npc_by_vnum(20410)
+			if v!= 0 then
+				target.vid("__TARGET__", v, "Guetteur de la Forêt.")
+			end
+		end
+		when __TARGET__.target.click or
+			20410.chat."Seconde exploration !" begin
+			target.delete("__TARGET__")
+			if pc.count_item(31100) >=1 then
+			say_title("Seconde exploration")
+			say("")
+			say("Coucou toi, merci pour la trousse")
+			say("Faut m'aider encore :D")
+			pc.remove_item(31100, 1)
+			set_state(killmetin)
+			end
+		end
+	end
+	state killmetin begin
+		when letter begin
+			send_letter("Seconde exploration")
+		end
+		when button or info begin
+			say_title("Seconde exploration")
+			say("")
+			say("Détruisez 5 Metin des êtres sylv. et retournez auprès du ")
+			say("Guetteur de la forêt.")
+			say("")
+			say_reward("Metin déjà détruite : "..pc.getqf("state")..".")
+			say("")
+		end
+		when 8059.kill begin
+			local count = pc.getqf("state") + 1
+
+			if count <= 5 then
+				q.set_counter("Reste :", 5 - count)
+
+				if count == 5 then
+					say_title("Seconde exploration")
+					say("")
+					say("Vous avez détruis 5 Metin des êtres sylv. .")
+					say("Retournez aurpès du Guetteur de la Forêt.")
+					say("")
+					pc.setqf("state", 0)
+					set_state(metin_reward)
+				end
+			end
+		end
+	end
+	state metin_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Seconde exploration")
+			q.set_title ("Seconde exploration")
+			q.start()
+
+			local v = find_npc_by_vnum(20410)
+			if v!= 0 then
+			else
+				target.vid("__TARGET__",v,"Guetteur de la Forêt.")
+			end
+		end
+		when info or button begin
+			say_title("Vous avez détruis 5 Metin des êtres sylv. .")
+			say("Retournez aurpès du Guetteur de la Forêt")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20410.chat."Les metin des êtres sylv. sont détruite !" begin
+			target.delete("__TARGET__")
+			say_title("Seconde exploration")
+			say("")
+			say("Je savais bien que vous étiez parfait pour cette")
+			say("mission !")
+			say("")
+			say("Prenez ceci en guise de remerciment.")
+			pc.give_exp2("7766000")
+			say_title("Récompense :")
+			say("")
+			say_reward("Vous avez reçu 7 766 000 d'expérience")
+			say("")
+			clear_letter()
+			set_state(repetd)
+		end
+	end
+	state repetd begin
+		when letter begin
+			local v = find_npc_by_vnum(20410)
+			if v!= 0 then
+				target.vid("__TARGET__", v, "Guetteur de la Forêt.")
+			end
+		end
+		when __TARGET__.target.click or
+			20410.chat."Le gardien de la forêt !" begin
+			target.delete("__TARGET__")
+			say_title("Récupérer la Rosée En-Tai")
+			say("Aide moi encore et encore")
+			say_item_vnum(31097)
+			say("")
+			set_state(rosee)
+		end
+	end
+	state rosee begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Récupérer la Rosée En-Tai")
+			q.set_title ("Récupérer la Rosée En-Tai")
+			q.start()
+		end
+		when info or button begin
+			say_title("Récupérer la Rosée En-Tai")
+			say("")
+			say("Récupérer 5 Rosée En-Tai et retournez auprès du ")
+			say("Guetteur de la forêt.")
+			say("")
+			set_state( killdesentai )
+			pc.setqf("state", 0)
+			q.set_counter("Rosée En-Tai:", 0)
+		end
+	end
+	state killdesentai begin
+		when letter begin
+			send_letter("Récupérer la Rosée En-Tai")
+		end
+		when button or info begin
+			say_title("Récupérer la Rosée En-Tai")
+			say("")
+			say("Récupérer 5 Rosée En-Tai et retournez auprès du ")
+			say("Guetteur de la forêt.")
+			say("")
+			say_reward("Rosée récupérer : "..pc.getqf("state")..".")
+			say("")
+		end
+		when 6406.kill begin
+			local count = pc.getqf("state") + 1
+			local s = number(1, 100)
+			if s == 1 then
+					pc.give_item2(31097, 1)
+					notice("Vous avez récupéré 1 rosée En-Tail.")
+				if count <= 5 then
+					q.set_counter("Reste :", 5 - count)
+
+					if count == 5 then
+						say_title("Récupérer la Rosée En-Tai")
+						say("")
+						say("Vous avez récupérer 5 Rosée En-Tai.")
+						say("Retournez aurpès du Guetteur de la Forêt.")
+						say("")
+						pc.setqf("state", 0)
+						set_state(rosee_reward)
+					end
+				end
+			end
+		end
+	end
+	state rosee_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Récupérer la Rosée En-Tai")
+			q.set_title ("Récupérer la Rosée En-Tai")
+			q.start()
+
+			local v = find_npc_by_vnum(20410)
+			if v!= 0 then
+			else
+				target.vid("__TARGET__",v,"Guetteur de la Forêt.")
+			end
+		end
+		when info or button begin
+			say("Vous avez récupérer 5 Rosée En-Tai.")
+			say("Retournez aurpès du Guetteur de la Forêt.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20410.chat."J'ai les 5 rosées En-Tail !" begin
+			target.delete("__TARGET__")
+			say_title("Récupérer la Rosée En-Tai")
+			say("")
+			say("Je savais bien que vous étiez parfait pour cette")
+			say("mission !")
+			say("")
+			say("Prenez ceci en guise de remerciment.")
+			pc.give_exp2("7766000")
+			pc.give_item2("50816", 10)
+			say_title("Récompense :")
+			say("")
+			say_reward("Vous avez reçu 7 766 000 d'expérience et 10 Eau de Yuong")
+			say("")
+			clear_letter()
+			set_state(repetf)
+		end
+	end
+	state repetf begin
+		when letter begin
+			local v = find_npc_by_vnum(20411)
+			if v!= 0 then
+				target.vid("__TARGET__", v, "Éclaireur de la Forêt.")
+			end
+		end
+		when __TARGET__.target.click or
+			20411.chat."Le gardien de la forêt !" begin
+			target.delete("__TARGET__")
+			say_title("	Tuez le Seigneur En-Tai")
+			say("")
+			say("Coucou toi")
+			say("Faut m'aider :D")
+			set_state(seigneur)
+		end
+	end
+	state seigneur begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Tuez le Seigneur En-Tai")
+			q.set_title ("Tuez le Seigneur En-Tai")
+			q.start()
+		end
+		when info or button begin
+			say_title("Tuez le Seigneur En-Tai")
+			say("")
+			say("Éliminez des Seigneurs En-Tai pour obtenir un Bois précieux ")
+			say("et retournez auprès de l'Éclaireur de la forêt.")
+			say("")
+			set_state( killseigneur )
+		end
+	end
+	state killseigneur begin
+		when 6407.kill begin
+					local s = number(1, 100)
+			if s == 1 then
+				pc.give_item2(31096, 1)
+				set_state(seigneur_reward)
+			end
+		end
+	end
+	state seigneur_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Tuez le Seigneur En-Tai")
+			q.set_title ("Tuez le Seigneur En-Tai")
+			q.start()
+
+			local v = find_npc_by_vnum(20411)
+			if v!= 0 then
+			else
+				target.vid("__TARGET__",v,"Gardien de la forêt.")
+			end
+		end
+		when info or button begin
+			say_title("Vous avez la Trousse de Secours.")
+			say("Retournez aurpès du Gardien de la forêt.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20411.chat."J'ai le bois précieux !" begin
+			target.delete("__TARGET__")
+			say_title("Tuez le Seigneur En-Tai")
+			say("Tuez le Seigneur En-Tai")
+			say("")
+			say("Bientot fini")
+			say("<3 !")
+			say("")
+			say("Prenez ceci en guise de remerciment.")
+			pc.give_exp2(11650000)
+			say_title("Récompense :")
+			say("")
+			say_reward("Vous avez reçu  11 650 000 d'expérience")
+			say("")
+			clear_letter()
+			set_state(repetg)
+		end
+	end
+	state repetg begin
+		when letter begin
+			local v = find_npc_by_vnum(20411)
+			if v!= 0 then
+				target.vid("__TARGET__", v, "Éclaireur de la Forêt.")
+			end
+		end
+		when __TARGET__.target.click or
+			20411.chat."J'ai le bois précieux !" begin
+			target.delete("__TARGET__")
+			say_title("	Trouvez une Émeraude boisée")
+			say("")
+			say("Coucou toi")
+			say("Faut m'aider :D")
+			set_state(seigneur)
+		end
+	end
+	state seigneur begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Trouvez une Émeraude boisée")
+			q.set_title ("Trouvez une Émeraude boisée")
+			q.start()
+		end
+		when info or button begin
+			say_title("Trouvez une Émeraude boisée")
+			say("")
+			say("Éliminez des Seigneurs En-Tai pour obtenir un emeraude boisé ")
+			say("et retournez auprès de l'Éclaireur de la forêt.")
+			say("")
+			set_state( killseigneur1 )
+		end
+	end
+	state killseigneur1 begin
+		when 6407.kill begin
+					local s = number(1, 100)
+			if s == 1 then
+				pc.give_item2(31099, 1)
+				set_state(seigneur1_reward)
+			end
+		end
+	end
+	state seigneur1_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Tuez le Seigneur En-Tai")
+			q.set_title ("Tuez le Seigneur En-Tai")
+			q.start()
+
+			local v = find_npc_by_vnum(20411)
+			if v!= 0 then
+			else
+				target.vid("__TARGET__",v,"Gardien de la forêt.")
+			end
+		end
+		when info or button begin
+			say_title("Vous avez la Trousse de Secours.")
+			say("Retournez aurpès du Gardien de la forêt.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20411.chat."J'ai l'émeraude précieux !" begin
+			target.delete("__TARGET__")
+			say_title("Tuez le Seigneur En-Tai")
+			say("Tuez le Seigneur En-Tai")
+			say("")
+			say("Bientot fini")
+			say("<3 !")
+			say("")
+			say("Prenez ceci en guise de remerciment.")
+			pc.give_exp2(11650000)
+			pc.give_item2("30613", 1)
+			say_title("Récompense :")
+			say("")
+			say_reward("Vous avez reçu  11 650 000 d'expérience et 1 Pierre des Dryades")
+			say("")
+			clear_letter()
+			pc.setqf("duration",get_time()+1*60)
+			set_state(timerepet)
+			wait()
+		end
+	end
+	state timerepet begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Temps")
+			q.set_title ("Temps")
+		end
+		when info or button begin
+			say_title("Temps")
+			say("")
+			say("Vous pourrez refaire les quêtes ")
+			say("dans ... .")
+			say("")
+			if get_time() > pc.getqf("duration") then
+				set_state(repet)
+				return
+			end
+		end
+	end
+end

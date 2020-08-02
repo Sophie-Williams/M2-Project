@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\christmas_2017_penguin\christmas_2017_penguin.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\christmas_2017_penguin\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"christmas_2017_penguin.gr2"
+		SourceSkin	"christmas_2017_penguin_1.dds"
+		TargetSkin	"christmas_2017_penguin_2.dds"
+	}
+}

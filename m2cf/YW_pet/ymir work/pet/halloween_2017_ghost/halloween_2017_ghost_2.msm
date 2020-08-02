@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\halloween_2017_ghost\halloween_2017_ghost.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\halloween_2017_ghost\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"halloween_2017_ghost.gr2"
+		SourceSkin	"halloween_2017_ghost_1.dds"
+		TargetSkin	"halloween_2017_ghost_2.dds"
+	}
+}

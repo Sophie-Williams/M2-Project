@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\luck_sheep_young1\luck_sheep_young1.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\luck_sheep_young1\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"luck_sheep_young1.gr2"
+		SourceSkin	"luck_sheep_young1.dds"
+		TargetSkin	"luck_sheep_young2.dds"
+	}
+}

@@ -1,0 +1,79 @@
+30073	0.5 --Natte de ruban blanc+
+30034	4.0 --Natte de ruban blanc
+30035	9.0 --Crème de visage
+30037	3.0 --Griffe de tigre
+30038	5.0 --Fourrure de tigre
+30085	5.0 --Morceau de tissu+
+30039	7.0 --Morceau de tissu
+30040	5.0 --Feuille
+30075	5.0 --Shuriken+
+30041	2.0 --Shuriken
+30042	2.0 --Croc de tigre de combat
+30055	5.0 --Pince de scorpion
+30045	4.0 --Dard de scorpion
+30081	4.5 --Queue de scorpion+
+30046	5.0 --Queue de scorpion
+30080	3.0 --Livre maudit+
+30047	8.0 --Livre maléfique
+30077	1.0 --Dent d'orc+
+30006	2.5 --Molaire d'orc
+30076	2.5 --Amulette d'orc+
+30007	4.5 --Amulette d'orc
+30092	1.5 --Dent de barbare
+30088	2.0 --Morceau de glace+
+30048	2.0 --Morceau de glace
+30049	2.0 --Corne de baleine
+30090	2.0 --Orbe de glace+
+30050	2.5 --Orbe de glace
+30083	4.0 --Médicament inconnu+
+30009	4.5 --Médicament inconnu
+30079	4.5 --Talisman inconnu+
+30051	4.5 --Talisman inconnu
+30011	5.0 --Pelote
+30089	8.0 --Fourrure de Yeti+
+30014	4.0 --Fourrure de Yéti
+30086	6.5 --Souvenir de Démon+
+30015	4.5 --Souvenir de Démon
+30087	2.5 --Gemme de Démon+
+30016	3.5 --Gemme du Démon
+30017	7.0 --Épingle de cheveux déco.
+30018	1.0 --Natte de ruban rouge
+30019	2.0 --Crinière flamboyante
+30022	1.0 --Queue de serpent
+30067	1.5 --Peau de serpent
+30023	4.0 --Peau de tigre blanc
+30078	0.5 --Manuel d'Esotérisme+
+30008	4.5 --Manuel d'Esotérisme
+30091	2.5 --Symbole de Guerrier
+30004	2.0 --Dents de sanglier sauv.
+30003	3.0 --Groin
+30070	3.0 --Fourrure de loup+
+30027	3.0 --Fourrure de loup
+30069	2.0 --Griffe de loup+
+30028	2.0 --Griffe de loup
+30030	3.8 --Lame rouillée
+30031	3.0 --Ornement
+30074	2.4 --Uniforme noir usé+
+30032	2.4 --Uniforme noir usé
+30033	2.5 --Porcelaine brisée
+30021	5.0 --Morceau de Gemme
+30005	3.5 --Morceau d'armure cassée
+30052	7.0 --Drapeau
+30071	7.0 --Bile d'ours+
+30010	7.0 --Bile d'ours
+30072	5.0 --Cuir de patte d'ours+
+30053	6.0 --Peau  de patte d'ours
+30056	2.0 --Toile d'araignée
+30025	5.7 --Glande venin d'araignée
+30057	7.0 --Yeux d'araignée
+30058	2.0 --Poche d'œuf d'araignée
+30059	3.0 --Pattes d'araignée
+30060	5.0 --Langue de grenouille
+30061	2.8 --Pattes de grenouille
+30192	0.2 --Latex
+30193	0.4 --Os de doigt
+30194	2.0 --Massue orque
+30195	1.0 --Sable silicieux
+30196	0.02 --Cendres de démon
+30197	0.08 --Graines magiques
+30199	0.16 --Cristal bleuté

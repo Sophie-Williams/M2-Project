@@ -1,0 +1,90 @@
+quest cheque_system begin
+	state start begin
+		when 9005.chat.M2SF.cheque.title_1 begin
+			local menu = select(M2SF.cheque.select_w2y, M2SF.cheque.select_y2w, M2SF.cheque.select_close)
+
+			if menu == 3 then
+				return
+			end
+			if menu == 1 then
+				say_title(M2SF.cheque.title_2)
+				say(M2SF.cheque.say_1)
+
+				local amount = tonumber(input())
+
+				if ((amount < 1) or (amount > 1000) or (amount == nil)) then
+					say(M2SF.cheque.say_2)
+					return
+				else
+					say_title(M2SF.cheque.title_2)
+					local yang = 100000000
+					local total = amount * yang
+
+					say(string.format(M2SF.cheque.say_3, amount, total))
+
+					local s = select(M2SF.cheque.select_exchange, M2SF.cheque.select_cancel)
+
+					if s == 2 then
+						return
+					end
+
+					if pc.get_cheque() >= amount then
+						if pc.get_gold() + total < 10000000000 then
+							pc.set_cheque(-amount)
+							pc.change_gold(total)
+							syschat(string.format(M2SF.cheque.say_10, amount))
+							syschat(string.format(M2SF.cheque.say_11, total))
+							return
+						else
+							syschat(M2SF.cheque.say_4)
+							return
+						end
+					else
+						syschat(M2SF.cheque.say_5)
+						return
+					end
+				end
+			elseif menu == 2 then
+				say_title(M2SF.cheque.title_3)
+				say(M2SF.cheque.say_6)
+
+				local amount = tonumber(input())
+
+				if ((amount < 1) or (amount >19) or (amount == nil)) then
+					say(M2SF.cheque.say_7)
+					return
+				else
+					say_title(M2SF.cheque.title_3)
+					local won = 100000000
+					local tax = amount * won * 0.03
+					local total = ((amount * won) + tax)
+
+					say(M2SF.cheque.say_8)
+					say(string.format(M2SF.cheque.say_9, total, amount))
+
+					local s = select(M2SF.cheque.select_exchange, M2SF.cheque.select_cancel)
+
+					if s == 2 then
+						return
+					end
+
+					if pc.get_gold() >= total then
+						if pc.get_cheque() + amount < 1000 then
+							pc.change_money(-total)
+							pc.set_cheque(amount)
+							syschat(string.format(M2SF.cheque.say_12, total))
+							syschat(string.format(M2SF.cheque.say_13, amount))
+							return
+						else
+							syschat(M2SF.cheque.say_14)
+							return
+						end
+					else
+						syschat(M2SF.cheque.say_15)
+						return
+					end
+				end
+			end
+		end
+	end
+end

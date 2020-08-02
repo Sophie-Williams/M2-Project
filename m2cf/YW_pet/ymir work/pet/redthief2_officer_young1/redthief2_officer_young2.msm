@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\redthief2_officer_young1\redthief2_officer_young1.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\redthief2_officer_young1\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"redthief2_officer_young1.gr2"
+		SourceSkin	"redthief2_officer_young1_gold.dds"
+		TargetSkin	"redthief2_officer_young1_gold.dds"
+	}
+}

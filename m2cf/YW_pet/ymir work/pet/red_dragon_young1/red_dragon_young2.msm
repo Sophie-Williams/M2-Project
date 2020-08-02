@@ -1,0 +1,17 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\pet\red_dragon_young1\red_dragon_young1.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\pet\red_dragon_young1\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"red_dragon_young1.gr2"
+		SourceSkin	"red_dragon_young1.dds"
+		TargetSkin	"red_dragon_young2.dds"
+	}
+}

@@ -1,0 +1,19 @@
+ScriptType	RaceDataScript
+
+BaseModelFileName	"D:\Ymir Work\npc\flag_d\flag_d.gr2"
+
+Group	ShapeData
+{
+	PathName	"D:\Ymir Work\npc\flag_d\"
+	ShapeDataCount	1
+	Group	ShapeData00
+	{
+		ShapeIndex	0
+
+		Model	"flag_d.gr2"
+		SourceSkin	"flag_d.dds"
+		TargetSkin	"flag_d_05.dds"
+		SourceSkin2	"flag_d_pole.dds"
+		TargetSkin2	"flag_d_pole_05.dds"
+	}
+}
